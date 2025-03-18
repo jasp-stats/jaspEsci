@@ -4,8 +4,8 @@ import JASP.Module	1.0
 Description
 {
 	name		    : "jaspesci"
-	title		    : qsTr("esci")
-	description	: qsTr("esci in JASP")
+	title		    : qsTr("ESCI (Beta)")
+	description	: qsTr("ESCI in JASP")
 	version		  : "0.1"
 	author		  : "Robert Calin-Jageman"
 	maintainer	: "Robert Calin-Jageman <rcalinjageman@dom.edu>"
@@ -15,7 +15,7 @@ Description
 
 	Analysis
 	{
-		title:	qsTr("esci: Describe")
+		title:	qsTr("ESCI: Describe")
 		menu:	qsTr("Describe")
 		func:	"jasp_describe"
 	}
@@ -27,35 +27,35 @@ Description
 
 	Analysis
 	{
-		title:	qsTr("esci Means and Medians: Single Group")
+		title:	qsTr("ESCI Means and Medians: Single Group")
 		menu:	qsTr("Single Group")
 		func:	"jasp_estimate_mdiff_one"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Means and Medians: Two Groups")
+		title:	qsTr("ESCI Means and Medians: Two Groups")
 		menu:	qsTr("Two Groups")
 		func:	"jasp_estimate_mdiff_two"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Means and Medians: Paired")
+		title:	qsTr("ESCI Means and Medians: Paired")
 		menu:	qsTr("Paired")
 		func:	"jasp_estimate_mdiff_paired"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Means and Medians: Independent Groups Contrast")
+		title:	qsTr("ESCI Means and Medians: Independent Groups Contrast")
 		menu:	qsTr("Independent Groups Contrast")
 		func:	"jasp_estimate_mdiff_ind_contrast"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Means and Medians: 2x2 Factorial")
+		title:	qsTr("ESCI Means and Medians: 2x2 Factorial")
 		menu:	qsTr("2x2 Factorial")
 		func:	"jasp_estimate_mdiff_2x2"
 	}
@@ -68,14 +68,14 @@ Description
 
 	Analysis
 	{
-		title:	qsTr("esci Correlations: Single Group")
+		title:	qsTr("ESCI Correlations: Single Group")
 		menu:	qsTr("Single Group")
 		func:	"jasp_estimate_r"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Correlations: Two Groups")
+		title:	qsTr("ESCI Correlations: Two Groups")
 		menu:	qsTr("Two Groups")
 		func:	"jasp_estimate_rdiff_two"
 	}
@@ -88,21 +88,21 @@ Description
 
 	Analysis
 	{
-		title:	qsTr("esci Proportions: Single Group")
+		title:	qsTr("ESCI Proportions: Single Group")
 		menu:	qsTr("Single Group")
 		func:	"jasp_estimate_pdiff_one"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Proportions: Two Groups")
+		title:	qsTr("ESCI Proportions: Two Groups")
 		menu:	qsTr("Two Groups")
 		func:	"jasp_estimate_pdiff_two"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Proportions: Paired")
+		title:	qsTr("ESCI Proportions: Paired")
 		menu:	qsTr("Paired")
 		func:	"jasp_estimate_pdiff_paired"
 	}
@@ -115,35 +115,35 @@ Description
 
 	Analysis
 	{
-		title:	qsTr("esci Meta-Analysis: Means")
+		title:	qsTr("ESCI Meta-Analysis: Means")
 		menu:	qsTr("Means")
 		func:	"jasp_meta_mean"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Meta-Analysis: Difference in Means")
+		title:	qsTr("ESCI Meta-Analysis: Difference in Means")
 		menu:	qsTr("Difference in Means")
 		func:	"jasp_meta_mdiff_two"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Meta-Analysis: Correlations")
+		title:	qsTr("ESCI Meta-Analysis: Correlations")
 		menu:	qsTr("Correlations")
 		func:	"jasp_meta_r"
 	}
 
 	Analysis
 	{
-		title:	qsTr("esci Meta-Analysis: Proportions")
+		title:	qsTr("ESCI Meta-Analysis: Proportions")
 		menu:	qsTr("Proportions")
 		func:	"jasp_meta_proportion"
 	}
 
 		Analysis
 	{
-	  title: qsTr("esci Meta-Anlaysis: Difference in Proportions")
+	  title: qsTr("ESCI Meta-Anlaysis: Difference in Proportions")
 		menu:	qsTr("Difference in Proportions")
 		func:	"jasp_meta_pdiff_two"
 	}
