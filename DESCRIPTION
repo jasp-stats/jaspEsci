@@ -20,3 +20,4 @@ Suggests:
 Remotes:
   jasp-stats/jaspBase,
   jasp-stats/jaspGraphs
+Config/testthat/edition: 3

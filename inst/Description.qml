@@ -18,6 +18,7 @@ Description
 		title:	qsTr("ESCI: Describe")
 		menu:	qsTr("Describe")
 		func:	"jasp_describe"
+		preloadData: true
 	}
 
 	GroupTitle
@@ -58,6 +59,7 @@ Description
 		title:	qsTr("ESCI Means and Medians: 2x2 Factorial")
 		menu:	qsTr("2x2 Factorial")
 		func:	"jasp_estimate_mdiff_2x2"
+		preloadData: true
 	}
 
 
