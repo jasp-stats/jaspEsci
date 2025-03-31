@@ -1,4 +1,4 @@
-# Tables matches for summary 2x2 between-subjects
+# Tables match across conf_levels for summary 2x2 between-subjects
 
     Code
       results[["results"]][[mytable]][["data"]]
