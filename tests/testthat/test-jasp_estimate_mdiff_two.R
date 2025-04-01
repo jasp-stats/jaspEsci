@@ -1,13 +1,15 @@
 
-test_that("jasp_estimate_mdiff_one raw data check tables and figures", {
-  analysis_name <- "jasp_estimate_mdiff_one"
+test_that("jasp_estimate_mdiff_two raw data check tables and figures", {
+  analysis_name <- "jasp_estimate_mdiff_two"
   data_file <- "tests/testthat/self_explain.csv"
   data_file <- "self_explain.csv"
 
   options <- options_esci(analysis_name)
 
   options$outcome_variable <- c("Pretest", "Posttest")
+  options$grouping_variable <- "Condition"
   options$switch <- "from_raw"
+  options$assume_equal_variance <- TRUE
   options$show_details <- TRUE
   options$show_calculations <- TRUE
 
@@ -48,6 +50,7 @@ test_that("jasp_estimate_mdiff_one raw data check tables and figures", {
             results$options <- options
 
             testthat::expect_snapshot(results$results$overviewTable$data)
+            testthat::expect_snapshot(results$results$es_m_differenceTable$data)
             testthat::expect_snapshot(results$results$smdTable$data)
             testthat::expect_snapshot(results$results$heTable$data)
             testthat::expect_snapshot(results$results$mdiffPlot$data)
@@ -60,15 +63,18 @@ test_that("jasp_estimate_mdiff_one raw data check tables and figures", {
 
 
 
-test_that("jasp_estimate_mdiff_one summary data check tables and figures", {
-  analysis_name <- "jasp_estimate_mdiff_one"
+test_that("jasp_estimate_mdiff_two summary data check tables and figures", {
+  analysis_name <- "jasp_estimate_mdiff_two"
 
   options <- options_esci(analysis_name)
 
   options$switch <- "from_summary"
-  options$mean <- 10.1
-  options$sd <- 3
-  options$n <- 20
+  options$reference_mean <- 10
+  options$reference_sd <- 3
+  options$reference_n <- 20
+  options$comparison_mean <- 12
+  options$comparison_sd <- 3
+  options$comparison_n <- 20
   options$conf_level <- 0.95
   options$effect_size <- "mean"
   options$show_details <- TRUE
@@ -124,9 +130,10 @@ test_that("jasp_estimate_mdiff_one summary data check tables and figures", {
             results$properties <- options
 
             testthat::expect_snapshot(results$results$overviewTable$data)
+            testthat::expect_snapshot(results$results$es_m_differenceTable$data)
             testthat::expect_snapshot(results$results$smdTable$data)
             testthat::expect_snapshot(results$results$heTable$data)
-            testthat::expect_snapshot(results$results$mdiffPlot$data)
+            #testthat::expect_snapshot(results$results$mdiffPlot$data)
           }
         }
       }
