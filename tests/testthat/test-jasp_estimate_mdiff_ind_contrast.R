@@ -129,6 +129,8 @@ test_that("jasp_estimate_mdiff_ind_contrast raw data check tables and figures", 
 
 
 test_that("jasp_estimate_mdiff_ind_contrast summary data check tables and figures", {
+  # not working yet... no results tables returned!
+
   # setup data and options
   analysis_name <- "jasp_estimate_mdiff_ind_contrast"
   data_file <- "tests/testthat/data_halagappa.csv"

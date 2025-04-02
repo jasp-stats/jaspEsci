@@ -1,4 +1,3 @@
-
 test_that("jasp_estimate_mdiff_two raw data check tables and figures", {
   # setup data and options
   analysis_name <- "jasp_estimate_mdiff_two"
@@ -118,7 +117,6 @@ test_that("jasp_estimate_mdiff_two raw data check tables and figures", {
 
 
 })
-
 
 
 test_that("jasp_estimate_mdiff_two summary data check tables and figures", {
