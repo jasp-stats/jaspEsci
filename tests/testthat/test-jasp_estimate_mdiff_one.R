@@ -95,7 +95,7 @@ test_that("jasp_estimate_mdiff_one summary data check tables and figures", {
 
   # results, storing options
   results <- jaspTools::runAnalysis(analysis_name, NULL, options)
-  results$properties <- options
+  results$options <- options
 
   # tests - start testing graphs when they are working from jaspTools
   testthat::expect_snapshot(results$results$overviewTable$data)
