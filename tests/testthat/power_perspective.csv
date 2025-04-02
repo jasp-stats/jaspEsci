@@ -1,0 +1,5 @@
+"id","studies","control_egocentric","control_sample_size","power_egocentric","power_sample_size","setting"
+"1","Online",33,101,48,105,"Online"
+"2","Original",4,33,8,24,"In-Person"
+"3","Online Pilot",4,10,4,12,"Online"
+"4","Exact replication",7,53,11,56,"In-Person"

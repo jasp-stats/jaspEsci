@@ -9,10 +9,10 @@ esci_add_qml_options <- function(analysisName, options) {
   # jaspTools doesn't recognize common QML elements so this function adds the defaults manually
   root <- testthat::test_path(file.path("..", "..", "inst", "qml", "esci"))
 
-  meta_default <- c("MetaAesthetics.qml", "MetaFigureOptions.qml")
-  r_default <- c("ScatterplotOptions.qml", "FigureOptions.qml", "HeOptions.qml")
+  meta_default <- c("ConfLevel.qml", "MetaAesthetics.qml", "MetaFigureOptions.qml")
+  r_default <- c("ConfLevel.qml", "ScatterplotOptions.qml", "FigureOptions.qml", "HeOptions.qml")
   mdiff_default <- c("ConfLevel.qml", "FigureOptions.qml", "HeOptions.qml")
-  pdiff_default <- c("FigureOptions.qml", "HeOptions.qml")
+  pdiff_default <- c("ConfLevel.qml", "FigureOptions.qml", "HeOptions.qml")
   describe_default <- c("ConfLevel.qml", "ScatterplotOptions.qml")
 
 

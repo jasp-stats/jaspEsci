@@ -145,6 +145,7 @@ Description
 		title:	qsTr("ESCI Meta-Analysis: Correlations")
 		menu:	qsTr("Correlations")
 		func:	"jasp_meta_r"
+		preloadData: true
 	}
 
 	Analysis

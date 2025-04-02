@@ -1,23 +1,22 @@
-test_that("jasp_meta_mean raw data check tables and figures", {
+test_that("jasp_meta_r check tables and figures", {
   # setup data and options
-  analysis_name <- "jasp_meta_mean"
-  data_file <- "tests/testthat/data_gender_math_iat_ma.csv"
-  data_file <- "data_gender_math_iat_ma.csv"
+  analysis_name <- "jasp_meta_r"
+  data_file <- "tests/testthat/data_mcnamara_r_ma.csv"
+  data_file <- "data_mcnamara_r_ma.csv"
 
   options <- options_esci(analysis_name)
 
   # analysis parameters
-  options$means <- "M Female"
-  options$sds <- "s Female"
-  options$ns <- "n Female"
-  options$labels <- "Location"
-  options$moderator <- "USAorNot"
+  options$rs <- "r"
+  options$ns <- "N"
+  options$labels <- "Study"
+  options$moderator <- "Instrument_Type"
   options$switch <- "from_raw"
-  options$effect_label <- "IAT Score"
-  options$reference_mean <- 0.2
-  options$reported_effect_size <- "mean_difference"
+  options$effect_label <- "Skill-Practice Correlation"
   options$random_effects <- "random_effects"
   options$show_details <- TRUE
+
+  options$reported_effect_size <- "r"
 
 
 

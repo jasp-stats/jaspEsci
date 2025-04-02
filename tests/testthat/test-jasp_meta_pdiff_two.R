@@ -1,23 +1,24 @@
-test_that("jasp_meta_mean raw data check tables and figures", {
+test_that("jasp_meta_pdiff_two check tables and figures", {
   # setup data and options
-  analysis_name <- "jasp_meta_mean"
-  data_file <- "tests/testthat/data_gender_math_iat_ma.csv"
-  data_file <- "data_gender_math_iat_ma.csv"
+  analysis_name <- "jasp_meta_pdiff_two"
+  data_file <- "tests/testthat/power_perspective.csv"
+  data_file <- "power_perspective.csv"
 
   options <- options_esci(analysis_name)
 
   # analysis parameters
-  options$means <- "M Female"
-  options$sds <- "s Female"
-  options$ns <- "n Female"
-  options$labels <- "Location"
-  options$moderator <- "USAorNot"
+  options$reference_cases <- "control_egocentric"
+  options$reference_ns <- "control_sample_size"
+  options$comparison_cases <- "power_egocentric"
+  options$comparison_ns <- "power_sample_size"
+  options$labels <- "studies"
+  options$moderator <- "setting"
   options$switch <- "from_raw"
-  options$effect_label <- "IAT Score"
-  options$reference_mean <- 0.2
-  options$reported_effect_size <- "mean_difference"
+  options$effect_label <- "Proportion ego-centric"
   options$random_effects <- "random_effects"
   options$show_details <- TRUE
+
+  options$reported_effect_size <- "RD"
 
 
 

@@ -1,4 +1,8 @@
 test_that("jasp_estimate_mdiff_2x2 raw data bs design check tables and figures", {
+  #shouldn't need this
+  source("helper_esci.R")
+
+
   # setup data and options
   analysis_name <- "jasp_estimate_mdiff_2x2"
   data_file <- "tests/testthat/self_explain.csv"

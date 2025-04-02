@@ -256,3 +256,130 @@
       
       
 
+# jasp_estimate_mdiff_one summary data check tables and figures
+
+    Code
+      results$results$overviewTable$data
+    Output
+      [[1]]
+      [[1]]$df
+      [1] 19
+      
+      [[1]]$mean
+      [1] 10.1
+      
+      [[1]]$mean_LL
+      [1] 8.695957
+      
+      [[1]]$mean_SE
+      [1] 0.6708204
+      
+      [[1]]$mean_UL
+      [1] 11.50404
+      
+      [[1]]$moe
+      [1] 1.404043
+      
+      [[1]]$n
+      [1] 20
+      
+      [[1]]$n_component
+      [1] 0.2236068
+      
+      [[1]]$outcome_variable_name
+      [1] "Outcome variable"
+      
+      [[1]]$s_component
+      [1] 3
+      
+      [[1]]$sd
+      [1] 3
+      
+      [[1]]$t_multiplier
+      [1] 2.093024
+      
+      
+
+---
+
+    Code
+      results$results$smdTable$data
+    Output
+      [[1]]
+      [[1]]$LL
+      [1] 2.115263
+      
+      [[1]]$SE
+      [1] 0.566684
+      
+      [[1]]$UL
+      [1] 4.333844
+      
+      [[1]]$d_biased
+      [1] 3.366667
+      
+      [[1]]$denominator
+      [1] 3
+      
+      [[1]]$df
+      [1] 19
+      
+      [[1]]$effect
+      [1] "Outcome variable ‒ Reference value"
+      
+      [[1]]$effect_size
+      [1] 3.231698
+      
+      [[1]]$mean
+      [1] 10.1
+      
+      [[1]]$numerator
+      [1] 10.1
+      
+      [[1]]$reference_value
+      [1] 0
+      
+      
+
+---
+
+    Code
+      results$results$heTable$data
+    Output
+      [[1]]
+      [[1]]$CI
+      [1] "95% CI [8.695957, 11.50404]"
+      
+      [[1]]$CI_compare
+      [1] "The 95% CI does not contain <i>H</i><sub>0</sub>"
+      
+      [[1]]$conclusion
+      [1] "At α = 0.05, 0.00 is not a plausible value of μ"
+      
+      [[1]]$df
+      [1] 19
+      
+      [[1]]$effect
+      [1] "Outcome variable ‒ Reference value"
+      
+      [[1]]$null_decision
+      [1] "Reject <i>H</i><sub>0</sub>"
+      
+      [[1]]$null_words
+      [1] "0.00"
+      
+      [[1]]$p
+      [1] 5.153566e-12
+      
+      [[1]]$t
+      [1] 15.05619
+      
+      
+
+---
+
+    Code
+      results$results$mdiffPlot$data
+    Output
+      [1] "plots/40.png"
+

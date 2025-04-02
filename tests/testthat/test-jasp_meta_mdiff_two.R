@@ -1,15 +1,18 @@
-test_that("jasp_meta_mean raw data check tables and figures", {
+test_that("jasp_meta_mdiff_two raw data check tables and figures", {
   # setup data and options
-  analysis_name <- "jasp_meta_mean"
+  analysis_name <- "jasp_meta_mdiff_two"
   data_file <- "tests/testthat/data_gender_math_iat_ma.csv"
   data_file <- "data_gender_math_iat_ma.csv"
 
   options <- options_esci(analysis_name)
 
   # analysis parameters
-  options$means <- "M Female"
-  options$sds <- "s Female"
-  options$ns <- "n Female"
+  options$reference_means <- "M Male"
+  options$reference_sds <- "s Male"
+  options$reference_ns <- "n Male"
+  options$comparison_means <- "M Female"
+  options$comparison_sds <- "s Female"
+  options$comparison_ns <- "n Female"
   options$labels <- "Location"
   options$moderator <- "USAorNot"
   options$switch <- "from_raw"
