@@ -1332,7 +1332,7 @@
       [1] "LL"
       
       $schema$fields[[5]]$overTitle
-      [1] "% CI"
+      [1] "95% CI"
       
       $schema$fields[[5]]$title
       [1] "LL"
@@ -1349,7 +1349,7 @@
       [1] "UL"
       
       $schema$fields[[6]]$overTitle
-      [1] "% CI"
+      [1] "95% CI"
       
       $schema$fields[[6]]$title
       [1] "UL"
