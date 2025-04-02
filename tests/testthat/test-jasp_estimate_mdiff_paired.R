@@ -1,21 +1,19 @@
 
 test_that("jasp_estimate_mdiff_two raw data check tables and figures", {
   # setup data and options
-  analysis_name <- "jasp_estimate_mdiff_two"
+  analysis_name <- "jasp_estimate_mdiff_paired"
   data_file <- "tests/testthat/self_explain.csv"
   data_file <- "self_explain.csv"
 
   options <- options_esci(analysis_name)
 
+
   # analysis parameters
-  options$outcome_variable <- c("Pretest", "Posttest")
-  options$grouping_variable <- "Condition"
+  options$reference_measure <- "Pretest"
+  options$comparison_measure <- "Posttest"
   options$switch <- "from_raw"
-  options$effect_size <- "mean_difference"
-  options$assume_equal_variance <- TRUE
   options$show_details <- TRUE
   options$show_calculations <- TRUE
-  options$show_ratio <- TRUE
 
   options$evaluate_hypotheses <- TRUE
   options$null_value <- 0
@@ -108,36 +106,37 @@ test_that("jasp_estimate_mdiff_two raw data check tables and figures", {
   results <- jaspTools::runAnalysis(analysis_name, data_file, options)
   results$options <- options
 
+
   # tests - start testing graphs when they are working from jaspTools
   testthat::expect_snapshot(results$results$overviewTable$data)
   testthat::expect_snapshot(results$results$es_m_differenceTable$data)
   testthat::expect_snapshot(results$results$smdTable$data)
-  testthat::expect_snapshot(results$results$es_m_ratioTable$data)
   testthat::expect_snapshot(results$results$heTable$data)
-  #testthat::expect_snapshot(results$results$mdiffPlot$data)
+  testthat::expect_snapshot(results$results$mdiffPlot$data)
+
 
 
 })
 
 
 
-test_that("jasp_estimate_mdiff_two summary data check tables and figures", {
+test_that("jasp_estimate_mdiff_paired summary data check tables and figures", {
   # setup data and options
-  analysis_name <- "jasp_estimate_mdiff_two"
+  analysis_name <- "jasp_estimate_mdiff_paired"
 
   options <- options_esci(analysis_name)
 
   # analysis parameters
   options$switch <- "from_summary"
-  options$effect_size <- "mean_difference"
   options$reference_mean <- 10
-  options$reference_sd <- 3
-  options$reference_n <- 20
+  options$reference_sd <- 2
+  options$n <- 20
   options$comparison_mean <- 12
-  options$comparison_sd <- 3
-  options$comparison_n <- 20
+  options$comparison_sd <- 2.2
+  options$correlation <- 0.7
+  options$sdiff <- 1.67
   options$conf_level <- 0.95
-  options$effect_size <- "mean"
+  options$effect_size <- "mean_difference"
   options$show_details <- TRUE
   options$show_calculations <- TRUE
 
@@ -145,7 +144,6 @@ test_that("jasp_estimate_mdiff_two summary data check tables and figures", {
   options$null_value <- 0
   options$null_boundary <- 0
   options$rope_units <- "raw"
-
 
   # graph stuff -- will move to a function
   options$shape_summary_reference <- "circle filled"
@@ -228,9 +226,11 @@ test_that("jasp_estimate_mdiff_two summary data check tables and figures", {
   options$alpha_raw_difference <- 0
   options$alpha_raw_unused <- 0
 
+
   # results, storing options
   results <- jaspTools::runAnalysis(analysis_name, NULL, options)
   results$properties <- options
+
 
   # tests - start testing graphs when they are working from jaspTools
   testthat::expect_snapshot(results$results$overviewTable$data)
