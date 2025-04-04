@@ -256,6 +256,13 @@
       
       
 
+---
+
+    Code
+      results$results$mdiffPlot$data
+    Output
+      [1] "plots/21.png"
+
 # jasp_estimate_mdiff_one summary data check tables and figures
 
     Code
@@ -375,11 +382,4 @@
       [1] 15.05619
       
       
-
----
-
-    Code
-      results$results$mdiffPlot$data
-    Output
-      [1] "plots/40.png"
 

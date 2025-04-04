@@ -245,13 +245,6 @@
 ---
 
     Code
-      results$results$smdTable$data
-    Output
-      NULL
-
----
-
-    Code
       results$results$heTable$data
     Output
       [[1]]
@@ -280,11 +273,4 @@
       [1] 5.282276
       
       
-
----
-
-    Code
-      results$results$mdiffPlot$data
-    Output
-      NULL
 

@@ -258,13 +258,6 @@
       
       
 
----
-
-    Code
-      results$results$mdiffPlot$data
-    Output
-      [1] "plots/41.png"
-
 # jasp_estimate_mdiff_paired summary data check tables and figures
 
     Code
