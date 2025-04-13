@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.4.2",
+    "Version": "4.5.0",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -11,30 +11,30 @@
   "Packages": {
     "MASS": {
       "Package": "MASS",
-      "Version": "7.3-61",
+      "Version": "7.3-65",
       "Source": "Repository",
       "Requirements": [
-        "methods",
         "R",
         "grDevices",
         "graphics",
         "stats",
-        "utils"
+        "utils",
+        "methods"
       ]
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.7-1",
+      "Version": "1.7-3",
       "Source": "Repository",
       "Requirements": [
+        "R",
+        "methods",
         "grDevices",
         "graphics",
         "grid",
         "lattice",
         "stats",
-        "utils",
-        "R",
-        "methods"
+        "utils"
       ]
     },
     "PDQutils": {
@@ -74,7 +74,7 @@
     },
     "Rdpack": {
       "Package": "Rdpack",
-      "Version": "2.6.3",
+      "Version": "2.6.4",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -119,6 +119,14 @@
         "graphics",
         "grDevices",
         "utils"
+      ]
+    },
+    "brio": {
+      "Package": "brio",
+      "Version": "1.1.5",
+      "Source": "Repository",
+      "Requirements": [
+        "R"
       ]
     },
     "callr": {
@@ -181,6 +189,16 @@
         "R"
       ]
     },
+    "crayon": {
+      "Package": "crayon",
+      "Version": "1.5.3",
+      "Source": "Repository",
+      "Requirements": [
+        "grDevices",
+        "methods",
+        "utils"
+      ]
+    },
     "curl": {
       "Package": "curl",
       "Version": "6.2.2",
@@ -210,6 +228,19 @@
         "cli",
         "R6",
         "utils"
+      ]
+    },
+    "diffobj": {
+      "Package": "diffobj",
+      "Version": "0.3.5",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "crayon",
+        "tools",
+        "methods",
+        "utils",
+        "stats"
       ]
     },
     "digest": {
@@ -271,6 +302,14 @@
         "legendry"
       ]
     },
+    "evaluate": {
+      "Package": "evaluate",
+      "Version": "1.0.3",
+      "Source": "Repository",
+      "Requirements": [
+        "R"
+      ]
+    },
     "fansi": {
       "Package": "fansi",
       "Version": "1.0.6",
@@ -317,6 +356,15 @@
         "R",
         "fontBitstreamVera",
         "fontLiberation"
+      ]
+    },
+    "fs": {
+      "Package": "fs",
+      "Version": "1.6.6",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "methods"
       ]
     },
     "gdtools": {
@@ -378,7 +426,7 @@
     },
     "ggplot2": {
       "Package": "ggplot2",
-      "Version": "3.5.1",
+      "Version": "3.5.2",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -538,7 +586,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspBase",
-      "RemoteSha": "31bc23b340ebb9298c03b67108de300cdc3f9f57"
+      "RemoteSha": "d3c6d19feaa94dcd5c636345adb76a9f2e8bdac1"
     },
     "jaspGraphs": {
       "Package": "jaspGraphs",
@@ -561,7 +609,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspGraphs",
-      "RemoteSha": "24db07dff35e3587155e8a4954f3fbdf88b2ac96"
+      "RemoteSha": "cb357cc60fa30e106a87d3d99f9fe31312010f7e"
     },
     "jmvcore": {
       "Package": "jmvcore",
@@ -605,12 +653,12 @@
       "Version": "0.22-6",
       "Source": "Repository",
       "Requirements": [
+        "R",
         "grid",
         "grDevices",
         "graphics",
         "stats",
-        "utils",
-        "R"
+        "utils"
       ]
     },
     "legendry": {
@@ -642,7 +690,7 @@
     },
     "litedown": {
       "Package": "litedown",
-      "Version": "0.6",
+      "Version": "0.7",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -712,14 +760,14 @@
       "Version": "1.9-1",
       "Source": "Repository",
       "Requirements": [
+        "R",
+        "nlme",
         "methods",
         "stats",
         "graphics",
         "Matrix",
         "splines",
-        "utils",
-        "R",
-        "nlme"
+        "utils"
       ]
     },
     "mnonr": {
@@ -771,14 +819,14 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-166",
+      "Version": "3.1-168",
       "Source": "Repository",
       "Requirements": [
+        "R",
         "graphics",
         "stats",
         "utils",
-        "lattice",
-        "R"
+        "lattice"
       ]
     },
     "numDeriv": {
@@ -836,7 +884,7 @@
     },
     "pillar": {
       "Package": "pillar",
-      "Version": "1.10.1",
+      "Version": "1.10.2",
       "Source": "Repository",
       "Requirements": [
         "cli",
@@ -869,6 +917,26 @@
         "utils"
       ]
     },
+    "pkgload": {
+      "Package": "pkgload",
+      "Version": "1.4.0",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "cli",
+        "desc",
+        "fs",
+        "glue",
+        "lifecycle",
+        "methods",
+        "pkgbuild",
+        "processx",
+        "rlang",
+        "rprojroot",
+        "utils",
+        "withr"
+      ]
+    },
     "plyr": {
       "Package": "plyr",
       "Version": "1.8.9",
@@ -895,6 +963,12 @@
         "graphics"
       ]
     },
+    "praise": {
+      "Package": "praise",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Requirements": []
+    },
     "processx": {
       "Package": "processx",
       "Version": "3.8.6",
@@ -908,7 +982,7 @@
     },
     "ps": {
       "Package": "ps",
-      "Version": "1.9.0",
+      "Version": "1.9.1",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -925,7 +999,7 @@
     },
     "ragg": {
       "Package": "ragg",
-      "Version": "1.3.3",
+      "Version": "1.4.0",
       "Source": "Repository",
       "Requirements": [
         "systemfonts",
@@ -944,11 +1018,19 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "1.1.5",
+      "Version": "1.1.6",
       "Source": "Repository",
       "Requirements": [
         "R",
         "utils"
+      ]
+    },
+    "rprojroot": {
+      "Package": "rprojroot",
+      "Version": "2.0.4",
+      "Source": "Repository",
+      "Requirements": [
+        "R"
       ]
     },
     "rvg": {
@@ -1045,16 +1127,16 @@
     },
     "survival": {
       "Package": "survival",
-      "Version": "3.7-0",
+      "Version": "3.8-3",
       "Source": "Repository",
       "Requirements": [
+        "R",
         "graphics",
         "Matrix",
         "methods",
         "splines",
         "stats",
-        "utils",
-        "R"
+        "utils"
       ]
     },
     "svglite": {
@@ -1075,7 +1157,7 @@
     },
     "systemfonts": {
       "Package": "systemfonts",
-      "Version": "1.2.1",
+      "Version": "1.2.2",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -1085,6 +1167,33 @@
         "tools",
         "utils",
         "cpp11"
+      ]
+    },
+    "testthat": {
+      "Package": "testthat",
+      "Version": "3.2.3",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "brio",
+        "callr",
+        "cli",
+        "desc",
+        "digest",
+        "evaluate",
+        "jsonlite",
+        "lifecycle",
+        "magrittr",
+        "methods",
+        "pkgload",
+        "praise",
+        "processx",
+        "ps",
+        "R6",
+        "rlang",
+        "utils",
+        "waldo",
+        "withr"
       ]
     },
     "textshaping": {
@@ -1146,6 +1255,23 @@
         "rlang"
       ]
     },
+    "vdiffr": {
+      "Package": "vdiffr",
+      "Version": "1.0.8",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "diffobj",
+        "glue",
+        "grDevices",
+        "htmltools",
+        "lifecycle",
+        "rlang",
+        "testthat",
+        "xml2",
+        "cpp11"
+      ]
+    },
     "vipor": {
       "Package": "vipor",
       "Version": "0.4.7",
@@ -1164,6 +1290,19 @@
         "R"
       ]
     },
+    "waldo": {
+      "Package": "waldo",
+      "Version": "0.6.1",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "cli",
+        "diffobj",
+        "glue",
+        "methods",
+        "rlang"
+      ]
+    },
     "withr": {
       "Package": "withr",
       "Version": "3.0.2",
@@ -1176,7 +1315,7 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.51",
+      "Version": "0.52",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -1204,7 +1343,7 @@
     },
     "zoo": {
       "Package": "zoo",
-      "Version": "1.8-13",
+      "Version": "1.8-14",
       "Source": "Repository",
       "Requirements": [
         "R",
