@@ -1,0 +1,357 @@
+    {
+      "name": "Books",
+      "path": "Books",
+      "description": "",
+      "kind": "folder",
+      "children": [
+        {        {
+          "name": "Cumming & Calin-Jageman - Introduction to the New Statistics",
+          "path": "Cumming & Calin-Jageman - Introduction to the New Statistics",
+          "description": "This folder contains the data sets from Cumming G. & Calin-Jageman R. J. (2024).<i>Introduction to the New Statistics</i> (2nd ed.). London: Routledge.",
+          "kind": "folder",
+          "children": [             {
+              "name": "Ch12 - Altruism Happiness - from Brethel-Haurwitz and Marsh (2014)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch12_Altruism Happiness.jasp",
+              "description": " Happiness may not be important just for the person feeling it; happiness may<BR>   also promote kind, altruistic behavior. Brethel-Haurwitz and Marsh (2014)<BR>   examined this idea by collecting data on U.S. states. A Gallup poll in 2010<BR>   was used to measure each state's well-being index, a measure of mean<BR>   happiness for the state's residents on a scale from 0 to 100. Next, a kidney<BR>   donation database for 1999-2010 was used to figure out each state's rate<BR>   (number of donations per 1 million people) of non-directed kidney<BR>   donations-that's giving one kidney to a stranger, an extremely generous and<BR>   altruistic thing to do!<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch12_Altruism Happiness.csv",
+             },
+             {
+              "name": "Ch9 - Anchor Estimate ma - Many Labs replications of Jacowitz and Kahneman (1995)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch9_Anchor Estimate ma.jasp",
+              "description": " To what extent does the wording of a question influence one's judgment? In<BR>   their classic study, Jacowitz and Kahneman (1995) asked participants to<BR>   estimate how many babies are born each day in the United States. Participants<BR>   were given either a low anchor (more than 100 babies/day) or a high anchor<BR>   (less than 50,000 babies/day). Those who saw the low anchor estimated many<BR>   fewer births/day than those who saw the high anchor, which suggests that the<BR>   wording can have a profound influence. The correct answer, as it happens, is<BR>   ~11,000 births/day in 2014. To investigate the extent that these results are<BR>   replicable, the Many Labs project repeated this classic study at many<BR>   different labs around the world. You can find the summary data for 30 of<BR>   these labs in the Anchor Estimate ma data file<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch9_Anchor Estimate ma.csv",
+             },
+             {
+              "name": "Ch07 - Basol badnews - from Basol et al. (2020)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch07_Basol badnews.jasp",
+              "description": " Climate change? Vaccines? Fake news and conspiracy theories on these and<BR>   numerous other issues can be highly damaging, but are thriving in this social<BR>   media age. Trying to debunk a conspiracy theory by presenting facts and<BR>   evidence often doesn't work, alas. Psychological inoculation, also similar to<BR>   prebunking, presents a mild form of misinformation, preferably with<BR>   explanation, in the hope of building resistance to real-life fake news-a sort<BR>   of vaccine for fake news. The Bad News game is a spin-off from research on<BR>   psychological inoculation. Basol et al. (2020) assessed the possible<BR>   effectiveness of this game as a fake news vaccine. At getbadnews.com you can<BR>   click 'About' for information, or just start playing the game- it's easy and<BR>   maybe even fun. You encounter mock Twitter (now X) fake news messages that<BR>   illustrate common strategies for making fake news memorable or believable.<BR>   You make choices between messages and decide which ones to 'forward' as you<BR>   try to spread fake news while building your credibility score and number of<BR>   'followers'-rather like real life for a conspiracy theorist wanting to spread<BR>   the word. Compete with your friends for credibility and number of followers.<BR>   Basol's online participants first saw 18 fictitious fake news tweets and<BR>   rated each for reliability (accuracy, believability), and also rated their<BR>   confidence in that reliability rating. Both ratings were on a 1 to 7 scale.<BR>   Those in the BadNews group then played the game for 15 minutes, whereas those<BR>   in the Control group played Tetris. Then all once again gave reliability and<BR>   confidence ratings for the 18 tweets.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch07_Basol badnews.csv",
+             },
+             {
+              "name": "Ch13 - Bem Psychic - from Bem and Honorton (1994)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch13_Bem Psychic.jasp",
+              "description": " Daryl Bem was an experienced mentalist and research psychologist, who, a<BR>   decade earlier, had been one of several outside experts invited to scrutinize<BR>   the laboratory and experimental procedures of parapsychology researcher<BR>   Charles Honorton. Bem not only judged them adequate, but joined the research<BR>   effort and became a coauthor with Honorton. Bem and Honorton (1994) first<BR>   reviewed early ganzfeld studies and described how the experimental procedure<BR>   had been improved to reduce the chance that results could be influenced by<BR>   various possible biases, or leakages of information from sender to receiver.<BR>   For example, the randomization procedure was carried out automatically by<BR>   computer, and all stimuli were presented under computer control. Bem and<BR>   Honorton then presented data from studies conducted with the improved<BR>   procedure. Table 13.1 presents basic data from 10 studies reported by Bem and<BR>   Honorton (1994). Participants each made a single judgment, so in Pilot 1, for<BR>   example, 22 participants responded, with 8 of them giving a correct response.<BR>   Three pilot studies helped refine the procedures, then four studies used<BR>   novice receivers. Study 5 used 20 students of music, drama, or dance as<BR>   receivers, in response to suggestions that creative people might be more<BR>   likely to show telepathy. Studies 6 and 7 used receivers who had participated<BR>   in an earlier study. The proportion of hits expected by chance is .25, and<BR>   Table 13.1 shows that all but Study 1 found proportions higher than .25.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch13_Bem Psychic.csv",
+             },
+             {
+              "name": "Ch12 - BodyWellF - Body Satisfaction and Well-being data for females from Figure 11.24 right panel",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch12_BodyWellF.jasp",
+              "description": " A subset of data_bodywell_fm, reports only for those participants<BR>   who identified as female.  Data is Subjective Wellbeing and Body Satisfaction.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch12_BodyWellF.csv",
+             },
+             {
+              "name": "Ch12 - BodyWellFM - Body Satisfaction and Well-being data from Figure 11.1",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch12_BodyWellFM.jasp",
+              "description": " Survey data from a convenience sample Dominican University students.<BR>   Reported are measures of Subjective Wellbeing abd Body Satisfaction.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch12_BodyWellFM.csv",
+             },
+             {
+              "name": "Ch12 - BodyWellM - Body Satisfaction and Well-being data for males from Figure 11.24 left panel",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch12_BodyWellM.jasp",
+              "description": " A subset of data_bodywell_fm, reports only for those participants<BR>   who identified as male.  Data is Subjective Wellbeing abd Body Satisfaction.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch12_BodyWellM.csv",
+             },
+             {
+              "name": "Ch11 - Campus Involvement - for End-of-Chapter Exercise 11.7",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch11_Campus Involvement.jasp",
+              "description": "<BR>   Clinton conducted a survey of college students to determine the extent to<BR>   which subjective well-being is related to campus involvement (Campus<BR>   Involvement data set on the book website). Participants completed a measure<BR>   of subjective well-being (scale from 1 to 5) and a measure of campus<BR>   involvement (scale from 1 to 5). Participants also reported gender (male or<BR>   female) and commuter status (resident or commuter).  Synthetic data simulated<BR>   to mimic survey data from a class project.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch11_Campus Involvement.csv",
+             },
+             {
+              "name": "Ch18 - Example 18 - Chap 8 paired Ex 8.18",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch18_Example 18.jasp",
+              "description": "<BR>   *Fictitious* data from an unrealistically small HEAT<BR>   study comparing scores for a single group of students before and after a<BR>   workshop on climate change.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch18_Example 18.csv",
+             },
+             {
+              "name": "Ch07 - Clean moral - from Schnall et al. (2008), Study 1, and Johnson et al. (2014)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch07_Clean moral.jasp",
+              "description": "<BR>   Some researchers claim that moral judgments are based not only on rational<BR>   considerations but also on one's current emotional state. To what extent can<BR>   recent emotional experiences influence moral judgments? Schnall et al. (2008)<BR>   examined this question by manipulating feelings of cleanliness and purity and<BR>   then observing the extent that this changes how harshly participants judge<BR>   the morality of others. Inscho Study 1, Schnall et al. asked participants to<BR>   complete a word scramble task with either neutral words (neutral prime) or<BR>   words related to cleanliness (cleanliness prime). All students then completed<BR>   a set of moral judgments about controversial scenarios: Moral judgment is the<BR>   average of six items, each rated on a scale from 0 to 9, with high meaning<BR>   harsh. The data from this study are in the Clean moral file, which also<BR>   contains data from a replication by Johnson et al. (2014)<BR>  <BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch07_Clean moral.csv",
+             },
+             {
+              "name": "Ch03 - College survey 1 - for End-of-Chapter Exercise 3.3",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch03_College survey 1.jasp",
+              "description": " Data from an additional survey of Dominican University students; reports<BR>   various psychological and behavioral measures.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch03_College survey 1.csv",
+             },
+             {
+              "name": "Ch05 - College survey 2 - for End-of-Chapter Exercise 5.4",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch05_College survey 2.jasp",
+              "description": "",
+              "kind": "file"
+              "associated_datafile": "Ch05_College survey 2.csv",
+             },
+             {
+              "name": "Ch9 - DamischRCJ - from 6 Damisch studies, and Calin-Jageman and Caldwell (2014)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch9_DamischRCJ.jasp",
+              "description": "",
+              "kind": "file"
+              "associated_datafile": "Ch9_DamischRCJ.csv",
+             },
+             {
+              "name": "Ch8 - EffronRaj fakenews - from Effron and Raj (2020)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch8_EffronRaj fakenews.jasp",
+              "description": " *Synthetic data* meant to represent Experiment 1 of Effron & Raj, 2020.<BR>   138 U.S. adults, recruited in August 2018 on Prolific Academic, worked<BR>   online. First, they saw six fake headlines four times, each time being asked<BR>   to rate how interesting/engaging/ funny/well-written the headline was. This<BR>   rating task simply ensured that the participants paid some attention to each<BR>   headline. The stimuli were 12 actual fake-news headlines about American<BR>   politics, with accompanying photographs. Half appealed to Republicans and<BR>   half to Democrats. Later, 12 fake headlines were presented one at a time, a<BR>   random mix of the six Old headlines-those seen before-and six New headlines<BR>   not seen previously. It was stated very clearly that independent,<BR>   non-partisan fact-checking had established that all the headlines were not<BR>   true. Participants first rated, on a 0 (not at all) to 100 (extremely) scale,<BR>   the degree to which to which they judged it unethical to publish that<BR>   headline. That's the Unethicality DV. They also rated how likely they would<BR>   be to share the headline if they saw it posted by an acquaintance on social<BR>   media; there were three further similar ratings. Finally, they rated how<BR>   accurate they believed the headline to be.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch8_EffronRaj fakenews.csv",
+             },
+             {
+              "name": "Ch8 - Emotion heartrate - from Lakens (2013)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch8_Emotion heartrate.jasp",
+              "description": " Anger is a powerful emotion. To what extent can feeling angry actually change<BR>   your heart rate? To investigate, Lakens (2013) asked students to record their<BR>   heart rate (in beats per minute) at rest before (baseline) and then while<BR>   recalling a time of intense anger. This is a conceptual replication of a<BR>   classic study by Ekman et al. (1983). Load the Emotion heartrate data set<BR>   from the book website.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch8_Emotion heartrate.csv",
+             },
+             {
+              "name": "Ch11 - Exam Scores - for End-of-Chapter Exercise 11.2",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch11_Exam Scores.jasp",
+              "description": "<BR>   To what extent does initial performance in a class relate to performance on a<BR>   final exam? First exam and final exam scores for nine students enrolled in an<BR>   introductory psychology course. Exam scores are percentages, where 0 = no<BR>   answers correct and 100 = all answers correct.<BR>   Data is synthetic to represent patterns found in a previous psych<BR>   stats course.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch11_Exam Scores.csv",
+             },
+             {
+              "name": "Ch9 - Flag Priming ma - Many Labs replications of Carter et al. (2011)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch9_Flag Priming ma.jasp",
+              "description": "<BR>   To what extent does being exposed to the American flag influence political<BR>   attitudes? One seminal study (Carter et al., 2011) explored this issue by<BR>   subtly exposing participants either to images of the American flag or to<BR>   control images. Next, participants were asked about their political<BR>   attitudes, using a 1-7 rating scale where high scores indicate conservative<BR>   attitudes. Participants exposed to the flag were found to express<BR>   substantially more conservative attitudes. The Many Labs project replicated<BR>   this finding at 25 different locations in the United States.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch9_Flag Priming ma.csv",
+             },
+             {
+              "name": "Ch9 - Gender math IAT ma - Many Labs replications of Nosek et al. (2002)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch9_Gender math IAT ma.jasp",
+              "description": " In EOC Exercise 4 in Chapter 7 we encountered the classic study of Nosek et<BR>   al. (2002), in which male and female participants completed an Implicit<BR>   Association Test (IAT) that measured the extent of negative attitudes towards<BR>   mathematics, compared with art. The study found that women, compared with<BR>   men, tended to have more negative implicit attitudes towards mathematics. The<BR>   Many Labs project repeated this study at locations around the world (Klein et<BR>   al., 2014a, 2014b). Summary data for 30 of these labs are available in Gender<BR>   math IAT ma. Higher scores indicate more implicit bias against mathematics.<BR>   See also data_gender_math_iat for raw data from two specific sites from this<BR>   replication effort.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch9_Gender math IAT ma.csv",
+             },
+             {
+              "name": "Ch07 - Gender math IAT - Ithaca and SDSU replications of Nosek et al. (2002)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch07_Gender math IAT.jasp",
+              "description": " To what extent do men and women differ in their attitudes towards<BR>   mathematics? To investigate, Nosek et al. (2002) asked male and female<BR>   students to complete an Implicit Association Test (IAT)-this is a task<BR>   designed to measure a participant's implicit (non-conscious) feelings towards<BR>   a topic. (If you've never heard of the IAT, try it out here:<BR>   tiny.cc/harvardiat) On this IAT, students were tested for negative feelings<BR>   towards mathematics and art. Scores reflect the degree to which a student had<BR>   more negative implicit attitudes about mathematics than art (positive score:<BR>   more negative feelings about mathematics; 0: same level of negativity to<BR>   both; negative score: more negative feelings about art). data_gender_math_iat<BR>   has data from two labs that participated in a large-scale replication of the<BR>   original study (Klein et al., 2014a, 2014b)<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch07_Gender math IAT.csv",
+             },
+             {
+              "name": "Ch14 - Halagappa - from Halagappa et al. (2007)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch14_Halagappa.jasp",
+              "description": "<BR>   Could eating much less delay Alzheimer's? If so, that would be great news.<BR>   Halagappa et al. (2007) investigated the possibility by using a mouse model,<BR>   meaning they used Alzheimer-prone mice, which were genetically predisposed to<BR>   develop neural degeneration typical of Alzheimer's. The researchers used six<BR>   independent groups of mice, three tested in mouse middle age when 10 months<BR>   old, and three in mouse old age when 17 months. At each age there was a<BR>   control group of normal mice that ate freely (the NFree10 and NFree17<BR>   groups), a group of Alzheimer-prone mice that also ate freely (the AFree10<BR>   and AFree17 groups), and another Alzheimer-prone group restricted to 40% less<BR>   food than normal (the ADiet10 and ADiet17 groups). Table 14.2 lists the<BR>   factors that define the groups, and group labels. I'll discuss one measure of<BR>   mouse cognition: the percent time spent near the target of a water maze, with<BR>   higher values indicating better learning and memory. Table 14.2 reports the<BR>   means and standard deviations for this measure, and group sizes.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch14_Halagappa.csv",
+             },
+             {
+              "name": "Ch12 - Home Prices - for End-of-Chapter Exercise 12.2",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch12_Home Prices.jasp",
+              "description": "<BR>   Maybe you're thinking about buying a house after college? Regression can help<BR>   you hunt for a bargain. Download the Home Prices data set. This file contains<BR>   real estate listings from 1997 to 2003 in a city in California. Let's explore<BR>   the extent to which the size of the home (in square meters) predicts the sale<BR>   price.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch12_Home Prices.csv",
+             },
+             {
+              "name": "Ch07 - Kardas Expt 3 - from Kardas and O'Brien (2018), Experiment 3",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch07_Kardas Expt 3.jasp",
+              "description": "<BR>   Suppose you want to change the battery in your phone, cook the perfect<BR>   souffle, or perform a three-ball juggle. Just as numerous people do every<BR>   day, you might search online to find a video that shows what to do. Suppose<BR>   you watch such a video just once. First question: How well would you then<BR>   predict you could perform the task? Second question: How well would you<BR>   actually perform the task, the first time you tried? Now suppose you watch<BR>   the video many times: Again consider the two questions. These questions were<BR>   investigated in a series of studies by Kardas and O'Brien (2018). Let's first<BR>   do some quick analyses of Kardas Experiments 3 and 4-let's call them Expt 3<BR>   and Expt 4-focusing on the effect of watching a video many times rather than<BR>   once. In Expt 3, participants first watched a brief video of a person<BR>   performing the moonwalk. The Low Exposure group watched the video once, the<BR>   High Exposure group 20 times. Then participants predicted, on a 1 to 10<BR>   scale, how well they felt they would be able to perform the moonwalk<BR>   themselves. Finally, they attempted a single performance of the moonwalk,<BR>   which was videoed. These videos were rated, on the same 1 to 10 scale, by<BR>   independent raters.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch07_Kardas Expt 3.csv",
+             },
+             {
+              "name": "Ch07 - Kardas Expt 4 - from Kardas and O'Brien (2018), Experiment 4",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch07_Kardas Expt 4.jasp",
+              "description": " Suppose you want to change the battery in your phone, cook the perfect<BR>   souffle, or perform a three-ball juggle. Just as numerous people do every<BR>   day, you might search online to find a video that shows what to do. Suppose<BR>   you watch such a video just once. First question: How well would you then<BR>   predict you could perform the task? Second question: How well would you<BR>   actually perform the task, the first time you tried? Now suppose you watch<BR>   the video many times: Again consider the two questions. These questions were<BR>   investigated in a series of studies by Kardas and O'Brien (2018). Let's first<BR>   do some quick analyses of Kardas Experiments 3 and 4-let's call them Expt 3<BR>   and Expt 4-focusing on the effect of watching a video many times rather than<BR>   once. Expt 4 was conducted online with participants recruited from Amazon's<BR>   Mechanical Turk, who are typically more diverse than students. The online<BR>   task was based on a mirror-drawing game developed by Bob and students (Cusack<BR>   et al., 2015, tiny.cc/bobmirrortrace). Participants first read a description<BR>   of the game and the scoring procedure. To play, you use your computer<BR>   trackpad to trace a target line, as accurately and quickly as you can. The<BR>   task is tricky because you can see only a mirror image of the path you are<BR>   tracing with a finger on the trackpad. A running score is displayed. The<BR>   final score is the percentage match between the target line and the path you<BR>   traced, so scores can range from 0 to 100<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch07_Kardas Expt 4.csv",
+             },
+             {
+              "name": "Ch8 - Labels flavor - from Floretta-Schiller et al. (2015)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch8_Labels flavor.jasp",
+              "description": " To what extent do brand labels influence perceptions of a product? To<BR>   investigate, participants were asked to participate in a taste test. All<BR>   participants were actually given the same grape juice, but one glass was<BR>   poured from a bottle labeled 'Organic' and the other glass from a bottle<BR>   labeled 'Generic'. After each tasting (in counterbalanced order),<BR>   participants were asked to rate how much they enjoyed the juice on a scale<BR>   from 1 (not at all) to 10 (very much). Participants were also asked to say<BR>   how much they'd be willing to pay for a large container of that juice on a<BR>   scale from $1 to $10. Load the Labels flavor data set from the book website.<BR>   These data were collected as part of a class project by Floretta-Schiller et<BR>   al. (2015), whose work was inspired by a very clever study looking at the<BR>   effects of fast-food wrappers on children's enjoyment of food (Robinson et<BR>   al., 2007).<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch8_Labels flavor.csv",
+             },
+             {
+              "name": "Ch14 - Latimier 3Groups - 3 groups in Latimier et al. (2019)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch14_Latimier 3Groups.jasp",
+              "description": "<BR>   The researchers were interested in how different study approaches might<BR>   impact learning. Working in France, they created three independent groups,<BR>   each comprising 95 adults. Participants worked online through seven learning<BR>   modules about DNA. The Reread group worked through a module, then worked<BR>   through it a second time before going on to the next module. The Quiz group<BR>   worked through a module, then had to complete a quiz before going on to the<BR>   next module. The Prequiz group had to work through the quiz before seeing the<BR>   presentation of a module, then went on to the quiz and presentation of the<BR>   next module. Participants received feedback and a brief explanation after<BR>   answering each question in a quiz, and could take as long as they wished to<BR>   work through each module and quiz. Seven days later, participants completed a<BR>   final test.<BR>   data_latimier_3groups is the full data set.<BR>   To facilitate different student exercises, there are also separate data<BR>   entities for each group (data_latimier_prequiz, data_latimier_reread, etc.),<BR>   and for every *pair* of groups (data_latimier_quiz_prequiz, etc.).<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch14_Latimier 3Groups.csv",
+             },
+             {
+              "name": "Ch03 - Latimier Prequiz - Prequiz group in Latimier et al. (2019)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch03_Latimier Prequiz.jasp",
+              "description": "<BR>   Just the Prequiz group from Latimier et al., 2019<BR>   See full details in data_latimier_3_groups<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch03_Latimier Prequiz.csv",
+             },
+             {
+              "name": "Ch07 - Latimier Quiz Prequiz - Quiz and Prequiz groups in Latimier et al. (2019)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch07_Latimier Quiz Prequiz.jasp",
+              "description": "<BR>   Just the Quiz (RQ) an Prequiz (QR) groups from Latimier et al., 2019<BR>   See full details in data_latimier_3_groups<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch07_Latimier Quiz Prequiz.csv",
+             },
+             {
+              "name": "Ch03 - Latimier Quiz - Quiz group in Latimier et al. (2019)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch03_Latimier Quiz.jasp",
+              "description": "<BR>   Just the Quiz group from Latimier et al., 2019<BR>   See full details in data_latimier_3_groups<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch03_Latimier Quiz.csv",
+             },
+             {
+              "name": "Ch07 - Latimier Reread Prequiz - Reread and Prequiz groups in Latimier et al. (2019)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch07_Latimier Reread Prequiz.jasp",
+              "description": "<BR>   Just the Reread (RR) an Prequiz (QR) groups from Latimier et al., 2019<BR>   See full details in data_latimier_3_groups<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch07_Latimier Reread Prequiz.csv",
+             },
+             {
+              "name": "Ch07 - Latimier Reread Quiz - Reread and Quiz groups in Latimier et al. (2019)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch07_Latimier Reread Quiz.jasp",
+              "description": "<BR>   Just the Reread Quiz groups from Latimier et al., 2019<BR>   See full details in data_latimier_3_groups<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch07_Latimier Reread Quiz.csv",
+             },
+             {
+              "name": "Ch03 - Latimier Reread - Reread group in Latimier et al. (2019)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch03_Latimier Reread.jasp",
+              "description": "<BR>   Just the Reread group from Latimier et al., 2019<BR>   See full details in data_latimier_3_groups<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch03_Latimier Reread.csv",
+             },
+             {
+              "name": "Ch11 - Macnamara r ma - from Macnamara et al. (2014)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch11_Macnamara r ma.jasp",
+              "description": " Is genius born or made? Could any of us be Michael Jordan or Mozart if we<BR>   worked sufficiently hard to develop the requisite skills? Meta-analysis of<BR>   correlations can help answer such questions. The issue here is the extent<BR>   that practice and effort may be sufficient for achieving the highest levels<BR>   of expertise. Ericsson et al. (1993) argued that years of effort is what<BR>   matters most: 'Many characteristics once believed to reflect innate talent<BR>   are actually the result of intense practice extended for a minimum of 10<BR>   years' (p. 363). This view was enormously popularized by Malcolm Gladwell<BR>   (2008), who argued in his book Outliers that 10,000 hours of focused practice<BR>   is the key to achieving expertise. However, this view is now being<BR>   challenged, with one important contribution being a large meta-analysis of<BR>   correlations between amount of intense practice and level of achievement:<BR>   Macnamara et al. (2014) combined 157 correlations reported in a wide range of<BR>   fields, from sports to music and education, and found correlation of only r =<BR>   .35 (.30, .39). Table 11.1 shows the 16 main correlations for music, from<BR>   Macnamara et al. (2014).<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch11_Macnamara r ma.csv",
+             },
+             {
+              "name": "Ch9 - McCabeMichael brain - from Michael et al. (2013)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch9_McCabeMichael brain.jasp",
+              "description": " You've probably seen cross sections of the brain with<BR>   brightly colored areas indicating which brain regions are most active during<BR>   a particular type of cognition or emotion. Search online for fMRI (functional<BR>   magnetic resonance imaging) brain scans to see such pictures and learn how<BR>   they are made. They can be fascinating-are we at last able to see how<BR>   thinking works? In 2008, McCabe and Castel published studies that<BR>   investigated how adding a brain picture might alter judgments of the<BR>   credibility of a scientific article. For one group of participants, an<BR>   article was accompanied by a brain image that was irrelevant to the article.<BR>   For a second, independent group, there was no image. Participants read the<BR>   article, then gave a rating of the statement 'The scientific reasoning in the<BR>   article made sense'. The response options were 1 (strongly disagree), 2<BR>   (disagree), 3 (agree), and 4 (strongly agree). The researchers reported that<BR>   mean ratings were higher with a brain picture than without, but that the<BR>   difference was small. It seemed that an irrelevant brain picture may have<BR>   some, but only a small influence. The authors drew appropriately cautious<BR>   conclusions, but the result quickly attracted attention and there were many<BR>   media reports that greatly overstated it. At least according to the popular<BR>   media, it seemed that adding a brain picture made any story convincing.<BR>   Search on 'McCabe seeing is believing', or similar, to find media reports and<BR>   blog posts. Some warned readers to watch out for brain pictures, which, they<BR>   said, can trick you into believing things that aren't true. The result<BR>   intrigued some New Zealander colleagues of mine who discovered that, despite<BR>   its wide recognition, the finding hadn't been replicated. They ran<BR>   replication studies using the materials used by the original researchers, and<BR>   found generally small ESs. I joined the team at the data analysis stage and<BR>   the research was published (Michael et al., 2013). I'll discuss here a<BR>   meta-analysis of two of the original studies and eight replications by our<BR>   team. The studies were sufficiently similar for meta-analysis, especially<BR>   considering that all the Michael studies were designed to have many features<BR>   that matched the original studies.  This data set does *not* include<BR>   two additional critique studies run by the Michael team.  See also<BR>   data_mccabemichael_brain2<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch9_McCabeMichael brain.csv",
+             },
+             {
+              "name": "Ch9 - McCabeMichael brain2 - from Michael et al. (2013)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch9_McCabeMichael brain2.jasp",
+              "description": " Same as data_mccabemichael_brain but includes two additional critique studies<BR>   run by the Michael team.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch9_McCabeMichael brain2.csv",
+             },
+             {
+              "name": "Ch15 - MeditationBrain - from Holzel et al. (2011)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch15_MeditationBrain.jasp",
+              "description": " My example is a well-known study of mindfulness meditation by Holzel et al.<BR>   (2011). People who wanted to reduce stress, and were not experienced<BR>   meditators, were assigned to a Meditation (n = 16) or a Control (n = 17)<BR>   group. The Meditation group participated in 8 weeks of intensive training and<BR>   practice of mindfulness meditation. The researchers used a questionnaire to<BR>   assess a range of emotional and cognitive variables both before (Pretest) and<BR>   after (Posttest) the 8-week period. All assessment was conducted while the<BR>   participants were not meditating. The study is notable for including brain<BR>   imaging to assess possible changes in participants' brains from Pretest to<BR>   Posttest. The researchers measured gray matter concentration, which increases<BR>   in brain regions that experience higher and more frequent activation. The<BR>   researchers expected that the hippocampus may be especially responsive to<BR>   meditation because it has been implicated in the regulation of emotion,<BR>   arousal, and general responsiveness. They therefore included in their planned<BR>   analysis the assessment of any changes to gray matter concentration in the<BR>   hippocampus.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch15_MeditationBrain.csv",
+             },
+             {
+              "name": "Ch14 - OrganicMoral - from Eskine (2013)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch14_OrganicMoral.jasp",
+              "description": "<BR>   To what extent might choosing organic foods make us morally smug? To<BR>   investigate, Eskine (2013) asked participants to rate images of organic food,<BR>   neutral (control) food, or comfort food. Next, under the guise of a different<BR>   study, all participants completed a moral judgment scale in which they read<BR>   different controversial scenarios and rated how morally wrong they judged<BR>   them to be (scale of 1-7, high judgments mean more wrong). Table 14.7 shows<BR>   summary data, which are also available in the first four variables in the<BR>   OrganicMoral file. In that file you can see two further variables, which<BR>   report full data-we'll come to these shortly. Here we use the summary data.<BR>   After the results of Eskine (2013) were published, Moery and Calin-Jageman<BR>   (2016) conducted a series of close replications. We obtained original<BR>   materials from Eskine, piloted the procedure, and preregistered our sampling<BR>   and analysis plan. The OSF page, osf.io/atkn7, has all the details. The data<BR>   from one of these close replications are in the last two variables of the<BR>   OrganicMoral file. For this replication study, group names are in the<BR>   variable ReplicationGroup and moral judgments in MoralJudgment. (You may need<BR>   to scroll right to see these variables.)<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch14_OrganicMoral.csv",
+             },
+             {
+              "name": "ChXX - Pen Laptop - Pen laptop example from previous edition",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/ChXX_Pen Laptop.jasp",
+              "description": " % transcription scores from pen and laptop group of Meuller et al., 2014<BR>  ",
+              "kind": "file"
+              "associated_datafile": "ChXX_Pen Laptop.csv",
+             },
+             {
+              "name": "Ch9 - PowerPerformance ma - from Burgmer and Englich (2012), and Cusack et al. (2015)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch9_PowerPerformance ma.jasp",
+              "description": " To what extent could feeling powerful affect your performance at motor<BR>   skills? To investigate, Burgmer and Englich (2012) assigned German<BR>   participants to either power or control conditions and then asked them to<BR>   play golf (Experiment 1) or darts (Experiment 2). They found that<BR>   participants manipulated to feel powerful performed substantially better than<BR>   those in the control condition. To study this finding further, Cusack et al.<BR>   (2015) conducted five replications in the United States. Across these<BR>   replications they tried different ways of manipulating power, different types<BR>   of tasks (golf, mirror tracing, and a cognitive task), different levels of<BR>   difficulty, and different types of participant pools (undergraduates and<BR>   online). Summary data from all seven studies are available in<BR>   PowerPerformance ma.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch9_PowerPerformance ma.csv",
+             },
+             {
+              "name": "Ch14 - RattanMotivation - from Rattan et al. (2012)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch14_RattanMotivation.jasp",
+              "description": " How do you think you would react to feedback that gave encouragement and<BR>   reassurance, or, instead, encouragement and challenge? Carol Dweck and her<BR>   colleagues have investigated many such questions about how people respond to<BR>   different types of feedback. My next example comes from Dweck's research<BR>   group and illustrates data analysis that starts with the full data, rather<BR>   than only summary statistics. Rattan et al. (2012) asked their college<BR>   student participants to imagine they were undertaking a mathematics course<BR>   and had just received a low score (65%) on the first test of the year.<BR>   Participants were assigned randomly into three groups, which received<BR>   different feedback along with the low score. The Comfort group received<BR>   positive encouragement and also reassurance, the Challenge group received<BR>   positive encouragement and also challenge, and the Control group received<BR>   just the positive encouragement. Participants then responded to a range of<BR>   questions about how they felt about the course and their professor. I'll<BR>   discuss data for their ratings of their own motivation toward mathematics,<BR>   made after they had received the feedback.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch14_RattanMotivation.csv",
+             },
+             {
+              "name": "Ch14 - ReligionSharing - for End-of-Chapter Exercise 14.3",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch14_ReligionSharing.jasp",
+              "description": " To what extent is a religious upbringing related to prosocial behavior in<BR>   childhood? To investigate, a large international sample of children was asked<BR>   to play a game in which they were given 10 stickers but then asked if they<BR>   would give some of these stickers away to another child who had not been able<BR>   to be tested that day. The number of stickers donated was considered a<BR>   measure of altruistic sharing. In addition, the parents of each child<BR>   reported the family's religion. Summary data provided.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch14_ReligionSharing.csv",
+             },
+             {
+              "name": "Ch03 - Religious belief - for End-of-Chapter Exercise 3.5",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch03_Religious belief.jasp",
+              "description": " Let's look at some data about religious beliefs. The Religious belief file<BR>   has data from a large online survey in which participants were asked to<BR>   report, on a scale from 0 to 100, their belief in the existence of God.  Age<BR>   was also reported.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch03_Religious belief.csv",
+             },
+             {
+              "name": "Ch15 - SelfExplain - from McEldoon et al. (2013)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch15_SelfExplain.jasp",
+              "description": " Self-explaining is a learning strategy where students write or say their own<BR>   explanations of the material they are studying. Self-explaining has generally<BR>   been found to be more effective than standard studying, but it may also take<BR>   more time. This raises the question of whether it's the study strategy or the<BR>   extra time that benefits learning. To explore this issue, grade school<BR>   children took a pretest of mathematics conceptual knowledge, studied<BR>   mathematics problems, and then took a similar posttest (McEldoon et al.,<BR>   2013). Participants were randomly assigned to one of two study conditions:<BR>   normal study + more practice (More Practice group), or self-explaining<BR>   (Self-Explain group). The first condition was intended to make time spent<BR>   learning to be similar for the two groups. You can find part of the data from<BR>   this study in SelfExplain, the scores being percent correct.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch15_SelfExplain.csv",
+             },
+             {
+              "name": "Ch14 - SimmonsCredibility - from Simmons and Nelson (2020)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch14_SimmonsCredibility.jasp",
+              "description": " You're excited! Your company has developed a wonderful new weight-loss<BR>   program, and now it's your job to develop the ad campaign. Should you choose<BR>   a BeforeAfter pair of pictures, as in Figure 14.1, top panel? Or might a<BR>   Progressive sequence of pictures of the same person, as in the bottom panel,<BR>   be more effective? Pause, think, and discuss. Which would you choose, and<BR>   why? You might think that BeforeAfter is simpler and more dramatic. On the<BR>   other hand, Progressive highlights the steady improvement that you claim the<BR>   program will deliver. You're probably not surprised to learn that BeforeAfter<BR>   is used often and has long been a favorite of the advertising industry,<BR>   whereas Progressive is used only rarely. Luca Cian and colleagues (Cian et<BR>   al., 2020) were curious to know the extent to which BeforeAfter is actually<BR>   more effective, appealing, and credible than Progressive, or, indeed, whether<BR>   Progressive might score more highly. They reported seven studies of various<BR>   aspects of that question. I'll focus on their Study 2, in which they used<BR>   three independent groups to compare all three conditions illustrated in<BR>   Figure 14.1. The BeforeAfterInfo condition, in the middle panel, comprises<BR>   three BeforeAfter pairs, thus providing extra information about the before<BR>   and after endpoints. The researchers included this condition in case any<BR>   advantage of Progressive might stem simply from having more images, rather<BR>   than because it illustrates a clear progressive sequence. They randomly<BR>   assigned 213 participants from MTurk to one of the three groups. Participants<BR>   were asked to 'imagine that you have decided to lose some weight', then saw<BR>   one of the three ads for a weight loss program called MRMDiets. They then<BR>   answered the question 'How would you evaluate MRMDiets?' by choosing a 1-7<BR>   response on several scales, including Unlikeable-Likable,<BR>   Ineffective-Effective, and Not credible-Credible. The researchers averaged<BR>   six such scores to give an overall Credibility score, on the 1-7 scale, with<BR>   7 being the most credible. Simmons and Nelson (2020) were sufficiently<BR>   intrigued to carry out two substantial very close replications. With the<BR>   cooperation of the original researchers, they used the same materials and<BR>   procedure. They used much larger groups and preregistered their research<BR>   plan, including data analysis plan. I'll focus on their first replication, in<BR>   which 761 participants from MTurk were randomized to the three groups.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch14_SimmonsCredibility.csv",
+             },
+             {
+              "name": "Ch11 - Sleep Beauty - for End-of-Chapter Exercise 11.6",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch11_Sleep Beauty.jasp",
+              "description": " Is there really such a thing as beauty sleep? To investigate, researchers<BR>   decided to examine the extent to which sleep relates to attractiveness. Each<BR>   of 70 college students self-reported the amount of sleep they had the night<BR>   before. In addition, a photograph was taken of each participant and rated for<BR>   attractiveness on a scale from 1 to 10 by two judges of the opposite gender.<BR>   The average rating score was used. You can download this data set (Sleep<BR>   Beauty) from the book website.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch11_Sleep Beauty.csv",
+             },
+             {
+              "name": "Ch15 - SmithRecall - from Smith et al. (2016)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch15_SmithRecall.jasp",
+              "description": "",
+              "kind": "file"
+              "associated_datafile": "Ch15_SmithRecall.csv",
+             },
+             {
+              "name": "Ch06 - Stickgold - from Stickgold et al. (2000)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch06_Stickgold.jasp",
+              "description": "<BR>   Stickgold et al. (2000) found that, remarkably, performance on a visual<BR>   discrimination task actually improved over the 48-96 hours after initial<BR>   training, even without practice during that time. However, what if<BR>   participants were sleep deprived during that period? They trained 11<BR>   participants in that new skill, then all were sleep deprived. The data were<BR>   (-14.7, -10.7, -10.7, 2.2, 2.4, 4.5, 7.2, 9.6, 10, 21.3, 21.8)-or download<BR>   the Stickgold data set from the book website. The data are the changes in<BR>   performance scores from immediately after training to after the night without<BR>   sleep: 0 represents no change, positive scores represent improvement, and<BR>   negative scores represent decline. Data set courtesy of<BR>   DataCrunch (tiny.cc/Stickgold)<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch06_Stickgold.csv",
+             },
+             {
+              "name": "Ch14 - StudyStrategies - from O'Reilly et al. (1998)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch14_StudyStrategies.jasp",
+              "description": "<BR>   To what extent does study strategy influence learning? To investigate,<BR>   psychology students were randomly assigned to three groups and asked to learn<BR>   biology facts using one of three different strategies: a) Self-Explain<BR>   (explaining for each fact what new knowledge is gained and how it relates to<BR>   what is already known), b) Elab Interrogation (elaborative interrogation:<BR>   stating for each fact why it makes sense), or c) Repetition Control (stating<BR>   each fact over and over). After studying, students took a 25-point<BR>   fill-the-blank test (O'Reilly et al., 1998)<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch14_StudyStrategies.csv",
+             },
+             {
+              "name": "Ch11 - Thomason 1 - from Thomason 1",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch11_Thomason 1.jasp",
+              "description": " Summary data from an unpublished study by Neil Thomason and colleagues, who<BR>   were interested in ways to enhance students' critical thinking. They were<BR>   investigating argument mapping, which is a promising way to use diagrams to<BR>   represent the structure of arguments. Students in their study completed an<BR>   established test of critical thinking (the Pretest), then a critical thinking<BR>   course based on argument mapping, then a second version of the test (the<BR>   Posttest).<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch11_Thomason 1.csv",
+             },
+             {
+              "name": "Ch15 - VideogameAggression - from Hilgard (2015)",
+              "path": "../../../Data Library/Books/Cumming & Calin-Jageman - Introduction to the New Statistics/Ch15_VideogameAggression.jasp",
+              "description": " Video games can be violent and they can also be challenging. To what extent<BR>   might these factors cause aggressive behavior? To explore, Hilgard (2015)<BR>   asked male participants to play one of four versions of a video game for 15<BR>   minutes. The game was customized so that it could vary in violence (shooting<BR>   zombies or helping aliens) and difficulty (targets controlled by tough AI or<BR>   dumb AI). After the game, players were provoked by being given an insulting<BR>   evaluation by a confederate. Participants then got to decide how long the<BR>   confederate should hold their hand in painfully cold ice water (between 0 and<BR>   80 seconds), and this was taken as a measure of aggressive behavior. You can<BR>   find the materials and analysis plan for this study on the Open Science<BR>   Framework: osf. io/cwenz. This is a simplified version of the full data set.<BR>  ",
+              "kind": "file"
+              "associated_datafile": "Ch15_VideogameAggression.csv",
+             },
+          ]
+        }
+      ],
