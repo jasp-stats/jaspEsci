@@ -6,7 +6,7 @@ Description
 	name		    : "jaspesci"
 	title		    : qsTr("ESCI (Beta)")
 	description	: qsTr("ESCI in JASP")
-	version		  : "0.1"
+	version			: "0.20.0"
 	author		  : "Robert Calin-Jageman"
 	maintainer	: "Robert Calin-Jageman <rcalinjageman@dom.edu>"
 	website		  : "https://thenewstatistics.com/"
