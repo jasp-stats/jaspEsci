@@ -12,7 +12,7 @@ jobs:
     env:
       REPO_KEY: ${{ secrets.REPOS_KEY }}
       WEBLATE_KEY: ${{ secrets.WEBLATE_KEY }}
-      QML_REPO: jaspesci-qml
+      QML_REPO: jaspesci
       R_REPO: jaspesci-r
 
     steps:
