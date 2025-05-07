@@ -685,19 +685,9 @@ msgctxt "ScatterplotOptions|"
 msgid "<i>Z</i> scores rather than raw scores"
 msgstr ""
 
-#: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:350
-msgctxt "ScatterplotOptions|"
-msgid ""
-msgstr ""
-
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:356
 msgctxt "ScatterplotOptions|"
 msgid "<i>r</i> value on scatterplot"
-msgstr ""
-
-#: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:362
-msgctxt "ScatterplotOptions|"
-msgid ""
 msgstr ""
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/UnitsLayout.qml:8
@@ -763,11 +753,6 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:94
 msgctxt "jasp_describe|"
 msgid "<i>z</i> lines"
-msgstr ""
-
-#: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:98
-msgctxt "jasp_describe|"
-msgid ""
 msgstr ""
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:103
@@ -1924,11 +1909,6 @@ msgctxt "jasp_estimate_rdiff_two|"
 msgid "Grouping variable"
 msgstr ""
 
-#: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:89
-msgctxt "jasp_estimate_rdiff_two|"
-msgid ""
-msgstr ""
-
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:93
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<b>Reference group</b>"
@@ -2429,4 +2409,24 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_r.qml:108
 msgctxt "jasp_meta_r|"
 msgid "Prediction intervals"
+msgstr ""
+
+#: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:350
+msgctxt "ScatterplotOptions|"
+msgid ""
+msgstr ""
+
+#: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:362
+msgctxt "ScatterplotOptions|"
+msgid ""
+msgstr ""
+
+#: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:98
+msgctxt "jasp_describe|"
+msgid ""
+msgstr ""
+
+#: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:89
+msgctxt "jasp_estimate_rdiff_two|"
+msgid ""
 msgstr ""
