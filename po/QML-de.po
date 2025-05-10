@@ -1,79 +1,86 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-05-11 08:03+0000\n"
+"Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspesci/de/>"
+"\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12-dev\n"
 "X-Qt-Contexts: true\n"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:7
 msgctxt "Description|"
 msgid "ESCI (Beta)"
-msgstr ""
+msgstr "ESCI (Beta)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:8
 msgctxt "Description|"
 msgid "ESCI in JASP"
-msgstr ""
+msgstr "ESCI in JASP"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:18
 msgctxt "Description|"
 msgid "ESCI: Describe"
-msgstr ""
+msgstr "ESCI: Beschreiben"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:19
 msgctxt "Description|"
 msgid "Describe"
-msgstr ""
+msgstr "Beschreiben"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:26
 msgctxt "Description|"
 msgid "Means and Medians"
-msgstr ""
+msgstr "Mittelwerte und Mediane"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:31
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Single Group"
-msgstr ""
+msgstr "ESCI Mittelwerte und Mediane: Einzelne Gruppe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:32
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:78
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:100
 msgctxt "Description|"
 msgid "Single Group"
-msgstr ""
+msgstr "Einzelgruppe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:39
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Two Groups"
-msgstr ""
+msgstr "ESCI Mittelwerte und Mediane: Zwei Gruppen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:40
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:86
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:108
 msgctxt "Description|"
 msgid "Two Groups"
-msgstr ""
+msgstr "Zwei Gruppen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:47
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Paired"
-msgstr ""
+msgstr "ESCI Mittelwerte und Mediane: Paarweise"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:48
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:116
 msgctxt "Description|"
 msgid "Paired"
-msgstr ""
+msgstr "Paarweise"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:55
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Independent Groups Contrast"
-msgstr ""
+msgstr "ESCI Mittelwerte und Mediane: Kontrast unabhängiger Gruppen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:56
 msgctxt "Description|"
 msgid "Independent Groups Contrast"
-msgstr ""
+msgstr "Kontrast unabhängiger Gruppen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:63
 msgctxt "Description|"
@@ -89,17 +96,17 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:146
 msgctxt "Description|"
 msgid "Correlations"
-msgstr ""
+msgstr "Korrelationen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:77
 msgctxt "Description|"
 msgid "ESCI Correlations: Single Group"
-msgstr ""
+msgstr "ESCI Korrelationen: Einzelne Gruppe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:85
 msgctxt "Description|"
 msgid "ESCI Correlations: Two Groups"
-msgstr ""
+msgstr "ESCI Korrelationen: Zwei Gruppen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:94
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:154
@@ -125,32 +132,32 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:124
 msgctxt "Description|"
 msgid "Meta-Analysis"
-msgstr ""
+msgstr "Metaanalyse"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:129
 msgctxt "Description|"
 msgid "ESCI Meta-Analysis: Means"
-msgstr ""
+msgstr "ESCI Metaanalyse: Mittelwerte"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:130
 msgctxt "Description|"
 msgid "Means"
-msgstr ""
+msgstr "Mittelwerte"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:137
 msgctxt "Description|"
 msgid "ESCI Meta-Analysis: Difference in Means"
-msgstr ""
+msgstr "ESCI Metaanalyse: Differenz von Mittelwerten"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:138
 msgctxt "Description|"
 msgid "Difference in Means"
-msgstr ""
+msgstr "Differenz von Mittelwerten"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:145
 msgctxt "Description|"
 msgid "ESCI Meta-Analysis: Correlations"
-msgstr ""
+msgstr "ESCI Metaanalyse: Korrelationen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:153
 msgctxt "Description|"
@@ -176,26 +183,26 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:498
 msgctxt "AestheticsAll|"
 msgid "Shape"
-msgstr ""
+msgstr "Form"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:94
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:531
 msgctxt "AestheticsAll|"
 msgid "Size"
-msgstr ""
+msgstr "Größe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:126
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:566
 msgctxt "AestheticsAll|"
 msgid "Outline"
-msgstr ""
+msgstr "Umriss"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:159
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:405
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:599
 msgctxt "AestheticsAll|"
 msgid "Fill"
-msgstr ""
+msgstr "Füllung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:192
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:350
@@ -203,47 +210,47 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:632
 msgctxt "AestheticsAll|"
 msgid "Transparency"
-msgstr ""
+msgstr "Transparenz"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:223
 msgctxt "AestheticsAll|"
 msgid "<b>CI</b>"
-msgstr ""
+msgstr "<b>KI</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:243
 msgctxt "AestheticsAll|"
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:272
 msgctxt "AestheticsAll|"
 msgid "Thickness"
-msgstr ""
+msgstr "Dicke"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:313
 msgctxt "AestheticsAll|"
 msgid "Color"
-msgstr ""
+msgstr "Farbe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsAll.qml:385
 msgctxt "AestheticsAll|"
 msgid "<b>Error distribution</b>"
-msgstr ""
+msgstr "<b>Fehlerverteilung</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:14
 msgctxt "AestheticsSummary|"
 msgid "<b>Summary</b>"
-msgstr ""
+msgstr "<b>Zusammenfassung</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:16
 msgctxt "AestheticsSummary|"
 msgid "Shape"
-msgstr ""
+msgstr "Form"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:25
 msgctxt "AestheticsSummary|"
 msgid "Size"
-msgstr ""
+msgstr "Größe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:33
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:56
@@ -251,53 +258,53 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:69
 msgctxt "AestheticsSummary|"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:35
 msgctxt "AestheticsSummary|"
 msgid "Outline"
-msgstr ""
+msgstr "Umriss"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:45
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:50
 msgctxt "AestheticsSummary|"
 msgid "Fill"
-msgstr ""
+msgstr "Füllung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummary.qml:58
 msgctxt "AestheticsSummary|"
 msgid "Transparency"
-msgstr ""
+msgstr "Transparenz"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummaryByGroup.qml:39
 msgctxt "AestheticsSummaryByGroup|"
 msgid "Shape"
-msgstr ""
+msgstr "Form"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummaryByGroup.qml:64
 msgctxt "AestheticsSummaryByGroup|"
 msgid "Size"
-msgstr ""
+msgstr "Größe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummaryByGroup.qml:89
 msgctxt "AestheticsSummaryByGroup|"
 msgid "Outline"
-msgstr ""
+msgstr "Umriss"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummaryByGroup.qml:114
 msgctxt "AestheticsSummaryByGroup|"
 msgid "Fill"
-msgstr ""
+msgstr "Füllung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/AestheticsSummaryByGroup.qml:139
 msgctxt "AestheticsSummaryByGroup|"
 msgid "Transparency"
-msgstr ""
+msgstr "Transparenz"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ConfLevel.qml:10
 msgctxt "ConfLevel|"
 msgid "Confidence level"
-msgstr ""
+msgstr "Konfidenzniveau"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/DataLayout.qml:8
 msgctxt "DataLayout|"
@@ -307,109 +314,109 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ErrorLayout.qml:8
 msgctxt "ErrorLayout|"
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:9
 msgctxt "FigureOptions|"
 msgid "Figure options"
-msgstr ""
+msgstr "Diagramm-Optionen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:38
 msgctxt "FigureOptions|"
 msgid "<b>Dimensions</b>"
-msgstr ""
+msgstr "<b>Abmessungen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:40
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:225
 msgctxt "FigureOptions|"
 msgid "Width"
-msgstr ""
+msgstr "Breite"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:51
 msgctxt "FigureOptions|"
 msgid "Height"
-msgstr ""
+msgstr "Höhe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:64
 msgctxt "FigureOptions|"
 msgid "<b><i>Y</i> axis</b>"
-msgstr ""
+msgstr "<b><i>Y</i>-Achse</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:66
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:140
 msgctxt "FigureOptions|"
 msgid "Label"
-msgstr ""
+msgstr "Beschriftung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:79
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:153
 msgctxt "FigureOptions|"
 msgid "Tick font size"
-msgstr ""
+msgstr "Schriftgröße Teilstriche"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:89
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:164
 msgctxt "FigureOptions|"
 msgid "Label font size"
-msgstr ""
+msgstr "Schriftgröße Beschriftungen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:103
 msgctxt "FigureOptions|"
 msgid "Min"
-msgstr ""
+msgstr "Min"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:112
 msgctxt "FigureOptions|"
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:125
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:208
 msgctxt "FigureOptions|"
 msgid "Num. tick marks"
-msgstr ""
+msgstr "Anz. Teilstriche"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:138
 msgctxt "FigureOptions|"
 msgid "<b><i>X</i> axis</b>"
-msgstr ""
+msgstr "<b><i>X</i>-Achse</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:181
 msgctxt "FigureOptions|"
 msgid "Simple labels"
-msgstr ""
+msgstr "Einfache Beschriftungen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:191
 msgctxt "FigureOptions|"
 msgid "<b>Difference axis</b>"
-msgstr ""
+msgstr "<b>Differenz-Achse</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:193
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:199
 msgctxt "FigureOptions|"
 msgid "Units"
-msgstr ""
+msgstr "Einheiten"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:224
 msgctxt "FigureOptions|"
 msgid "<b>Distributions</b>"
-msgstr ""
+msgstr "<b>Verteilungen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:238
 msgctxt "FigureOptions|"
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:256
 msgctxt "FigureOptions|"
 msgid "<b>Data</b>"
-msgstr ""
+msgstr "<b>Daten</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:257
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:262
 msgctxt "FigureOptions|"
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:272
 msgctxt "FigureOptions|"
@@ -417,20 +424,21 @@ msgid "Spread"
 msgstr ""
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/FigureOptions.qml:288
+#, fuzzy
 msgctxt "FigureOptions|"
 msgid "Offset from CI"
-msgstr ""
+msgstr "Versatz vom KI"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/HeOptions.qml:9
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/HeOptions.qml:32
 msgctxt "HeOptions|"
 msgid "Hypothesis evaluation"
-msgstr ""
+msgstr "Hypothesen-Auswertung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/HeOptions.qml:43
 msgctxt "HeOptions|"
 msgid "Evaluate against <i>H</i>₀ of: "
-msgstr ""
+msgstr "Auswerten gegen <i>H</i>₀ von: "
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/HeOptions.qml:65
 msgctxt "HeOptions|"
