@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-11 08:03+0000\n"
+"PO-Revision-Date: 2025-05-24 21:09+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspesci/de/>"
 "\n"
@@ -85,12 +85,12 @@ msgstr "Kontrast unabhängiger Gruppen"
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:63
 msgctxt "Description|"
 msgid "ESCI Means and Medians: 2x2 Factorial"
-msgstr ""
+msgstr "ESCI Mittelwerte und Mediane: 2x2 Faktoriell"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:64
 msgctxt "Description|"
 msgid "2x2 Factorial"
-msgstr ""
+msgstr "2x2 Faktoriell"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:72
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:146
@@ -443,143 +443,144 @@ msgstr "Auswerten gegen <i>H</i>₀ von: "
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/HeOptions.qml:65
 msgctxt "HeOptions|"
 msgid "+/- "
-msgstr ""
+msgstr "+/- "
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/HeOptions.qml:105
 msgctxt "HeOptions|"
 msgid "Color for null hypothesis"
-msgstr ""
+msgstr "Farbe für Nullhypothese"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:7
 msgctxt "MetaAesthetics|"
 msgid "Aesthetics"
-msgstr ""
+msgstr "Ästhetik"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:59
 msgctxt "MetaAesthetics|"
 msgid "Shape"
-msgstr ""
+msgstr "Form"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:94
 msgctxt "MetaAesthetics|"
 msgid "Outline"
-msgstr ""
+msgstr "Umriss"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:130
 msgctxt "MetaAesthetics|"
 msgid "Fill"
-msgstr ""
+msgstr "Füllung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:165
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:327
 msgctxt "MetaAesthetics|"
 msgid "Transparency"
-msgstr ""
+msgstr "Transparenz"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:201
 msgctxt "MetaAesthetics|"
 msgid "<b>CI</b>"
-msgstr ""
+msgstr "<b>KI</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:221
 msgctxt "MetaAesthetics|"
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:253
 msgctxt "MetaAesthetics|"
 msgid "Thickness"
-msgstr ""
+msgstr "Dicke"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaAesthetics.qml:292
 msgctxt "MetaAesthetics|"
 msgid "Color"
-msgstr ""
+msgstr "Farbe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:9
 msgctxt "MetaFigureOptions|"
 msgid "Figure options"
-msgstr ""
+msgstr "Diagrammoptionen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:21
 msgctxt "MetaFigureOptions|"
 msgid "<b>Dimensions</b>"
-msgstr ""
+msgstr "<b>Abmessungen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:25
 msgctxt "MetaFigureOptions|"
 msgid "Width"
-msgstr ""
+msgstr "Breite"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:38
 msgctxt "MetaFigureOptions|"
 msgid "Height"
-msgstr ""
+msgstr "Höhe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:52
 msgctxt "MetaFigureOptions|"
 msgid "<b><i>Y</i> axis</b>"
-msgstr ""
+msgstr "<b><i>Y</i>-Achse</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:56
 msgctxt "MetaFigureOptions|"
 msgid "Diamond height"
-msgstr ""
+msgstr "Diamant-Höhe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:69
 msgctxt "MetaFigureOptions|"
 msgid "Include CIs"
-msgstr ""
+msgstr "KIs einbeziehen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:82
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:124
 msgctxt "MetaFigureOptions|"
 msgid "Tick Font Size"
-msgstr ""
+msgstr "Schriftgröße Teilstriche"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:104
 msgctxt "MetaFigureOptions|"
 msgid "<b><i>X</i> axis</b>"
-msgstr ""
+msgstr "<b><i>X</i>-Achse</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:108
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:202
 msgctxt "MetaFigureOptions|"
 msgid "Label"
-msgstr ""
+msgstr "Beschriftung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:136
 msgctxt "MetaFigureOptions|"
 msgid "Label Font Size"
-msgstr ""
+msgstr "Schriftgröße Beschriftungen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:153
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:218
 msgctxt "MetaFigureOptions|"
 msgid "Min"
-msgstr ""
+msgstr "Min"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:163
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:229
 msgctxt "MetaFigureOptions|"
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:178
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:244
 msgctxt "MetaFigureOptions|"
 msgid "Num. tick marks"
-msgstr ""
+msgstr "Anz. Teilstriche"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:189
+#, fuzzy
 msgctxt "MetaFigureOptions|"
 msgid "Mark zero"
-msgstr ""
+msgstr "Null markieren"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:198
 msgctxt "MetaFigureOptions|"
 msgid "<b>Difference axis</b>"
-msgstr ""
+msgstr "<b>Differenz-Achse</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:265
 msgctxt "MetaFigureOptions|"
@@ -589,17 +590,17 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:269
 msgctxt "MetaFigureOptions|"
 msgid "Minimum"
-msgstr ""
+msgstr "Minimum"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/MetaFigureOptions.qml:282
 msgctxt "MetaFigureOptions|"
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplikator"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:10
 msgctxt "ScatterplotOptions|"
 msgid "Scatterplot options"
-msgstr ""
+msgstr "Optionen Streudiagramm"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:31
 msgctxt "ScatterplotOptions|"
@@ -609,79 +610,79 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:36
 msgctxt "ScatterplotOptions|"
 msgid "Width"
-msgstr ""
+msgstr "Breite"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:50
 msgctxt "ScatterplotOptions|"
 msgid "Height"
-msgstr ""
+msgstr "Höhe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:75
 msgctxt "ScatterplotOptions|"
 msgid "<b>Histogram</b>"
-msgstr ""
+msgstr "<b>Histogramm</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:79
 msgctxt "ScatterplotOptions|"
 msgid "No. bins"
-msgstr ""
+msgstr "Anz. Kategorien"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:92
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:96
 msgctxt "ScatterplotOptions|"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:111
 msgctxt "ScatterplotOptions|"
 msgid "<b><i>Y</i> axis</b>"
-msgstr ""
+msgstr "<b><i>Y</i>-Achse</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:115
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:227
 msgctxt "ScatterplotOptions|"
 msgid "Label"
-msgstr ""
+msgstr "Beschriftung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:132
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:243
 msgctxt "ScatterplotOptions|"
 msgid "Tick Font Size"
-msgstr ""
+msgstr "Schriftgröße Teilstriche"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:145
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:256
 msgctxt "ScatterplotOptions|"
 msgid "Label Font Size"
-msgstr ""
+msgstr "Schriftgröße Beschriftungen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:162
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:274
 msgctxt "ScatterplotOptions|"
 msgid "Min"
-msgstr ""
+msgstr "Min"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:174
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:286
 msgctxt "ScatterplotOptions|"
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:191
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:302
 msgctxt "ScatterplotOptions|"
 msgid "Num. tick marks"
-msgstr ""
+msgstr "Anz. Teilstriche"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:222
 msgctxt "ScatterplotOptions|"
 msgid "<b><i>X</i> axis</b>"
-msgstr ""
+msgstr "<b><i>X</i>-Achse</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:330
 msgctxt "ScatterplotOptions|"
 msgid "<b>Other options</b>"
-msgstr ""
+msgstr "<b>Andere Optionen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:336
 msgctxt "ScatterplotOptions|"
@@ -701,22 +702,23 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/UnitsLayout.qml:8
 msgctxt "UnitsLayout|"
 msgid "Units"
-msgstr ""
+msgstr "Einheiten"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:34
+#, fuzzy
 msgctxt "jasp_describe|"
 msgid "Outcome variable"
-msgstr ""
+msgstr "Ergebnis-Variable"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:39
 msgctxt "jasp_describe|"
 msgid "<b>Results options</b>"
-msgstr ""
+msgstr "<b>Ergebnisoptionen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:45
 msgctxt "jasp_describe|"
 msgid "Extra details"
-msgstr ""
+msgstr "Weitere Details"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:51
 msgctxt "jasp_describe|"
@@ -731,27 +733,27 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:65
 msgctxt "jasp_describe|"
 msgid "Mean"
-msgstr ""
+msgstr "Mittelwert"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:70
 msgctxt "jasp_describe|"
 msgid "Median"
-msgstr ""
+msgstr "Median"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:75
 msgctxt "jasp_describe|"
 msgid "Spread"
-msgstr ""
+msgstr "Streubreite"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:80
 msgctxt "jasp_describe|"
 msgid "Standard deviation"
-msgstr ""
+msgstr "Standardabweichung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:85
 msgctxt "jasp_describe|"
 msgid "Quartiles"
-msgstr ""
+msgstr "Quartile"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:89
 msgctxt "jasp_describe|"
@@ -766,7 +768,7 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:103
 msgctxt "jasp_describe|"
 msgid "Percentiles"
-msgstr ""
+msgstr "Perzentile"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:109
 msgctxt "jasp_describe|"
@@ -776,17 +778,17 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:121
 msgctxt "jasp_describe|"
 msgid "Figure options"
-msgstr ""
+msgstr "Diagrammoptionen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:131
 msgctxt "jasp_describe|"
 msgid "Aesthetics"
-msgstr ""
+msgstr "Ästhetik"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:139
 msgctxt "jasp_describe|"
 msgid "Bars and dots"
-msgstr ""
+msgstr "Balken und Punkte"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_describe.qml:145
 msgctxt "jasp_describe|"
