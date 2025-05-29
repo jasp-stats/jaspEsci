@@ -88,7 +88,7 @@ Form
     TextField {
         name: "effect_label"
         label: qsTr("Effect label")
-        placeholderText: "My effect"
+        placeholderText: qsTr("My effect")
     }
 
     DropDown {
@@ -97,11 +97,11 @@ Form
         startValue: 'RD'
         values:
           [
-            { label: "Risk difference (<i>P</i><sub>diff</sub>)", value: "RD"},
-            { label: "Log risk ratio (ln(<i>RR</i>))", value: "RR"},
-            { label: "Log odds ratio (ln(<i>OR</i>))", value: "OR"},
-            { label: "Arcsine-square-root-transformed risk difference (1/2 * Cohen's <i>h</i>)", value: "AS"},
-            { label: "Log odds ratio, Peto's method (ln(<i>OR</i>)<sub>Peto</sub>)", value: "PETO"}
+            { label: qsTr("Risk difference (<i>P</i><sub>diff</sub>)"), value: "RD"},
+            { label: qsTr("Log risk ratio (ln(<i>RR</i>))"), value: "RR"},
+            { label: qsTr("Log odds ratio (ln(<i>OR</i>))"), value: "OR"},
+            { label: qsTr("Arcsine-square-root-transformed risk difference (1/2 * Cohen's <i>h</i>)"), value: "AS"},
+            { label: qsTr("Log odds ratio, Peto's method (ln(<i>OR</i>)<sub>Peto</sub>)"), value: "PETO"}
           ]
         id: reported_effect_size
     }
@@ -113,8 +113,8 @@ Form
         startValue: 'random_effects'
         values:
           [
-            { label: "Random effects (RE)", value: "random_effects"},
-            { label: "Fixed effect (FE)", value: "fixed_effects"}
+            { label: qsTr("Random effects (RE)"), value: "random_effects"},
+            { label: qsTr("Fixed effect (FE)"), value: "fixed_effects"}
           ]
         id: random_effects
     }

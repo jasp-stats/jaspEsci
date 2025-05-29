@@ -200,8 +200,8 @@ import "./" as Esci
           startValue: 'raw'
           values:
             [
-              { label: "Original units", value: "raw"},
-              { label: "Standard deviations", value: "sd"}
+              { label: qsTr("Original units"), value: "raw"},
+              { label: qsTr("Standard deviations"), value: "sd"}
             ]
       }
 
@@ -245,9 +245,9 @@ import "./" as Esci
           startValue: 'halfeye'
           values:
               [
-                  { label: "Plausibility curve", value: "halfeye"},
-                  { label: "Cat's eye", value: "eye"},
-                  { label: "None", value: "none"}
+                  { label: qsTr("Plausibility curve"), value: "halfeye"},
+                  { label: qsTr("Cat's eye"), value: "eye"},
+                  { label: qsTr("None"), value: "none"}
               ]
       }
         // end: distributions_grid row 1
@@ -263,9 +263,9 @@ import "./" as Esci
         startValue: 'random'
         values:
           [
-            { label: "Random", value: "random"},
-            { label: "Swarm", value: "swarm"},
-            { label: "None", value: "none"}
+            { label: qsTr("Random"), value: "random"},
+            { label: qsTr("Swarm"), value: "swarm"},
+            { label: qsTr("None"), value: "none"}
           ]
       }
 

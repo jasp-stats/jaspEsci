@@ -93,7 +93,7 @@ Form
         TextField
         {
           name: "outcome_variable_name"
-          placeholderText: "Outcome variable"
+          placeholderText: qsTr("Outcome variable")
         }
 
 
@@ -126,7 +126,7 @@ Form
           id: not_case_label
           enabled: false
           label: ""
-          value: "Not " + case_label.value
+          value: qsTr("Not ") + case_label.value
         }
 
         IntegerField
@@ -211,7 +211,7 @@ Form
 
     Group
     {
-    title: qsTr("<b>CI</b>")
+    title: "<b>CI</b>"
     columns: 2
     Layout.columnSpan: 2
 

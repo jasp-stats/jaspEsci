@@ -9,8 +9,8 @@ import "./" as Esci
         startValue: 'random'
         values:
           [
-            { label: "Random", value: "random"},
-            { label: "Swarm", value: "swarm"},
-            { label: "None", value: "none"}
+            { label: qsTr("Random"), value: "random"},
+            { label: qsTr("Swarm"), value: "swarm"},
+            { label: qsTr("None"), value: "none"}
           ]
       }

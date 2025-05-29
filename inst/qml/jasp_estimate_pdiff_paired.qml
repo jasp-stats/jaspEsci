@@ -90,7 +90,7 @@ Form
           name: "comparison_measure_name"
           Layout.columnSpan: 2
           label: ""
-          placeholderText: "Post-test"
+          placeholderText: qsTr("Post-test")
           enabled: from_summary.checked
           fieldWidth: 2*jaspTheme.textFieldWidth
         }
@@ -99,7 +99,7 @@ Form
         TextField {
           name: "reference_measure_name"
           label: ""
-          placeholderText: "Pre-test"
+          placeholderText: qsTr("Pre-test")
           enabled: from_summary.checked
         }
 
@@ -108,7 +108,7 @@ Form
           name: "case_label"
           id: case_label
           label: ""
-          defaultValue: "Sick"
+          defaultValue: qsTr("Sick")
           enabled: from_summary.checked
         }
 
@@ -117,7 +117,7 @@ Form
           name: "not_case_label"
           id: not_case_label
           label: ""
-          defaultValue: "Well"
+          defaultValue: qsTr("Well")
           enabled: from_summary.checked
         }
 
@@ -251,7 +251,7 @@ Form
       columns: 4
 
       Label {
-        text: qsTr("<b>CI</b>")
+        text: "<b>CI</b>"
         Layout.columnSpan: 4
       }
 

@@ -9,8 +9,8 @@ import "./" as Esci
         startValue: 'halfeye'
         values:
           [
-            { label: "Plausibility curve", value: "halfeye"},
-            { label: "Cat's eye", value: "eye"},
-            { label: "None", value: "none"}
+            { label: qsTr("Plausibility curve"), value: "halfeye"},
+            { label: qsTr("Cat's eye"), value: "eye"},
+            { label: qsTr("None"), value: "none"}
           ]
       }

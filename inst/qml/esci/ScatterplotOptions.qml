@@ -89,11 +89,11 @@ import "./" as Esci
         }
 
         Label {
-          text: qsTr(" ")
+          text: " "
         }
 
         Label {
-          text: qsTr(" ")
+          text: " "
         }
 
 
@@ -347,7 +347,7 @@ import "./" as Esci
     	   }
 
         Label {
-          text: qsTr("")
+          text: ""
         }
 
     	  CheckBox
@@ -359,7 +359,7 @@ import "./" as Esci
     	   }
 
         Label {
-          text: qsTr("")
+          text: ""
         }
 
       }

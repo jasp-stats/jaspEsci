@@ -30,7 +30,7 @@ import "./" as Esci
         fieldWidth: jaspTheme.textFieldWidth * 0.7
       }
 
-    Label { text: qsTr(" ") }
+    Label { text: " " }
 
     Label { text: qsTr("Outline") }
 
@@ -53,7 +53,7 @@ import "./" as Esci
         fieldWidth: jaspTheme.textFieldWidth * 0.7
       }
 
-    Label { text: qsTr(" ") }
+    Label { text: " " }
 
     Label { text: qsTr("Transparency") }
 
@@ -64,9 +64,9 @@ import "./" as Esci
         fieldWidth: jaspTheme.textFieldWidth * 0.7
       }
 
-      Label { text: qsTr(" ") }
+      Label { text: " " }
 
-      Label { text: qsTr(" ") }
+      Label { text: " " }
 
 
     }

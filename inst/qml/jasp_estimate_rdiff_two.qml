@@ -86,7 +86,7 @@ Form
       columnSpacing: 1
 
         Label {
-          text: qsTr("")
+          text: ""
         }
 
         Label {
@@ -106,7 +106,7 @@ Form
           name: "reference_level_name"
           id: reference_level_name
           label: ""
-          placeholderText: "Reference level"
+          placeholderText: qsTr("Reference level")
           enabled: from_summary.checked
           fieldWidth: jaspTheme.textFieldWidth
         }
@@ -117,7 +117,7 @@ Form
           name: "comparison_level_name"
           id: comparison_level_name
           label: ""
-          placeholderText: "Comparison level"
+          placeholderText: qsTr("Comparison level")
           enabled: from_summary.checked
           fieldWidth: jaspTheme.textFieldWidth
         }
@@ -194,7 +194,7 @@ Form
         {
           name: "x_variable_name"
           id: x_variable_name
-          placeholderText: "X variable"
+          placeholderText: qsTr("X variable")
           enabled: from_summary.checked
            Layout.columnSpan: 2
            fieldWidth: jaspTheme.textFieldWidth * 2
@@ -208,7 +208,7 @@ Form
         {
           name: "y_variable_name"
           id: y_variable_name
-          placeholderText: "Y variable"
+          placeholderText: qsTr("Y variable")
           enabled: from_summary.checked
            Layout.columnSpan: 2
            fieldWidth: jaspTheme.textFieldWidth * 2
@@ -223,7 +223,7 @@ Form
         {
           name: "grouping_variable_name"
           id: grouping_variable_name
-          placeholderText: "Grouping variable"
+          placeholderText: qsTr("Grouping variable")
           enabled: from_summary.checked
            Layout.columnSpan: 2
            fieldWidth: jaspTheme.textFieldWidth * 2
@@ -653,7 +653,7 @@ Form
       columns: 4
 
       Label {
-        text: qsTr("<b>CI</b>")
+        text: "<b>CI</b>"
         Layout.columnSpan: 4
       }
 

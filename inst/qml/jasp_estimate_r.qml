@@ -101,7 +101,7 @@ Form
         }
 
       Label {
-        text: qsTr(" ")
+        text: " "
       }
 
       Label {
@@ -120,7 +120,7 @@ Form
         }
 
       Label {
-        text: qsTr(" ")
+        text: " "
       }
 
 
@@ -134,7 +134,7 @@ Form
           id: x_variable_name
           fieldWidth: jaspTheme.textFieldWidth * 2
           Layout.columnSpan: 2
-          placeholderText: "X variable"
+          placeholderText: qsTr("X variable")
           enabled: from_summary.checked
         }
 
@@ -149,7 +149,7 @@ Form
           id: y_variable_name
           fieldWidth: jaspTheme.textFieldWidth * 2
           Layout.columnSpan: 2
-          placeholderText: "Y variable"
+          placeholderText: qsTr("Y variable")
           enabled: from_summary.checked
         }
 
@@ -248,7 +248,7 @@ Form
          name: "predict_from_x"
          id: predict_from_x
          label: qsTr("Enter <i>X</i> value to generate prediction (<i>&#374;</i>)")
-         placeholderText: "Enter an X value"
+         placeholderText: qsTr("Enter an X value")
    	     enabled: do_regression.checked
          visible: from_raw.checked
      }
@@ -348,7 +348,7 @@ Form
       }
 
       Label {
-          text: "Style"
+          text: qsTr("Style")
       }
 
       Esci.LineTypeSelect
@@ -374,7 +374,7 @@ Form
       }
 
       Label {
-          text: "Thickness"
+          text: qsTr("Thickness")
       }
 
       IntegerField
@@ -405,7 +405,7 @@ Form
       }
 
       Label {
-          text: "Color"
+          text: qsTr("Color")
       }
 
 
@@ -435,7 +435,7 @@ Form
 
 
       Label {
-          text: "Transparency"
+          text: qsTr("Transparency")
       }
 
 
@@ -519,7 +519,7 @@ Form
       }
 
       Label {
-          text: "Style"
+          text: qsTr("Style")
       }
 
 
@@ -546,7 +546,7 @@ Form
       }
 
       Label {
-          text: "Thickness"
+          text: qsTr("Thickness")
       }
 
       IntegerField
@@ -577,7 +577,7 @@ Form
       }
 
       Label {
-          text: "Color"
+          text: qsTr("Color")
       }
 
 
@@ -607,7 +607,7 @@ Form
 
 
       Label {
-          text: "Transparency"
+          text: qsTr("Transparency")
       }
 
 
@@ -662,7 +662,7 @@ Form
 
     Group
     {
-    title: qsTr("<b>CI</b>")
+    title: "<b>CI</b>"
     columns: 2
     Layout.columnSpan: 2
 

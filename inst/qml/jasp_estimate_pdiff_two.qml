@@ -91,7 +91,7 @@ Form
           name: "grouping_variable_name"
           Layout.columnSpan: 2
           label: ""
-          placeholderText: "Grouping variable"
+          placeholderText: qsTr("Grouping variable")
           fieldWidth: 2*jaspTheme.textFieldWidth
         }
 
@@ -99,19 +99,19 @@ Form
         TextField {
           name: "outcome_variable_name"
           label: ""
-          placeholderText: "Outcome variable"
+          placeholderText: qsTr("Outcome variable")
         }
 
         TextField {
           name: "grouping_variable_level1"
           label: ""
-          placeholderText: "Control"
+          placeholderText: qsTr("Control")
         }
 
         TextField {
           name: "grouping_variable_level2"
           label: ""
-          placeholderText: "Treated"
+          placeholderText: qsTr("Treated")
         }
 
 
@@ -120,7 +120,7 @@ Form
           name: "case_label"
           id: case_label
           label: ""
-          placeholderText: "Sick"
+          placeholderText: qsTr("Sick")
         }
 
         IntegerField
@@ -154,7 +154,7 @@ Form
           name: "not_case_label"
           id: not_case_label
           label: ""
-          placeholderText: "Well"
+          placeholderText: qsTr("Well")
         }
 
         IntegerField
@@ -304,7 +304,7 @@ Form
       columns: 4
 
       Label {
-        text: qsTr("<b>CI</b>")
+        text: "<b>CI</b>"
         Layout.columnSpan: 4
       }
 

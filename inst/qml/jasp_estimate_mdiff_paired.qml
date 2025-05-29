@@ -104,11 +104,11 @@ Form
       Item {}
 
       Label {
-        text: "Reference group"
+        text: qsTr("Reference group")
       }
 
       Label {
-        text: "Comparison group"
+        text: qsTr("Comparison group")
       }
 
 
@@ -119,13 +119,13 @@ Form
       TextField
       {
         name: "reference_measure_name"
-        placeholderText: "Reference measure"
+        placeholderText: qsTr("Reference measure")
       }
 
       TextField
       {
         name: "comparison_measure_name"
-        placeholderText: "Comparison measure"
+        placeholderText: qsTr("Comparison measure")
       }
 
       Label {
@@ -304,8 +304,8 @@ Form
         enabled: from_raw.checked
         values:
           [
-            { label: "Mean difference", value: "mean_difference"},
-            { label: "Median difference", value: "median_difference"}
+            { label: qsTr("Mean difference"), value: "mean_difference"},
+            { label: qsTr("Median difference"), value: "median_difference"}
           ]
         id: effect_size
       }
@@ -357,22 +357,22 @@ Form
       }
 
       Label {
-        text: "<u>Reference</u>"
+        text: qsTr("<u>Reference</u>")
       }
 
 
       Label {
-        text: "<u>Comparison</u>"
+        text: qsTr("<u>Comparison</u>")
       }
 
 
       Label {
-        text: "<u>Difference</u>"
+        text: qsTr("<u>Difference</u>")
       }
 
 
       Label {
-        text: "<b>Summary</b>"
+        text: qsTr("<b>Summary</b>")
       }
 
       Label {
@@ -515,7 +515,7 @@ Form
       }
 
       Label {
-        text: qsTr("<b>CI</b>")
+        text: "<b>CI</b>"
       }
 
       Label {
@@ -718,7 +718,7 @@ Form
 
 
       Label {
-        text: "<b>Raw data</b>"
+        text: qsTr("<b>Raw data</b>")
       }
 
       Label {

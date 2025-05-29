@@ -17,21 +17,21 @@ import "./" as Esci
       }
 
       Label {
-        text: "<u>Reference</u>"
+        text: qsTr("<u>Reference</u>")
       }
 
 
       Label {
-        text: "<u>Comparison</u>"
+        text: qsTr("<u>Comparison</u>")
       }
 
 
       Label {
-        text: "<u>Difference</u>"
+        text: qsTr("<u>Difference</u>")
       }
 
       Label {
-        text: "<b>Summary</b>"
+        text: qsTr("<b>Summary</b>")
         Layout.columnSpan: 4
       }
 

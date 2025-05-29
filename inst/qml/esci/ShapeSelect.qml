@@ -8,9 +8,9 @@ import "./" as Esci
         startValue: 'circle filled'
         values:
           [
-            { label: "Circle", value: "circle filled"},
-            { label: "Square", value: "square filled"},
-            { label: "Diamond", value: "diamond filled"},
-            { label: "Triangle", value: "triangle filled"}
+            { label: qsTr("Circle"), value: "circle filled"},
+            { label: qsTr("Square"), value: "square filled"},
+            { label: qsTr("Diamond"), value: "diamond filled"},
+            { label: qsTr("Triangle"), value: "triangle filled"}
           ]
       }

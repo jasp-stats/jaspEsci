@@ -75,7 +75,7 @@ Form
     TextField {
         name: "effect_label"
         label: qsTr("Effect label")
-        placeholderText: "My effect"
+        placeholderText: qsTr("My effect")
     }
 
 
@@ -85,8 +85,8 @@ Form
         startValue: 'random_effects'
         values:
           [
-            { label: "Random effects (RE)", value: "random_effects"},
-            { label: "Fixed effect (FE)", value: "fixed_effects"}
+            { label: qsTr("Random effects (RE)"), value: "random_effects"},
+            { label: qsTr("Fixed effect (FE)"), value: "fixed_effects"}
           ]
         id: random_effects
     }

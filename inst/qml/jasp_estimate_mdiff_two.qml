@@ -101,11 +101,11 @@ Form
       Item {}
 
       Label {
-        text: "Reference group"
+        text: qsTr("Reference group")
       }
 
       Label {
-        text: "Comparison group"
+        text: qsTr("Comparison group")
       }
 
 
@@ -115,13 +115,13 @@ Form
       TextField
       {
         name: "reference_level_name"
-        placeholderText: "Reference group"
+        placeholderText: qsTr("Reference group")
       }
 
       TextField
       {
         name: "comparison_level_name"
-        placeholderText: "Comparison group"
+        placeholderText: qsTr("Comparison group")
       }
 
       Label {
@@ -215,7 +215,7 @@ Form
       {
         name: "outcome_variable_name"
         label: qsTr("Outcome variable name")
-        placeholderText: "Outcome variable"
+        placeholderText: qsTr("Outcome variable")
       }
 
 
@@ -223,7 +223,7 @@ Form
       {
         name: "grouping_variable_name"
         label: qsTr("Grouping variable name")
-        placeholderText: "Grouping variable"
+        placeholderText: qsTr("Grouping variable")
       }
 
     }
@@ -258,8 +258,8 @@ Form
         enabled: from_raw.checked
         values:
           [
-            { label: "Mean difference", value: "mean_difference"},
-            { label: "Median difference", value: "median_difference"}
+            { label: qsTr("Mean difference"), value: "mean_difference"},
+            { label: qsTr("Median difference"), value: "median_difference"}
           ]
         id: effect_size
       }
@@ -312,22 +312,22 @@ Form
       }
 
       Label {
-        text: "<u>Reference</u>"
+        text: qsTr("<u>Reference</u>")
       }
 
 
       Label {
-        text: "<u>Comparison</u>"
+        text: qsTr("<u>Comparison</u>")
       }
 
 
       Label {
-        text: "<u>Difference</u>"
+        text: qsTr("<u>Difference</u>")
       }
 
 
       Label {
-        text: "<b>Summary</b>"
+        text: qsTr("<b>Summary</b>")
       }
 
       Label {
@@ -470,7 +470,7 @@ Form
       }
 
       Label {
-        text: qsTr("<b>CI</b>")
+        text: "<b>CI</b>"
       }
 
       Label {
@@ -657,7 +657,7 @@ Form
 
 
       Label {
-        text: "<b>Raw data</b>"
+        text: qsTr("<b>Raw data</b>")
       }
 
       Label {

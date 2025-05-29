@@ -29,9 +29,9 @@ Form
 
 	function dlab() {
     if (from_raw.checked) {
-      means.label = "Means"
+      means.label = qsTr("Means")
     } else {
-      means.label = "Cohen's <i>d</i>, unbiased"
+      means.label = qsTr("Cohen's <i>d</i>, unbiased")
     }
     means = null
 
@@ -123,7 +123,7 @@ Form
     TextField {
         name: "effect_label"
         label: qsTr("Effect label")
-        placeholderText: "My effect"
+        placeholderText: qsTr("My effect")
     }
 
     TextField {
@@ -140,8 +140,8 @@ Form
         enabled: from_raw.checked
         values:
           [
-            { label: "Original units", value: "mean_difference"},
-            { label: "Standardized mean difference", value: "smd_unbiased"}
+            { label: qsTr("Original units"), value: "mean_difference"},
+            { label: qsTr("Standardized mean difference"), value: "smd_unbiased"}
           ]
         id: effect_size
     }
@@ -152,9 +152,9 @@ Form
         startValue: 'random_effects'
         values:
           [
-            { label: "Random effects (RE)", value: "random_effects"},
-            { label: "Fixed effect (FE)", value: "fixed_effects"},
-            { label: "Compare fixed and random effects", value: "compare"}
+            { label: qsTr("Random effects (RE)"), value: "random_effects"},
+            { label: qsTr("Fixed effect (FE)"), value: "fixed_effects"},
+            { label: qsTr("Compare fixed and random effects"), value: "compare"}
           ]
         id: random_effects
     }

@@ -143,7 +143,7 @@ Form
       TextField
       {
         name: "outcome_variable_name"
-        placeholderText: "Outcome variable"
+        placeholderText: qsTr("Outcome variable")
       }
 
 
@@ -177,8 +177,8 @@ Form
         label: qsTr("Effect size of interest")
         values:
           [
-            { label: "Mean", value: "mean"},
-            { label: "Median", value: "median"}
+            { label: qsTr("Mean"), value: "mean"},
+            { label: qsTr("Median"), value: "median"}
           ]
         id: effect_size
         enabled: from_raw.checked
@@ -224,7 +224,7 @@ Form
     rowSpacing:    jaspTheme.rowGroupSpacing
     columnSpacing: jaspTheme.columnGroupSpacing
 
-      Label { text: qsTr("<b>CI</b>") }
+      Label { text: "<b>CI</b>" }
 
       Label { text:  qsTr("Style") }
 
@@ -315,7 +315,7 @@ Form
         fieldWidth: jaspTheme.textFieldWidth * 0.7
       }
 
-      Label { text: qsTr(" ") }
+      Label { text:" " }
 
       Label { text: qsTr("Outline") }
 
@@ -340,7 +340,7 @@ Form
       }
 
 
-      Label { text: qsTr(" ") }
+      Label { text: " " }
 
       Label { text: qsTr("Transparency") }
 

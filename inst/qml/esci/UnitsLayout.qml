@@ -9,8 +9,8 @@ import "./" as Esci
         startValue: 'raw'
         values:
           [
-            { label: "Original units", value: "raw"},
-            { label: "Standard deviations", value: "sd"}
+            { label: qsTr("Original units"), value: "raw"},
+            { label: qsTr("Standard deviations"), value: "sd"}
           ]
       }
 

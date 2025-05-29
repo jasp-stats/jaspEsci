@@ -110,7 +110,7 @@ Form
     enabled: from_summary.checked & fully_between.checked
     visible: from_summary.checked & fully_between.checked
     expanded: from_summary.checked & fully_between.checked
-    title: "Between subjects, summary data"
+    title: qsTr("Between subjects, summary data")
 
     GridLayout {
       id: summary_grid
@@ -161,7 +161,7 @@ Form
       {
         name: "A1B1_mean"
         defaultValue: 10
-        label: qsTr("<i>M</i>")
+        label: "<i>M</i>"
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {
           summary_dirty.checked = true
@@ -172,7 +172,7 @@ Form
       {
         name: "A2B1_mean"
         defaultValue: 10
-        label: qsTr("<i>M</i>")
+        label: "<i>M</i>"
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {
           summary_dirty.checked = true
@@ -186,7 +186,7 @@ Form
       {
         name: "A1B1_sd"
         defaultValue: 2.1
-        label: qsTr("<i>s</i>")
+        label: "<i>s</i>"
         negativeValues: false
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {
@@ -197,7 +197,7 @@ Form
       DoubleField
       {
         name: "A2B1_sd"
-        label: qsTr("<i>s</i>")
+        label: "<i>s</i>"
         defaultValue: 2.2
         negativeValues: false
         fieldWidth: jaspTheme.textFieldWidth * .9
@@ -211,7 +211,7 @@ Form
 
       IntegerField
       {
-        label: qsTr("<i>n</i>")
+        label: "<i>n</i>"
         name: "A1B1_n"
         defaultValue: 20
         min: 2
@@ -224,7 +224,7 @@ Form
       IntegerField
       {
         name: "A2B1_n"
-        label: qsTr("<i>n</i>")
+        label: "<i>n</i>"
         defaultValue: 20
         min: 2
         fieldWidth: jaspTheme.textFieldWidth * .9
@@ -244,7 +244,7 @@ Form
       {
         name: "A1B2_mean"
         defaultValue: 15
-        label: qsTr("<i>M</i>")
+        label: "<i>M</i>"
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {
           summary_dirty.checked = true
@@ -255,7 +255,7 @@ Form
       {
         name: "A2B2_mean"
         defaultValue: 10
-        label: qsTr("<i>M</i>")
+        label: "<i>M</i>"
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {
           summary_dirty.checked = true
@@ -271,7 +271,7 @@ Form
       {
         name: "A1B2_sd"
         defaultValue: 2.3
-        label: qsTr("<i>s</i>")
+        label: "<i>s</i>"
         negativeValues: false
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {
@@ -282,7 +282,7 @@ Form
       DoubleField
       {
         name: "A2B2_sd"
-        label: qsTr("<i>s</i>")
+        label: "<i>s</i>"
         defaultValue: 2.4
         negativeValues: false
         fieldWidth: jaspTheme.textFieldWidth * .9
@@ -298,7 +298,7 @@ Form
 
       IntegerField
       {
-        label: qsTr("<i>n</i>")
+        label: "<i>n</i>"
         name: "A1B2_n"
         defaultValue: 20
         negativeValues: false
@@ -311,7 +311,7 @@ Form
       IntegerField
       {
         name: "A2B2_n"
-        label: qsTr("<i>n</i>")
+        label: "<i>n</i>"
         defaultValue: 20
         negativeValues: false
         fieldWidth: jaspTheme.textFieldWidth * .9
@@ -347,7 +347,7 @@ Form
     enabled: mixed.checked
     visible: mixed.checked
     expanded: mixed.checked
-    title: "RCT, full data"
+    title: qsTr("RCT, full data")
 
     	VariablesForm
     	{
@@ -393,8 +393,8 @@ Form
         enabled: from_raw.checked & fully_between.checked
         values:
           [
-            { label: "Mean difference", value: "mean_difference"},
-            { label: "Median difference", value: "median_difference"}
+            { label: qsTr("Mean difference"), value: "mean_difference"},
+            { label: qsTr("Median difference"), value: "median_difference"}
           ]
         id: effect_size
       }

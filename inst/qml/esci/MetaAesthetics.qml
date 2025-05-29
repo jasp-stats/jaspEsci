@@ -18,25 +18,25 @@ import "./" as Esci
         }
 
         Label {
-          text: "<u>Reference</u>"
+          text: qsTr("<u>Reference</u>")
         }
 
 
         Label {
-          text: "<u>Comparison</u>"
+          text: qsTr("<u>Comparison</u>")
         }
 
 
         Label {
-          text: "<u>Difference</u>"
+          text: qsTr("<u>Difference</u>")
         }
 
         Label {
-          text: "<u>Unused</u>"
+          text: qsTr("<u>Unused</u>")
         }
 
         Label {
-          text: "<b>Point estimate markers</b>"
+          text: qsTr("<b>Point estimate markers</b>")
         }
 
         Label {
@@ -198,7 +198,7 @@ import "./" as Esci
         }
 
         Label {
-          text: qsTr("<b>CI</b>")
+          text: "<b>CI</b>"
         }
 
         Label {
@@ -359,7 +359,7 @@ import "./" as Esci
         }
 
         Label {
-          text: "<b>Diamonds"
+          text: qsTr("<b>Diamonds")
         }
 
         Label {
@@ -384,15 +384,15 @@ import "./" as Esci
         }
 
         Label {
-          text: "<u>Outline</u>"
+          text: qsTr("<u>Outline</u>")
         }
 
         Label {
-          text: "<u>Fill</u>"
+          text: qsTr("<u>Fill</u>")
         }
 
         Label {
-          text: "<u>Transparency</u>"
+          text: qsTr("<u>Transparency</u>")
         }
 
         Label {
@@ -400,7 +400,7 @@ import "./" as Esci
         }
 
         Label {
-          text: "Overall"
+          text: qsTr("Overall")
         }
 
         Esci.ColorSelect
@@ -428,7 +428,7 @@ import "./" as Esci
         }
 
         Label {
-          text: "Reference"
+          text: qsTr("Reference")
         }
 
         Esci.ColorSelect
@@ -459,7 +459,7 @@ import "./" as Esci
         }
 
         Label {
-          text: "Comparison"
+          text: qsTr("Comparison")
         }
 
         Esci.ColorSelect
@@ -488,7 +488,7 @@ import "./" as Esci
         }
 
         Label {
-          text: "Unused"
+          text: qsTr("Unused")
         }
 
         Esci.ColorSelect

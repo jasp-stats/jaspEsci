@@ -95,7 +95,7 @@ Form
 	    }
 
       Label {
-        text: qsTr("")
+        text: ""
       }
 
 
