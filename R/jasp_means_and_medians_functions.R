@@ -97,8 +97,8 @@ jasp_plot_depend_on <- function() {
 jasp_plot_m_prep <- function(jaspResults, options, ready, my_variable = "mdiffPlot", add_citation = FALSE, my_title = NULL) {
 
   if (is.null(my_title)) {
-    my_title <- if (my_variable == "mdiffPlot") "Estimation Figure" else paste("Estimation Figure", my_variable, sep = " - ")
-    if (my_variable == "scatterPlot") my_title <- "Scatterplot"
+    my_title <- if (my_variable == "mdiffPlot") gettext("Estimation Figure") else paste(gettext("Estimation Figure"), my_variable, sep = " - ")
+    if (my_variable == "scatterPlot") my_title <- gettext("Scatterplot")
   }
 
   mdiffPlot <- createJaspPlot(

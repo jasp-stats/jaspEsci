@@ -58,8 +58,8 @@ jasp_summary_dirty <- function(summary_dirty, jaspResults) {
 
   if (!summary_dirty) {
     summary_replace <- createJaspHtml(
-      '<p style="background-color:#ffc2c2;">For summary data analysis, sample data has been provided.  Enter your own values.</p>',
-      title = "Summary data: Replace sample data with your own values."
+      gettext('<p style="background-color:#ffc2c2;">For summary data analysis, sample data has been provided.  Enter your own values.</p>'),
+      title = gettext("Summary data: Replace sample data with your own values.")
     )
     summary_replace$dependOn(c("summary_dirty", "from_raw", "from_summary", "switch"))
     jaspResults[["summary_replace"]] <- summary_replace

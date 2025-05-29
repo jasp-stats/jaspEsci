@@ -208,13 +208,13 @@ jasp_estimate_mdiff_2x2 <- function(jaspResults, dataset = NULL, options, ...) {
           estimate$overview_properties$message_html <- paste(
             estimate$overview_properties$message_html,
             mysep,
-            "Variances are assumed equal, so <i>s</i><sub>p</sub> was used to calculate each CI."
+            gettext("Variances are assumed equal, so <i>s</i><sub>p</sub> was used to calculate each CI.")
           )
         } else {
           estimate$overview_properties$message_html <- paste(
             estimate$overview_properties$message_html,
             mysep,
-            "Variances are not assumed equal, and so the CI was calculated separately for each mean."
+            gettext("Variances are not assumed equal, and so the CI was calculated separately for each mean.")
           )
         }
       }
@@ -392,16 +392,16 @@ jasp_estimate_mdiff_2x2 <- function(jaspResults, dataset = NULL, options, ...) {
   for (this_plot in plot_names) {
     x <- x + 1
 
-    gvA <- if (!ready) "Variable A" else estimate$properties$grouping_variable_A_name
+    gvA <- if (!ready) gettext("Variable A") else estimate$properties$grouping_variable_A_name
 
-    gvB <- if (!ready) "Variable B" else estimate$properties$grouping_variable_B_name
+    gvB <- if (!ready) gettext("Variable B") else estimate$properties$grouping_variable_B_name
 
 
     which_title <- switch(
       this_plot,
-      "main_effect_A" = paste("Main Effect of", gvA),
-      "main_effect_B" = paste("Main Effect of", gvB),
-      "interaction" = paste("Interaction of", gvA, "and", gvB)
+      "main_effect_A" = paste(gettext("Main Effect of"), gvA),
+      "main_effect_B" = paste(gettext("Main Effect of"), gvB),
+      "interaction" = paste(gettext("Interaction of"), gvA, "and", gvB)
     )
 
 
@@ -523,7 +523,7 @@ jasp_estimate_mdiff_2x2 <- function(jaspResults, dataset = NULL, options, ...) {
   if (options$show_interaction_plot & is.null(jaspResults[["interaction_plot"]])) {
 
     mdiffPlot <- createJaspPlot(
-      title = "Figure Emphasizing Interaction",
+      title = gettext("Figure Emphasizing Interaction"),
       width = options$width,
       height = options$height
     )

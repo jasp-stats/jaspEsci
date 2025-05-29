@@ -44,10 +44,10 @@ jasp_estimate_mdiff_paired <- function(jaspResults, dataset = NULL, options, ...
         error_text <- createJaspHtml(
           paste(
             neg_errors,
-            "The ratio between group effect size is appropriate only for true ratio scales where values < 0 are impossible.  One or more of your measures includes at least one negative value, so the requested ratio effect size is not reported.",
+            gettext("The ratio between group effect size is appropriate only for true ratio scales where values < 0 are impossible.  One or more of your measures includes at least one negative value, so the requested ratio effect size is not reported."),
             sep = "<BR>"
           ),
-          title = "Warning!"
+          title = gettext("Warning!")
         )
         error_text$dependOn(c("reference_measure", "comparison_measure", "show_ratio"))
         jaspResults[["neg_errors"]] <- error_text

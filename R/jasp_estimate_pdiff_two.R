@@ -175,7 +175,7 @@ jasp_estimate_pdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
       options = options,
       ready = ready,
       table_name = "es_proportion_difference",
-      table_title = "Proportion Difference",
+      table_title = gettext("Proportion Difference"),
       effect_label = "<i>P</i>"
     )
 
@@ -196,7 +196,7 @@ jasp_estimate_pdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
       options = options,
       ready = ready,
       table_name = "es_odds_ratio",
-      table_title = "Odds Ratio",
+      table_title = gettext("Odds Ratio"),
       effect_label = "<i>OR</i>"
     )
 
@@ -227,7 +227,7 @@ jasp_estimate_pdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
       options = options,
       ready = ready,
       table_name = "es_phi",
-      table_title = "Correlation",
+      table_title = gettext("Correlation"),
       effect_label = "&#981;"
     )
 

@@ -133,16 +133,16 @@ jasp_es_r_prep <- function(jaspResults, options, ready, paired = FALSE, differen
   if (!from_raw) gvn <- jasp_text_fix(options, "grouping_variable_name", "Grouping variable")
 
   effect_title <- if (is.null(gvn))
-    "Effect"
+    gettext("Effect")
   else
-    if (difference) gvn else paste(gvn, "Effect", "</BR>")
+    if (difference) gvn else paste(gvn, gettext("Effect"), "</BR>")
 
-  if (paired) effect_title <- "Measures"
+  if (paired) effect_title <- gettext("Measures")
 
   table_title <- if (is.null(options$grouping_variable) & !paired)
-    "Linear Correlation"
+    gettext("Linear Correlation")
   else
-    "Correlation Between Paired Measures"
+    gettext("Correlation Between Paired Measures")
 
 
   overviewTable <- createJaspTable(title = table_title)
@@ -152,14 +152,14 @@ jasp_es_r_prep <- function(jaspResults, options, ready, paired = FALSE, differen
   if (!paired) {
     overviewTable$addColumnInfo(
       name = "x_variable_name",
-      title = "<i>X</i> variable",
+      title = gettext("<i>X</i> variable"),
       type = "string",
       combine = TRUE
     )
 
     overviewTable$addColumnInfo(
       name = "y_variable_name",
-      title = "<i>Y</i> variable",
+      title = gettext("<i>Y</i> variable"),
       type = "string",
       combine = TRUE
     )
@@ -244,20 +244,20 @@ jasp_es_r_prep <- function(jaspResults, options, ready, paired = FALSE, differen
 jasp_regression_prep <- function(jaspResults, options, ready) {
   # Handles
 
-  overviewTable <- createJaspTable(title = "Regression")
+  overviewTable <- createJaspTable(title = gettext("Regression"))
 
   overviewTable$dependOn(c(jasp_correlation_table_depends_on(), "do_regression"))
 
   overviewTable$addColumnInfo(
     name = "component",
-    title = "Component",
+    title = gettext("Component"),
     type = "string",
     combine = TRUE
   )
 
   overviewTable$addColumnInfo(
     name = "values",
-    title = "Value",
+    title = gettext("Value"),
     type = "number"
   )
 
@@ -304,7 +304,7 @@ jasp_es_r_difference_prep <- function(jaspResults, options, ready) {
   else
     paste(jasp_text_fix(options, "grouping_variable_name", "Grouping variable"), "Effect", "<BR>")
 
-  table_title <- "Difference in Correlation"
+  table_title <- gettext("Difference in Correlation")
 
   overviewTable <- createJaspTable(title = table_title)
 
@@ -312,14 +312,14 @@ jasp_es_r_difference_prep <- function(jaspResults, options, ready) {
 
   overviewTable$addColumnInfo(
     name = "x_variable_name",
-    title = "<i>X</i>-variable",
+    title = gettext("<i>X</i>-variable"),
     type = "string",
     combine = TRUE
   )
 
   overviewTable$addColumnInfo(
     name = "y_variable_name",
-    title = "<i>Y</i>-variable",
+    title = gettext("<i>Y</i>-variable"),
     type = "string",
     combine = TRUE
   )

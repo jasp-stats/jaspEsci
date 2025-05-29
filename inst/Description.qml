@@ -3,7 +3,7 @@ import JASP.Module	1.0
 
 Description
 {
-	name		    : "jaspesci"
+	name		    : "jaspEsci"
 	title		    : qsTr("ESCI (Beta)")
 	description	: qsTr("ESCI in JASP")
 	version			: "0.20.0"

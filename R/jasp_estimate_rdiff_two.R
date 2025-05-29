@@ -188,7 +188,7 @@ jasp_estimate_rdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
   if (is.null(jaspResults[["scatterPlot"]]) & from_raw) {
 
     scatterplot <- createJaspPlot(
-      title = "Scatterplot",
+      title = gettext("Scatterplot"),
       width = options$sp_plot_width,
       height = options$sp_plot_height
     )

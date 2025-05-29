@@ -42,7 +42,7 @@ jasp_poverview_prep <- function(jaspResults, options, ready, estimate = NULL, le
   }
 
   # Title
-  overviewTable <- createJaspTable(title = "Overview")
+  overviewTable <- createJaspTable(title = gettext("Overview"))
 
   # Depends on
   overviewTable$dependOn(
@@ -52,7 +52,7 @@ jasp_poverview_prep <- function(jaspResults, options, ready, estimate = NULL, le
   if (levels > 1) {
     overviewTable$addColumnInfo(
       name = "grouping_variable_name",
-      title = "Grouping variable",
+      title = gettext("Grouping variable"),
       type = "string",
       combine = TRUE
     )
@@ -69,7 +69,7 @@ jasp_poverview_prep <- function(jaspResults, options, ready, estimate = NULL, le
   # Columns
   overviewTable$addColumnInfo(
     name = "outcome_variable_name",
-    title = "Outcome variable",
+    title = gettext("Outcome variable"),
     type = "string",
     combine = TRUE
   )
@@ -77,14 +77,14 @@ jasp_poverview_prep <- function(jaspResults, options, ready, estimate = NULL, le
   # Columns
   overviewTable$addColumnInfo(
     name = "outcome_variable_level",
-    title = "Level",
+    title = gettext("Level"),
     type = "string",
     combine = TRUE
   )
 
   overviewTable$addColumnInfo(
     name = "cases",
-    title = "Cases",
+    title = gettext("Cases"),
     type = "integer"
   )
 
@@ -154,7 +154,7 @@ jasp_es_proportion_difference_prep <- function(jaspResults, options, ready) {
   # Handles
   from_raw <- options$switch == "from_raw"
 
-  overviewTable <- createJaspTable(title = "Proportion Difference")
+  overviewTable <- createJaspTable(title = gettext("Proportion Difference"))
 
   overviewTable$dependOn(
     c(
@@ -164,7 +164,7 @@ jasp_es_proportion_difference_prep <- function(jaspResults, options, ready) {
 
   overviewTable$addColumnInfo(
     name = "outcome_variable_name",
-    title = "Outcome variable",
+    title = gettext("Outcome variable"),
     type = "string",
     combine = TRUE
   )
@@ -257,7 +257,7 @@ jasp_es_proportion_prep <- function(jaspResults, options, ready, table_name, tab
   if (table_name != "es_phi" & show_outcome_variable) {
     overviewTable$addColumnInfo(
       name = "outcome_variable_name",
-      title = "Outcome variable",
+      title = gettext("Outcome variable"),
       type = "string",
       combine = TRUE
     )
@@ -376,7 +376,7 @@ jamovi_contingency_table <- function(self, estimate, jaspResults) {
   total_suffix <- "</b>"
 
   # Handle on the table and the observed and expected tables
-  tbl <- createJaspTable(title = "Chi-Square Analysis")
+  tbl <- createJaspTable(title = gettext("Chi-Square Analysis"))
 
   tbl$dependOn(
     c(
@@ -415,7 +415,7 @@ jamovi_contingency_table <- function(self, estimate, jaspResults) {
   # Add an extra column for totals
   tbl$addColumnInfo(
     name = "esci_Totals",
-    title = "Total",
+    title = gettext("Total"),
     type = "string"
   )
 
@@ -469,7 +469,7 @@ jamovi_contingency_table <- function(self, estimate, jaspResults) {
   # Add the totals row
   total_values <- colSums(observed)
   total_values <- c(
-    "Total",
+    gettext("Total"),
     paste(
       total_prefix,
       total_values,

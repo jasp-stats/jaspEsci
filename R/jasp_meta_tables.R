@@ -48,7 +48,7 @@ jasp_meta_raw_data_prep <- function(jaspResults, options, ready, estimate = NULL
     aev <- options$assume_equal_variance
   }
 
-  overviewTable <- createJaspTable(title = "Table of Studies")
+  overviewTable <- createJaspTable(title = gettext("Table of Studies"))
 
 
   overviewTable$dependOn(
@@ -58,19 +58,19 @@ jasp_meta_raw_data_prep <- function(jaspResults, options, ready, estimate = NULL
 
   overviewTable$addColumnInfo(
     name = "label",
-    title = "Study label",
+    title = gettext("Study label"),
     type = "string"
   )
 
   if (has_moderator) {
     overviewTable$addColumnInfo(
       name = "moderator",
-      title = "Moderator level",
+      title = gettext("Moderator level"),
       type = "string"
     )
   }
 
-  e_title <- if (has_estimate) estimate$properties$effect_size_name_html else "Effect size"
+  e_title <- if (has_estimate) estimate$properties$effect_size_name_html else gettext("Effect size")
   e_title <- gsub("Mean", "<i>M</i>", e_title)
   e_title <- gsub("<sub>H</sub>", "<sub><i>h</i></sub>", e_title)
 
@@ -103,7 +103,7 @@ jasp_meta_raw_data_prep <- function(jaspResults, options, ready, estimate = NULL
   }
 
   if (options$show_details) {
-      w_title <- if (options$random_effects == "fixed_effects") "FE weight" else "RE weight"
+      w_title <- if (options$random_effects == "fixed_effects") gettext("FE weight") else gettext("RE weight")
 
       overviewTable$addColumnInfo(
         name = "weight",
@@ -170,7 +170,7 @@ jasp_meta_raw_data_prep <- function(jaspResults, options, ready, estimate = NULL
   if (options$show_details & effect_size %in% c("proportion")) {
     overviewTable$addColumnInfo(
       name = "cases",
-      title = "Cases",
+      title = gettext("Cases"),
       type = "integer"
     )
 
@@ -198,7 +198,7 @@ jasp_meta_raw_data_prep <- function(jaspResults, options, ready, estimate = NULL
 
     overviewTable$addColumnInfo(
       name = "reference_cases",
-      title = "Cases<sub>reference</sub>",
+      title = gettext("Cases<sub>reference</sub>"),
       type = "integer"
     )
 
@@ -216,7 +216,7 @@ jasp_meta_raw_data_prep <- function(jaspResults, options, ready, estimate = NULL
 
     overviewTable$addColumnInfo(
       name = "comparison_cases",
-      title = "Cases<sub>comparison</sub>",
+      title = gettext("Cases<sub>comparison</sub>"),
       type = "integer"
     )
 
@@ -360,7 +360,7 @@ jasp_es_meta_data_prep <- function(jaspResults, options, ready, estimate = NULL,
   has_estimate <- !is.null(estimate)
 
 
-  overviewTable <- createJaspTable(title = "Meta-Analytic Effect Sizes")
+  overviewTable <- createJaspTable(title = gettext("Meta-Analytic Effect Sizes"))
 
   overviewTable$dependOn(
     jasp_meta_table_depends_on()
@@ -369,7 +369,7 @@ jasp_es_meta_data_prep <- function(jaspResults, options, ready, estimate = NULL,
 
   overviewTable$addColumnInfo(
     name = "effect_label",
-    title = "Effect",
+    title = gettext("Effect"),
     type = "string",
     combine = TRUE
   )
@@ -377,21 +377,21 @@ jasp_es_meta_data_prep <- function(jaspResults, options, ready, estimate = NULL,
   if (has_moderator) {
     overviewTable$addColumnInfo(
       name = "moderator_variable_name",
-      title = "Moderator",
+      title = gettext("Moderator"),
       type = "string",
       combine = TRUE
     )
 
     overviewTable$addColumnInfo(
       name = "moderator_variable_level",
-      title = "Level",
+      title = gettext("Level"),
       type = "string"
     )
 
   }
 
 
-  e_title <- if (has_estimate) estimate$properties$effect_size_name_html else "Effect size"
+  e_title <- if (has_estimate) estimate$properties$effect_size_name_html else gettext("Effect size")
   e_title <- gsub("Mean", "<i>M</i>", e_title)
   e_title <- gsub("<sub>H</sub>", "<sub><i>h</i></sub>", e_title)
 
@@ -517,7 +517,7 @@ jasp_es_heterogeneity_data_prep <- function(jaspResults, options, ready, levels 
   has_moderator <- options$moderator != ""
 
 
-  overviewTable <- createJaspTable(title = "Effect Size Heterogeneity")
+  overviewTable <- createJaspTable(title = gettext("Effect Size Heterogeneity"))
 
 
   overviewTable$dependOn(
@@ -527,7 +527,7 @@ jasp_es_heterogeneity_data_prep <- function(jaspResults, options, ready, levels 
 
   overviewTable$addColumnInfo(
     name = "measure_html",
-    title = "Measure",
+    title = gettext("Measure"),
     type = "string",
     combine = TRUE
   )
@@ -535,7 +535,7 @@ jasp_es_heterogeneity_data_prep <- function(jaspResults, options, ready, levels 
   if (has_moderator) {
       overviewTable$addColumnInfo(
       name = "moderator_level",
-      title = "Level",
+      title = gettext("Level"),
       type = "string",
       combine = TRUE
     )
@@ -544,7 +544,7 @@ jasp_es_heterogeneity_data_prep <- function(jaspResults, options, ready, levels 
 
   overviewTable$addColumnInfo(
     name = "estimate",
-    title = "Estimate",
+    title = gettext("Estimate"),
     type = "number"
   )
 
@@ -581,7 +581,7 @@ jasp_es_meta_difference_prep <- function(jaspResults, options, ready, estimate, 
   has_estimate <- !is.null(estimate)
 
 
-  overviewTable <- createJaspTable(title = "Moderator Analysis")
+  overviewTable <- createJaspTable(title = gettext("Moderator Analysis"))
 
   overviewTable$dependOn(
     jasp_meta_table_depends_on()
@@ -590,7 +590,7 @@ jasp_es_meta_difference_prep <- function(jaspResults, options, ready, estimate, 
 
   overviewTable$addColumnInfo(
     name = "effect_label",
-    title = "Effect",
+    title = gettext("Effect"),
     type = "string",
     combine = TRUE
   )
@@ -598,14 +598,14 @@ jasp_es_meta_difference_prep <- function(jaspResults, options, ready, estimate, 
   if (has_moderator) {
     overviewTable$addColumnInfo(
       name = "moderator_variable_name",
-      title = "Moderator",
+      title = gettext("Moderator"),
       type = "string",
       combine = TRUE
     )
 
     overviewTable$addColumnInfo(
       name = "moderator_level",
-      title = "Level",
+      title = gettext("Level"),
       type = "string"
     )
 

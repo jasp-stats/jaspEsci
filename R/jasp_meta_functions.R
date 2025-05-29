@@ -42,18 +42,18 @@ jasp_meta_notes <- function(options, estimate = NULL, reference_mean = NULL, jas
   if (has_aev) {
     aev <- self$options$assume_equal_variance
     if (aev) {
-      aev_note <- "Effect sizes calculated assuming equal variance.<br>"
+      aev_note <- gettext("Effect sizes calculated assuming equal variance.<br>")
     } else {
-      aev_note <- "Effect sizes calculated without assuming equal variance.<br>"
+      aev_note <- gettext("Effect sizes calculated without assuming equal variance.<br>")
     }
   }
 
 
   # Tbl note
   model_note <- if(self$options$random_effects != "fixed_effects")
-    "Estimate is based on a random effects (RE) model."
+    gettext("Estimate is based on a random effects (RE) model.")
   else
-    "Estimate is based on a fixed effect (FE) model."
+    gettext("Estimate is based on a fixed effect (FE) model.")
 
 
   correction_note <- NULL
@@ -74,12 +74,12 @@ jasp_meta_notes <- function(options, estimate = NULL, reference_mean = NULL, jas
 
       correction_warning <- NULL
       if (!aev) {
-        correction_warning <- "Without equal variace not assumed, studies with unequal sample sizes will not have perfect recovery of sampling variance; use equal variance assumption or original units input if this matters to you."
+        correction_warning <- gettext("With equal variace not assumed, studies with unequal sample sizes will not have perfect recovery of sampling variance; use equal variance assumption or original units input if this matters to you.")
       }
 
 
       correction_note <- paste(
-        "This analysis expected the inputted Cohen's <i>d</i> values to already be corrected for bias (",
+        gettext("This analysis expected the inputted Cohen's <i>d</i> values to already be corrected for bias ("),
         estimate$properties$effect_size_name_html,
         ").  ",
         correction_warning,
@@ -92,7 +92,7 @@ jasp_meta_notes <- function(options, estimate = NULL, reference_mean = NULL, jas
 
   if (smd_reported & is.null(reference_mean) & !is.null(options$means)) {
     ref_note <- paste(
-      "Effect sizes are relative to a reference value of ",
+      gettext("Effect sizes are relative to a reference value of "),
       0,
       ".<br>",
       sep = ""
@@ -111,7 +111,7 @@ jasp_meta_notes <- function(options, estimate = NULL, reference_mean = NULL, jas
   raw_note <- paste(
     ref_note,
     aev_note,
-    if (is_rd) "<i>P</i><sub>diff</sub> is calculated as <i>P</i><sub>comparison</sub> - <i>P</i><sub>reference</sub>" else NULL,
+    if (is_rd) gettext("<i>P</i><sub>diff</sub> is calculated as <i>P</i><sub>comparison</sub> - <i>P</i><sub>reference</sub>") else NULL,
     " "
   )
 

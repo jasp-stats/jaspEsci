@@ -87,7 +87,7 @@ jasp_describe_read_data <- function(dataset, options) {
 jasp_describe_prep <- function(jaspResults, options, ready) {
 
   # Title
-  overviewTable <- createJaspTable(title = "Overview")
+  overviewTable <- createJaspTable(title = gettext("Overview"))
   overviewTable$position <- 1
 
   # Depends on
@@ -98,7 +98,7 @@ jasp_describe_prep <- function(jaspResults, options, ready) {
   # Columns
   overviewTable$addColumnInfo(
     name = "outcome_variable_name",
-    title = "Outcome variable",
+    title = gettext("Outcome variable"),
     type = "string",
     combine = TRUE
   )
@@ -167,13 +167,13 @@ jasp_describe_prep <- function(jaspResults, options, ready) {
 
     overviewTable$addColumnInfo(
       name = "min",
-      title = "Minimum",
+      title = gettext("Minimum"),
       type = "number"
     )
 
     overviewTable$addColumnInfo(
       name = "max",
-      title = "Maximum",
+      title = gettext("Maximum"),
       type = "number"
     )
 
@@ -199,7 +199,7 @@ jasp_describe_prep <- function(jaspResults, options, ready) {
 
     overviewTable$addColumnInfo(
       name = "missing",
-      title = "Missing",
+      title = gettext("Missing"),
       type = "integer"
     )
 
@@ -231,7 +231,7 @@ jasp_describe_prep <- function(jaspResults, options, ready) {
 #histogram or dotplot
 jasp_histogram_create <- function(jaspResults, options, ready, estimate, plot_type = "histogram") {
 
-  my_title <- if (plot_type == "histogram") "Histogram" else "Dotplot"
+  my_title <- if (plot_type == "histogram") gettext("Histogram") else gettext("Dotplot")
 
   h_multiplier <- if (plot_type == "histogram") 1 else 0.66
 

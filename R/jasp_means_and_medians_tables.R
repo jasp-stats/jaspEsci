@@ -94,7 +94,7 @@ jasp_overview_prep <- function(jaspResults, options, ready, estimate = NULL, lev
 
 
   # Title
-  overviewTable <- createJaspTable(title = "Overview")
+  overviewTable <- createJaspTable(title = gettext("Overview"))
 
   # Depends on
   overviewTable$dependOn(
@@ -104,7 +104,7 @@ jasp_overview_prep <- function(jaspResults, options, ready, estimate = NULL, lev
   # Columns
   overviewTable$addColumnInfo(
     name = "outcome_variable_name",
-    title = "Outcome variable",
+    title = gettext("Outcome variable"),
     type = "string",
     combine = TRUE
   )
@@ -222,13 +222,13 @@ jasp_overview_prep <- function(jaspResults, options, ready, estimate = NULL, lev
   if (options$show_details & from_raw) {
     overviewTable$addColumnInfo(
       name = "min",
-      title = "Minimum",
+      title = gettext("Minimum"),
       type = "number"
     )
 
     overviewTable$addColumnInfo(
       name = "max",
-      title = "Maximum",
+      title = gettext("Maximum"),
       type = "number"
     )
 
@@ -316,21 +316,21 @@ jasp_overview_prep <- function(jaspResults, options, ready, estimate = NULL, lev
       name = "t_multiplier",
       title = "<i>t</i>",
       type = "number",
-      overtitle = "Calculation component"
+      overtitle = gettext("Calculation component")
     )
 
     overviewTable$addColumnInfo(
       name = "s_component",
-      title = "Variability",
+      title = gettext("Variability"),
       type = "number",
-      overtitle = "Calculation component"
+      overtitle = gettext("Calculation component")
     )
 
     overviewTable$addColumnInfo(
       name = "n_component",
-      title = "Sample size",
+      title = gettext("Sample size"),
       type = "number",
-      overtitle = "Calculation component"
+      overtitle = gettext("Calculation component")
     )
 
   }
@@ -338,11 +338,11 @@ jasp_overview_prep <- function(jaspResults, options, ready, estimate = NULL, lev
   if (options$effect_size == "mean_difference" & !paired) {
     if (options$assume_equal_variance) {
       overviewTable$addFootnote(
-        "Variances are assumed equal, so <i>s</i><sub>p</sub> was used to calculate each CI."
+        gettext("Variances are assumed equal, so <i>s</i><sub>p</sub> was used to calculate each CI.")
       )
     } else {
       overviewTable$addFootnote(
-        "Variances are not assumed equal, and so the CI was calculated separately for each mean."
+        gettext("Variances are not assumed equal, and so the CI was calculated separately for each mean.")
       )
     }
 
@@ -409,7 +409,7 @@ jasp_smd_prep <- function(jaspResults, options, ready, estimate = NULL, one_grou
 
 
   # Title
-  overviewTable <- createJaspTable(title = "Standardized Mean Difference")
+  overviewTable <- createJaspTable(title = gettext("Standardized Mean Difference"))
 
   # dependOn
   overviewTable$dependOn(
@@ -425,7 +425,7 @@ jasp_smd_prep <- function(jaspResults, options, ready, estimate = NULL, one_grou
   if (!one_group & !is_paired) {
     overviewTable$addColumnInfo(
       name = "outcome_variable_name",
-      title = "Outcome variable",
+      title = gettext("Outcome variable"),
       type = "string",
       combine = TRUE
     )
@@ -436,16 +436,16 @@ jasp_smd_prep <- function(jaspResults, options, ready, estimate = NULL, one_grou
   if (is_complex) {
     overviewTable$addColumnInfo(
       name = "effect_type",
-      title = "Effect type",
+      title = gettext("Effect type"),
       type = "string",
       combine = TRUE
     )
   }
 
-  effect_label <- "Effect"
+  effect_label <- gettext("Effect")
   if (!is_complex & ! one_group) {
     if (from_raw) {
-      effect_label <- paste(options$grouping_variable, "Effect", "</BR>")
+      effect_label <- paste(options$grouping_variable, gettext("Effect"), "</BR>")
     } else {
       effect_label <- paste(
         jasp_text_fix(
@@ -475,25 +475,25 @@ jasp_smd_prep <- function(jaspResults, options, ready, estimate = NULL, one_grou
 
     overviewTable$addColumnInfo(
       name = "reference_value",
-      title = "Reference value",
+      title = gettext("Reference value"),
       type = "number"
     )
   }
 
-  if (one_group) numerator_title <- "<i>M</i> - Reference" else numerator_title <- "<i>M</i><sub>diff</sub>"
+  if (one_group) numerator_title <- gettext("<i>M</i> - Reference") else numerator_title <- "<i>M</i><sub>diff</sub>"
 
   overviewTable$addColumnInfo(
     name = "numerator",
     title = numerator_title,
     type = "number",
-    overtitle = "Numerator"
+    overtitle = gettext("Numerator")
   )
 
   overviewTable$addColumnInfo(
     name = "denominator",
     title = if (has_estimate) estimate$es_smd_properties$denominator_name_html else "<i>s</i>",
     type = "number",
-    overtitle = "Standardizer"
+    overtitle = gettext("Standardizer")
   )
 
   overviewTable$addColumnInfo(
@@ -637,7 +637,7 @@ jasp_he_prep <- function(jaspResults, options, ready, mytest = NULL, show_outcom
 
 
   # Title
-  overviewTable <- createJaspTable(title = "Hypothesis Evaluation")
+  overviewTable <- createJaspTable(title = gettext("Hypothesis Evaluation"))
 
   # Depends on
   overviewTable$dependOn(
@@ -656,7 +656,7 @@ jasp_he_prep <- function(jaspResults, options, ready, mytest = NULL, show_outcom
     if (show_outcome_variable) {
       overviewTable$addColumnInfo(
         name = "outcome_variable_name",
-        title = "Outcome variable",
+        title = gettext("Outcome variable"),
         type = "string",
         combine = is_complex
       )
@@ -668,7 +668,7 @@ jasp_he_prep <- function(jaspResults, options, ready, mytest = NULL, show_outcom
   if (is_complex) {
     overviewTable$addColumnInfo(
       name = "effect_type",
-      title = "Effect type",
+      title = gettext("Effect type"),
       type = "string",
       combine = TRUE
     )
@@ -718,14 +718,14 @@ jasp_he_prep <- function(jaspResults, options, ready, mytest = NULL, show_outcom
   if (is_interval) {
     overviewTable$addColumnInfo(
       name = "rope_compare",
-      title = "Compare CI with <i>H</i><sub>0</sub>",
+      title = gettext("Compare CI with <i>H</i><sub>0</sub>"),
       type = "string"
     )
 
   } else {
     overviewTable$addColumnInfo(
       name = "CI_compare",
-      title = "Compare CI with <i>H</i><sub>0</sub>",
+      title = gettext("Compare CI with <i>H</i><sub>0</sub>"),
       type = "string"
     )
   }
@@ -745,7 +745,7 @@ jasp_he_prep <- function(jaspResults, options, ready, mytest = NULL, show_outcom
 
     overviewTable$addColumnInfo(
       name = "p",
-      title = "<i>p</i>, two tailed",
+      title = gettext("<i>p</i>, two tailed"),
       type = "pvalue"
     )
 
@@ -760,7 +760,7 @@ jasp_he_prep <- function(jaspResults, options, ready, mytest = NULL, show_outcom
 
       overviewTable$addColumnInfo(
         name = "p",
-        title = "<i>p</i>, two tailed",
+        title = gettext("<i>p</i>, two tailed"),
         type = "pvalue"
       )
 
@@ -769,14 +769,14 @@ jasp_he_prep <- function(jaspResults, options, ready, mytest = NULL, show_outcom
       if (is_r & ! is_interval) {
         overviewTable$addColumnInfo(
           name = "p",
-          title = "<i>p</i>, two tailed",
+          title = gettext("<i>p</i>, two tailed"),
           type = "pvalue"
         )
 
       } else {
         overviewTable$addColumnInfo(
           name = "p_result",
-          title = "<i>p</i>, two tailed",
+          title = gettext("<i>p</i>, two tailed"),
           type = "pvalue"
         )
 
@@ -788,14 +788,14 @@ jasp_he_prep <- function(jaspResults, options, ready, mytest = NULL, show_outcom
   if (!is_interval) {
     overviewTable$addColumnInfo(
       name = "null_decision",
-      title = "<i>H</i><sub>0</sub> decision",
+      title = gettext("<i>H</i><sub>0</sub> decision"),
       type = "string"
     )
   }
 
   overviewTable$addColumnInfo(
     name = "conclusion",
-    title = "Conclusion",
+    title = gettext("Conclusion"),
     type = "string"
   )
 
@@ -862,7 +862,7 @@ jasp_es_m_difference_prep <- function(jaspResults, options, ready, estimate = NU
   # }
 
   overviewTable <- createJaspTable(
-    title = if (is_mean) "Mean Difference" else "Median Difference"
+    title = if (is_mean) gettext("Mean Difference") else gettext("Median Difference")
   )
 
 
@@ -875,7 +875,7 @@ jasp_es_m_difference_prep <- function(jaspResults, options, ready, estimate = NU
   if (!is_paired) {
     overviewTable$addColumnInfo(
       name = "outcome_variable_name",
-      title = "Outcome variable",
+      title = gettext("Outcome variable"),
       type = "string",
       combine = TRUE
     )
@@ -885,16 +885,16 @@ jasp_es_m_difference_prep <- function(jaspResults, options, ready, estimate = NU
   if (is_complex) {
     overviewTable$addColumnInfo(
       name = "effect_type",
-      title = "Effect type",
+      title = gettext("Effect type"),
       type = "string",
       combine = TRUE
     )
   }
 
-  effect_label <- "Effect"
+  effect_label <- gettext("Effect")
   if (!is_complex & !is_paired) {
     if (from_raw) {
-      effect_label <- paste(options$grouping_variable, "Effect", "</BR>")
+      effect_label <- paste(options$grouping_variable, gettext("Effect"), "</BR>")
     } else {
       effect_label <- paste(
         jasp_text_fix(
@@ -975,21 +975,21 @@ jasp_es_m_difference_prep <- function(jaspResults, options, ready, estimate = NU
       name = "t_multiplier",
       title = "<i>t</i>",
       type = "number",
-      overtitle = "Calculation component"
+      overtitle = gettext("Calculation component")
     )
 
     overviewTable$addColumnInfo(
       name = "s_component",
-      title = "Variability",
+      title = gettext("Variability"),
       type = "number",
-      overtitle = "Calculation component"
+      overtitle = gettext("Calculation component")
     )
 
     overviewTable$addColumnInfo(
       name = "n_component",
-      title = "Sample size",
+      title = gettext("Sample size"),
       type = "number",
-      overtitle = "Calculation component"
+      overtitle = gettext("Calculation component")
     )
 
   }
@@ -1005,16 +1005,16 @@ jasp_es_m_difference_prep <- function(jaspResults, options, ready, estimate = NU
   if (options$effect_size == "mean_difference" & !is_mixed & !is_paired) {
     if (assume_equal_variance) {
       overviewTable$addFootnote(
-        "Variances are assumed equal, so <i>s</i><sub>p</sub> was used to calculate each CI."
+        gettext( "Variances are assumed equal, so <i>s</i><sub>p</sub> was used to calculate each CI.")
       )
     } else {
       if (is_complex) {
         overviewTable$addFootnote(
-          "Variances are not assumed equal, and so the Welch method was used to calculate each CI on a difference."
+          gettext("Variances are not assumed equal, and so the Welch method was used to calculate each CI on a difference.")
         )
       } else {
         overviewTable$addFootnote(
-          "Variances are not assumed equal, so the Welch method was used to calculate each CI on a difference."
+          gettext("Variances are not assumed equal, so the Welch method was used to calculate each CI on a difference.")
         )
 
       }
@@ -1055,7 +1055,7 @@ jasp_es_m_ratio_prep <- function(jaspResults, options, ready, estimate, levels =
   # }
 
   overviewTable <- createJaspTable(
-    title = if (is_mean) "Ratio of Means" else "Ratio of Medians"
+    title = if (is_mean) gettext("Ratio of Means") else gettext("Ratio of Medians")
   )
 
   overviewTable$dependOn(
@@ -1068,7 +1068,7 @@ jasp_es_m_ratio_prep <- function(jaspResults, options, ready, estimate, levels =
   if (!is_paired) {
     overviewTable$addColumnInfo(
       name = "outcome_variable_name",
-      title = "Outcome variable",
+      title = gettext("Outcome variable"),
       type = "string",
       combine = TRUE
     )
@@ -1076,7 +1076,7 @@ jasp_es_m_ratio_prep <- function(jaspResults, options, ready, estimate, levels =
   }
 
 
-  effect_title <- paste(options$grouping_variable, "Effect", sep = "</BR>")
+  effect_title <- paste(options$grouping_variable, gettext("Effect"), sep = "</BR>")
 
   overviewTable$addColumnInfo(
     name = "effect",
@@ -1130,7 +1130,7 @@ jasp_es_m_ratio_prep <- function(jaspResults, options, ready, estimate, levels =
 
 
   overviewTable$addFootnote(
-    "This effect-size measure is appropriate only for true ratio scales."
+    gettext("This effect-size measure is appropriate only for true ratio scales.")
   )
 
   overviewTable$showSpecifiedColumnsOnly <- TRUE
@@ -1171,7 +1171,7 @@ jasp_overview_complex_prep <- function(jaspResults, options, ready, estimate = N
 
 
   # Title
-  overviewTable <- createJaspTable(title = "Overview")
+  overviewTable <- createJaspTable(title = gettext("Overview"))
 
   # Depends on
   overviewTable$dependOn(
@@ -1181,7 +1181,7 @@ jasp_overview_complex_prep <- function(jaspResults, options, ready, estimate = N
   # Columns
   overviewTable$addColumnInfo(
     name = "outcome_variable_name",
-    title = "Outcome variable",
+    title = gettext("Outcome variable"),
     type = "string",
     combine = TRUE
   )
@@ -1310,13 +1310,13 @@ jasp_overview_complex_prep <- function(jaspResults, options, ready, estimate = N
   if (options$show_details & from_raw) {
     overviewTable$addColumnInfo(
       name = "min",
-      title = "Minimum",
+      title = gettext("Minimum"),
       type = "number"
     )
 
     overviewTable$addColumnInfo(
       name = "max",
-      title = "Maximum",
+      title = gettext("Maximum"),
       type = "number"
     )
 
