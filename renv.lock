@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.5.0",
+    "Version": "4.5.1",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -1057,7 +1057,7 @@
     },
     "statpsych": {
       "Package": "statpsych",
-      "Version": "1.7.0",
+      "Version": "1.8.0",
       "Source": "Repository",
       "Requirements": [
         "mathjaxr",
