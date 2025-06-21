@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-06-10 15:01+0000\n"
+"PO-Revision-Date: 2025-06-21 19:26+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspesci/de/>"
 "\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Qt-Contexts: true\n"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:7
@@ -1886,254 +1886,257 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:671
 msgctxt "jasp_estimate_r|"
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:679
 msgctxt "jasp_estimate_r|"
 msgid "Thickness"
-msgstr ""
+msgstr "Dicke"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:688
 msgctxt "jasp_estimate_r|"
 msgid "Color"
-msgstr ""
+msgstr "Farbe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:43
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Analyze full data"
-msgstr ""
+msgstr "Alle Daten analysieren"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:50
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Analyze summary data"
-msgstr ""
+msgstr "Zusammengefasste Daten analysieren"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:66
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<i>X</i> Variable"
-msgstr ""
+msgstr "<i>X</i>-Variable"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:67
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<i>Y</i> Variable"
-msgstr ""
+msgstr "<i>Y</i>-Variable"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:68
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Grouping variable"
-msgstr ""
+msgstr "Gruppierungsvariable"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:93
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<b>Reference group</b>"
-msgstr ""
+msgstr "<b>Referenzgruppe</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:97
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<b>Comparison group</b>"
-msgstr ""
+msgstr "<b>Vergleichsgruppe</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:101
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:126
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Correlation (<i>r</i>)"
-msgstr ""
+msgstr "Korrelation (<i>r</i>)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:159
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Sample size (<i>N</i>)"
-msgstr ""
+msgstr "Stichprobenumfang (<i>N</i>)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:190
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<i>X</i>-variable name"
-msgstr ""
+msgstr "<i>X</i>-Variablenname"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:204
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<i>Y</i>-variable name"
-msgstr ""
+msgstr "<i>Y</i>-Variablenname"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:218
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Grouping variable name"
-msgstr ""
+msgstr "Gruppierungsvariablenname"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:248
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<b>Analysis options</b>"
-msgstr ""
+msgstr "<b>Analyseoptionen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:263
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<b>Results options</b>"
-msgstr ""
+msgstr "<b>Ergebnisoptionen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:267
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Extra details"
-msgstr ""
+msgstr "Weitere Details"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:273
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<b>Regression</b>"
-msgstr ""
+msgstr "<b>Regression</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:284
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Line"
-msgstr ""
+msgstr "Linie"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:292
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "CI on Line"
-msgstr ""
+msgstr "KI auf Linie"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:310
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Scatterplot aesthetics"
-msgstr ""
+msgstr "Streudiagramm-Ästhetik"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:325
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<u>Reference</u>"
-msgstr ""
+msgstr "<u>Referenz</u>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:330
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<u>Comparison</u>"
-msgstr ""
+msgstr "<u>Vergleich</u>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:335
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<u>Unused</u>"
-msgstr ""
+msgstr "<u>Nicht verwendet</u>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:339
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<b>Raw data</b>"
-msgstr ""
+msgstr "<b>Rohdaten</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:356
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Shape"
-msgstr ""
+msgstr "Form"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:386
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Size"
-msgstr ""
+msgstr "Größe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:417
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Outline"
-msgstr ""
+msgstr "Umriss"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:446
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Fill"
-msgstr ""
+msgstr "Füllung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:475
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:599
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Transparency"
-msgstr ""
+msgstr "Transparenz"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:507
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<b>Regression lines</b>"
-msgstr ""
+msgstr "<b>Regressionslinien</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:524
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:661
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:547
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Thickness"
-msgstr ""
+msgstr "Dicke"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:574
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Color"
-msgstr ""
+msgstr "Farbe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:629
+#, fuzzy
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Estimation figure options"
-msgstr ""
+msgstr "Schätzungs-Diagramm-Optionen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:644
+#, fuzzy
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "Estimation figure aesthetics"
-msgstr ""
+msgstr "Schätzungs-Diagramm-Ästhetik"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_rdiff_two.qml:656
 msgctxt "jasp_estimate_rdiff_two|"
 msgid "<b>CI</b>"
-msgstr ""
+msgstr "<b>KI</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:46
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Analyze original units"
-msgstr ""
+msgstr "Analysiere ursprüngliche Einheiten"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:56
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Analyze Cohen's <i>d</i>"
-msgstr ""
+msgstr "Analysiere Cohens <i>d</i>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:73
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Reference means (<i>M</i><sub>reference</sub>)"
-msgstr ""
+msgstr "Referenz-Mittelwerte (<i>M</i><sub>Referenz</sub>)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:79
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Reference standard deviations (<i>s</i><sub>reference</sub>)"
-msgstr ""
+msgstr "Referenz-Standardabweichungen (<i>s</i><sub>Referenz</sub>)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:87
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Reference sample sizes (<i>N</i><sub>reference</sub>)"
-msgstr ""
+msgstr "Referenz-Stichprobenumfänge (<i>N</i><sub>Referenz</sub>)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:94
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Comparison means (<i>M</i><sub>comparison</sub>)"
-msgstr ""
+msgstr "Vergleichs-Mittelwerte (<i>M</i><sub>Vergleich</sub>)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:102
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Comparison standard deviations (<i>s</i><sub>comparison</sub>)"
-msgstr ""
+msgstr "Vergleichs-Standardabweichungen (<i>s</i><sub>Vergleich</sub>)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:110
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Comparison sample sizes (<i>N</i><sub>comparison</sub>)"
-msgstr ""
+msgstr "Vergleichs-Stichprobenumfänge (<i>N</i><sub>Vergleich</sub>)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:116
+#, fuzzy
 msgctxt "jasp_meta_mdiff_two|"
 msgid "<i>r</i> (Optional; leave blank for between-subjects)"
-msgstr ""
+msgstr "<i>r</i> (Optional; bei zwischen-Subjekt leer lassen)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:122
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Study labels (optional"
-msgstr ""
+msgstr "Studienbeschriftungen (optional"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:129
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Moderator (optional"
-msgstr ""
+msgstr "Moderator (optional"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:137
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:141
@@ -2143,92 +2146,92 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:157
 msgctxt "jasp_meta_mdiff_two|"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:164
 msgctxt "jasp_meta_mdiff_two|"
 msgid "<b>Analysis options</b>"
-msgstr ""
+msgstr "<b>Analyseoptionen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:175
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Effect label"
-msgstr ""
+msgstr "Effekt-Beschriftung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:181
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Effect size"
-msgstr ""
+msgstr "Effektstärke"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:196
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Assume equal variances"
-msgstr ""
+msgstr "Gleiche Varianzen annehmen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:201
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Model"
-msgstr ""
+msgstr "Modell"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:214
 msgctxt "jasp_meta_mdiff_two|"
 msgid "<b>Results options</b>"
-msgstr ""
+msgstr "<b>Ergebnisoptionen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:221
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Extra details"
-msgstr ""
+msgstr "Weitere Details"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mdiff_two.qml:226
 msgctxt "jasp_meta_mdiff_two|"
 msgid "Prediction intervals"
-msgstr ""
+msgstr "Vorhersageintervalle"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:48
 msgctxt "jasp_meta_mean|"
 msgid "Analyze original units"
-msgstr ""
+msgstr "Analysiere ursprüngliche Einheiten"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:58
 msgctxt "jasp_meta_mean|"
 msgid "Analyze Cohen's <i>d</i>"
-msgstr ""
+msgstr "Analysiere Cohens <i>d</i>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:76
 msgctxt "jasp_meta_mean|"
 msgid "Means"
-msgstr ""
+msgstr "Mittelwerte"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:83
 msgctxt "jasp_meta_mean|"
 msgid "Standard deviations"
-msgstr ""
+msgstr "Standardabweichungen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:92
 msgctxt "jasp_meta_mean|"
 msgid "Sample sizes"
-msgstr ""
+msgstr "Stichprobenumfänge"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:99
 msgctxt "jasp_meta_mean|"
 msgid "Study labels (optional"
-msgstr ""
+msgstr "Studienbeschriftungen (optional"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:106
 msgctxt "jasp_meta_mean|"
 msgid "Moderator (optional"
-msgstr ""
+msgstr "Moderator (optional"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:114
 msgctxt "jasp_meta_mean|"
 msgid "<b>Analysis options</b>"
-msgstr ""
+msgstr "<b>Analyseoptionen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:125
 msgctxt "jasp_meta_mean|"
 msgid "Effect label"
-msgstr ""
+msgstr "Effekt-Beschriftung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_meta_mean.qml:131
 msgctxt "jasp_meta_mean|"
