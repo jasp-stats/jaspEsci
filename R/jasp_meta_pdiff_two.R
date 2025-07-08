@@ -18,8 +18,18 @@ jasp_meta_pdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
     .hasErrors(
       dataset = dataset,
       type = c("observations", "variance", "infinity", "negativeValues"),
-      all.target = c(options$ns, options$cases),
+      all.target = c(options$reference_ns, options$comparison_ns, options$reference_cases, options$comparison_cases),
       observations.amount  = "< 2",
+      exitAnalysisIfErrors = TRUE
+    )
+
+    # ns are 3 or higher;
+    .hasErrors(
+      dataset = dataset,
+      type = c("limits"),
+      limits.target = c(options$reference_ns, options$comparison_ns),
+      limits.min = 3,
+      limits.max = Inf,
       exitAnalysisIfErrors = TRUE
     )
 
@@ -39,7 +49,7 @@ jasp_meta_pdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
         dataset = dataset,
         type = c("observations", "variance", "infinity"),
         all.grouping = options$moderator,
-        all.target = c(options$cases, options$ns),
+        all.target = c(options$reference_ns, options$comparison_ns, options$reference_cases, options$comparison_cases),
         observations.amount  = "< 2",
         exitAnalysisIfErrors = TRUE
       )

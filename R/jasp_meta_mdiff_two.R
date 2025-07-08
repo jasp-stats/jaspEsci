@@ -42,6 +42,16 @@ jasp_meta_mdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
       exitAnalysisIfErrors = TRUE
     )
 
+    # ns are 3 or higher;
+    .hasErrors(
+      dataset = dataset,
+      type = c("limits"),
+      limits.target = c(options$reference_ns, options$comparison_ns),
+      limits.min = 3,
+      limits.max = Inf,
+      exitAnalysisIfErrors = TRUE
+    )
+
     if (options$moderator != "") {
 
       # At least 2 levels in grouping variable

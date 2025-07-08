@@ -30,6 +30,16 @@ jasp_meta_mean <- function(jaspResults, dataset = NULL, options, ...) {
       exitAnalysisIfErrors = TRUE
     )
 
+    # ns are 3 or higher;
+    .hasErrors(
+      dataset = dataset,
+      type = c("limits"),
+      limits.target = c(options$ns),
+      limits.min = 3,
+      limits.max = Inf,
+      exitAnalysisIfErrors = TRUE
+    )
+
     if (options$moderator != "") {
 
       # At least 2 levels in grouping variable
