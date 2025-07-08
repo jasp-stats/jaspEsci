@@ -23,10 +23,45 @@ jasp_estimate_pdiff_paired <- function(jaspResults, dataset = NULL, options, ...
   # check for errors
   if (ready) {
     if (from_raw) {
+
       # read dataset
       dataset <- jasp_estimate_pdiff_paired_read_data(dataset, options)
 
-      mylevels <- levels(dataset[[options$comparison_measure]])
+      clevels <- levels(dataset[[options$comparison_measure]])
+      rlevels <- levels(dataset[[options$reference_measure]])
+
+
+      if (!identical(clevels, rlevels)) {
+
+        note <- paste(
+          "For this analysis the Reference and Comparison measures must have the exact same levels.  Instead,",
+          options$comparison_measure,
+          "has",
+          length(clevels),
+          "which are",
+          paste0(clevels, collapse = '; '),
+          "and",
+          options$reference_measure,
+          "has",
+          length(rlevels),
+          "which are",
+          paste0(rlevels, collapse = '; ')
+        )
+
+        lerror_text <- createJaspHtml(
+          note,
+          title = gettext("Warning!")
+        )
+
+        lerror_text$dependOn(c("comparison_measure", "reference_measure"))
+        jaspResults[["level_errors"]] <- lerror_text
+        jaspResults[["level_errors"]]$position <- -5
+
+        return()
+
+      }
+
+
     }
   } else {
     mylevels <- 1
