@@ -17,9 +17,11 @@ jasp_meta_r <- function(jaspResults, dataset = NULL, options, ...) {
     # ns are positive;
     .hasErrors(
       dataset = dataset,
-      type = c("observations", "variance", "infinity", "negativeValues"),
+      type = c("observations", "variance", "infinity", "negativeValues", "limits"),
       all.target = c(options$ns),
       observations.amount  = "< 2",
+      limits.min = 3,
+      limits.max = Inf,
       exitAnalysisIfErrors = TRUE
     )
 
@@ -27,9 +29,9 @@ jasp_meta_r <- function(jaspResults, dataset = NULL, options, ...) {
     .hasErrors(
       dataset = dataset,
       type = c("limits"),
-      target = c(options$rs),
-      min = -1,
-      max = 1,
+      limits.target = c(options$rs),
+      limits.min = -1,
+      limits.max = 1,
       exitAnalysisIfErrors = TRUE
     )
 
