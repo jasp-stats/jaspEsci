@@ -101,6 +101,7 @@ Form
         name: "mean"
         defaultValue: 10.1
         fieldWidth: jaspTheme.textFieldWidth
+        negativeValues: true
         onEditingFinished : {
           summary_dirty.checked = true
         }

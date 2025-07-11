@@ -91,6 +91,7 @@ Form
         DoubleField {
           name: "r"
           defaultValue: 0.5
+          negativeValues: true
           min: -1
           max: 1
           enabled: from_summary.checked

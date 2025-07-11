@@ -161,6 +161,7 @@ Form
       {
         name: "A1B1_mean"
         defaultValue: 10
+        negativeValues: true
         label: "<i>M</i>"
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {
@@ -172,6 +173,7 @@ Form
       {
         name: "A2B1_mean"
         defaultValue: 10
+        negativeValues: true
         label: "<i>M</i>"
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {
@@ -244,6 +246,7 @@ Form
       {
         name: "A1B2_mean"
         defaultValue: 15
+        negativeValues: true
         label: "<i>M</i>"
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {
@@ -255,6 +258,7 @@ Form
       {
         name: "A2B2_mean"
         defaultValue: 10
+        negativeValues: true
         label: "<i>M</i>"
         fieldWidth: jaspTheme.textFieldWidth * .9
         onEditingFinished : {

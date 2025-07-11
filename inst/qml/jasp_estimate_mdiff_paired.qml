@@ -136,6 +136,7 @@ Form
       {
         name: "reference_mean"
         defaultValue: 10
+        negativeValues: true
         fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
@@ -146,6 +147,7 @@ Form
       {
         name: "comparison_mean"
         defaultValue: 12
+        negativeValues: true
         fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true

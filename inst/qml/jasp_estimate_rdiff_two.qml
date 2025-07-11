@@ -130,6 +130,7 @@ Form
           name: "reference_r"
           label: ""
           defaultValue: 0.5
+          negativeValues: true
           min: -1
           max: 1
           fieldWidth: jaspTheme.textFieldWidth
@@ -144,6 +145,7 @@ Form
           name: "comparison_r"
           label: ""
           defaultValue: 0.75
+          negativeValues: true
           min: -1
           max: 1
           fieldWidth: jaspTheme.textFieldWidth
