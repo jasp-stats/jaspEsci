@@ -308,7 +308,7 @@ jasp_histogram_create <- function(jaspResults, options, ready, estimate, plot_ty
     args$fill_regular <- options$fill_regular
     args$fill_highlighted <- options$fill_highlighted
     args$color <- options$color
-    args$marker_size <- as.numeric(options$marker_size)
+    args$marker_size <- 5
 
 
     if (plot_type == "dotplot") {
