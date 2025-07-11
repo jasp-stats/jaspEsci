@@ -29,6 +29,60 @@ jasp_estimate_mdiff_ind_contrast <- function(jaspResults, dataset = NULL, option
     dataset <- jasp_estimate_mdiff_ind_contrast_summary_read_data(dataset, options)
     level_source <- options$grouping_variable_levels
     valid_levels <- dataset[which(!is.na(dataset[, level_source])) , level_source]
+
+    if (all(!duplicated(dataset[ , level_source]))) {
+
+    } else {
+      level_error <- createJaspHtml(
+        text = paste(
+          "Error - you have duplicated conditions for the variable you specified to contain Grouping Variable levels: ", level_source, ".</p>",
+          "For summary data analysis, the Grouping Variable levels should have no duplicate values, as it specifies the different unique levels of the study."
+        ),
+        title = "Error - Duplicated experimental conditions"
+      )
+      level_error$dependOn(c("grouping_variable_levels"))
+      jaspResults[["level_error"]] <- level_error
+      jaspResults[["level_error"]]$position <- -5
+      return()
+    }
+
+    # ns are positive; if from_raw sds should all be positive, too
+    .hasErrors(
+      dataset = dataset,
+      type = c("observations", "infinity", "negativeValues"),
+      all.target = c(
+        options$sds,
+        options$ns
+      ),
+      observations.amount  = "< 2",
+      exitAnalysisIfErrors = TRUE
+    )
+
+    # ns are 3 or higher;
+    .hasErrors(
+      dataset = dataset,
+      type = c("limits"),
+      limits.target = c(options$ns),
+      limits.min = 3,
+      limits.max = Inf,
+      exitAnalysisIfErrors = TRUE
+    )
+
+    #ns are all integers
+    if (!jasp_is_int(dataset[ , options$ns])) {
+      n_error <- createJaspHtml(
+        text = paste(
+          "Error - your have non-integer values in the variable you selected for Group sample sizes, : ", options$ns, ".</p>",
+          "For summary data analysis, the Group sample size variable should be all positive integers > 3."
+        ),
+        title = "Error - Non-integer sample sizes"
+      )
+      n_error$dependOn(c("grouping_variable_levels"))
+      jaspResults[["n_error"]] <- n_error
+      jaspResults[["n_error"]]$position <- -5
+      return()
+    }
+
   }
 
   if (from_raw & ready) {

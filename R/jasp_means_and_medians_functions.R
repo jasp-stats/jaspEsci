@@ -1,3 +1,5 @@
+jasp_is_int <- function(x) is.integer(x) || (is.numeric(x) && identical(round(x), x))
+
 jasp_test_mdiff <- function(options, estimate) {
 
     # Test results

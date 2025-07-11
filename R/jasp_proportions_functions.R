@@ -36,6 +36,7 @@ jasp_peffect_html <- function(tfix) {
 
   if (is.null(tfix)) return(NULL)
   if (nrow(tfix) == 0) return(tfix)
+  if (is.null(tfix$case_label)) return (tfix)
 
   tfix$case_label <- gsub("P_", "<i>P</i><sub>", tfix$case_label)
 
