@@ -112,6 +112,25 @@ jasp_estimate_pdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
     # debugtext$dependOn(c("reference_measure", "comparison_measure"))
     # jaspResults[["moredebugtext"]] <- debugtext
 
+    # Check if phi was not returned
+    if (options$show_phi & is.null(estimate$es_phi)) {
+      phi_error <- createJaspHtml(
+        text = paste(
+          "Correlation (<i>&#981;</i>) table not shown because analysis did not produce a 2x2 contingency table.  Instead there were",
+          dim(estimate$properties$chi_square$observe)[[1]],
+          "grouping variable levels and",
+          dim(estimate$properties$chi_square$observe)[[2]],
+          "outcome variable levels, so <i>&#981;</i> could not be calculated."
+        ),
+        title = "Correlation cannot be computed"
+      )
+
+      phi_error$dependOn(c("grouping_variable", "outcome_variable", "show_phi"))
+      jaspResults[["phi_error"]] <- phi_error
+      jaspResults[["phi_error"]]$position <- -5
+
+    }
+
 
     if (!from_raw) {
       ov_name <- jasp_text_fix(
@@ -233,11 +252,21 @@ jasp_estimate_pdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
 
     jaspResults[["es_phi"]]$position <- 40
 
-    if (ready) jasp_table_fill(
-      jaspResults[["es_phi"]],
-      estimate,
-      "es_phi"
-    )
+
+    if (ready) {
+
+      if (is.null(estimate$es_phi)) {
+          jaspResults[["es_phi"]] <- NULL
+      } else {
+        jasp_table_fill(
+          jaspResults[["es_phi"]],
+          estimate,
+          "es_phi"
+        )
+
+      }
+    }
+
   }
 
 
