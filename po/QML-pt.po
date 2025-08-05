@@ -1,58 +1,65 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-08-06 02:02+0000\n"
+"Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/jaspesci/"
+"pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Qt-Contexts: true\n"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:7
 msgctxt "Description|"
 msgid "ESCI (Beta)"
-msgstr ""
+msgstr "ESCI (Beta)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:8
 msgctxt "Description|"
 msgid "ESCI in JASP"
-msgstr ""
+msgstr "ESCI no JASP"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:18
 msgctxt "Description|"
 msgid "ESCI: Describe"
-msgstr ""
+msgstr "ESCI: Descrever"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:19
 msgctxt "Description|"
 msgid "Describe"
-msgstr ""
+msgstr "Descrever"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:26
 msgctxt "Description|"
 msgid "Means and Medians"
-msgstr ""
+msgstr "Médias e Medianas"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:31
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Single Group"
-msgstr ""
+msgstr "Médias e Medianas ESCI: Grupo Único"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:32
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:78
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:100
 msgctxt "Description|"
 msgid "Single Group"
-msgstr ""
+msgstr "Grupo Único"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:39
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Two Groups"
-msgstr ""
+msgstr "Médias e Medianas ESCI: Dois Grupos"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:40
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:86
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:108
 msgctxt "Description|"
 msgid "Two Groups"
-msgstr ""
+msgstr "Dois Grupos"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:47
 msgctxt "Description|"
