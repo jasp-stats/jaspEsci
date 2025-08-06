@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-06 02:02+0000\n"
+"PO-Revision-Date: 2025-08-06 07:43+0000\n"
 "Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/jaspesci/"
 "pt/>\n"
@@ -64,49 +64,49 @@ msgstr "Dois Grupos"
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:47
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Paired"
-msgstr ""
+msgstr "Médias e Medianas ESCI: Pareadas"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:48
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:116
 msgctxt "Description|"
 msgid "Paired"
-msgstr ""
+msgstr "Pareado"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:55
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Independent Groups Contrast"
-msgstr ""
+msgstr "Médias e Medianas ESCI: Contraste de Grupos Independentes"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:56
 msgctxt "Description|"
 msgid "Independent Groups Contrast"
-msgstr ""
+msgstr "Contrate de Grupos Independentes"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:63
 msgctxt "Description|"
 msgid "ESCI Means and Medians: 2x2 Factorial"
-msgstr ""
+msgstr "Médias e Medianas ESCI: Fatorial 2x2"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:64
 msgctxt "Description|"
 msgid "2x2 Factorial"
-msgstr ""
+msgstr "Fatorial 2x2"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:72
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:146
 msgctxt "Description|"
 msgid "Correlations"
-msgstr ""
+msgstr "Correlações"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:77
 msgctxt "Description|"
 msgid "ESCI Correlations: Single Group"
-msgstr ""
+msgstr "Correlações ESCI: Grupo Único"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:85
 msgctxt "Description|"
 msgid "ESCI Correlations: Two Groups"
-msgstr ""
+msgstr "Correlações ESCI: Dois Grupos"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:94
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:154
