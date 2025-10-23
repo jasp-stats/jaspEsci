@@ -1,8 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-10-25 00:02+0000\n"
+"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspesci/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 "X-Qt-Contexts: true\n"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:7
@@ -1761,7 +1768,7 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:232
 msgctxt "jasp_estimate_r|"
 msgid "Residuals"
-msgstr ""
+msgstr "殘差"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:242
 msgctxt "jasp_estimate_r|"
