@@ -4,9 +4,12 @@ import JASP
 import JASP.Controls
 import "./" as Esci
 
-    Section
+  Section
   {
     title: qsTr("Aesthetics")
+
+    property bool is_summary:  false
+    property bool is_mixed:    false
 
     GridLayout {
       id: grid
@@ -38,23 +41,8 @@ import "./" as Esci
       }
 
       Label {
+        Layout.columnSpan: 5
         text: qsTr("<b>Summary</b>")
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
       }
 
       Label {
@@ -220,23 +208,8 @@ import "./" as Esci
       }
 
       Label {
+        Layout.columnSpan: 5
         text: "<b>CI</b>"
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
       }
 
       Label {
@@ -382,23 +355,8 @@ import "./" as Esci
       }
 
       Label {
+        Layout.columnSpan: 5
         text: qsTr("<b>Error distribution</b>")
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
       }
 
       Label {
@@ -475,24 +433,10 @@ import "./" as Esci
 
 
       Label {
+        Layout.columnSpan: 5
         text: qsTr("<b>Raw data</b>")
       }
 
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
-      }
-
-      Label {
-        text: " "
-      }
 
       Label {
         text: qsTr("Shape")
@@ -503,19 +447,16 @@ import "./" as Esci
         name: "shape_raw_reference"
         id: shape_raw_reference
         startValue: 'circle filled'
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
       }
 
       Esci.ShapeSelect
       {
+        Layout.columnSpan: 2
         name: "shape_raw_comparison"
         id: shape_raw_comparison
         startValue: 'circle filled'
-        enabled: from_raw.checked | mixed.checked
-      }
-
-      Label {
-        text: " "
+        enabled: !is_summary | is_mixed
       }
 
       Esci.ShapeSelect
@@ -523,7 +464,7 @@ import "./" as Esci
         name: "shape_raw_unused"
         id: shape_raw_unused
         startValue: 'circle filled'
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
       }
 
 
@@ -536,21 +477,18 @@ import "./" as Esci
         name: "size_raw_reference"
         id: size_raw_reference
         defaultValue: 2
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
 
       }
 
       Esci.SizeSelect
       {
+        Layout.columnSpan: 2
         name: "size_raw_comparison"
         id: size_raw_comparison
         defaultValue: 2
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
 
-      }
-
-      Label {
-        text: " "
       }
 
       Esci.SizeSelect
@@ -558,7 +496,7 @@ import "./" as Esci
         name: "size_raw_unused"
         id: size_raw_unused
         defaultValue: 1
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
       }
 
 
@@ -571,19 +509,16 @@ import "./" as Esci
         name: "color_raw_reference"
         id: color_raw_reference
         startValue: "#008DF9"
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
       }
 
       Esci.ColorSelect
       {
+        Layout.columnSpan: 2
         name: "color_raw_comparison"
         id: color_raw_comparison
         startValue: "#009F81"
-        enabled: from_raw.checked | mixed.checked
-      }
-
-      Label {
-        text: " "
+        enabled: !is_summary | is_mixed
       }
 
       Esci.ColorSelect
@@ -591,7 +526,7 @@ import "./" as Esci
         name: "color_raw_unused"
         id: color_raw_unused
         startValue: "gray65"
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
       }
 
 
@@ -604,19 +539,16 @@ import "./" as Esci
         name: "fill_raw_reference"
         id: fill_raw_reference
         startValue: "NA"
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
       }
 
       Esci.ColorSelect
       {
+        Layout.columnSpan: 2
         name: "fill_raw_comparison"
         id: fill_raw_comparison
         startValue: "NA"
-        enabled: from_raw.checked | mixed.checked
-      }
-
-      Label {
-        text: " "
+        enabled: !is_summary | is_mixed
       }
 
       Esci.ColorSelect
@@ -624,7 +556,7 @@ import "./" as Esci
         name: "fill_raw_unused"
         id: fill_raw_unused
         startValue: "NA"
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
       }
 
 
@@ -636,27 +568,24 @@ import "./" as Esci
       {
         name: "alpha_raw_reference"
         id: alpha_raw_reference
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
 
       }
 
       Esci.AlphaSelect
       {
+        Layout.columnSpan: 2
         name: "alpha_raw_comparison"
         id: alpha_raw_comparison
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
 
-      }
-
-      Label {
-        text: " "
       }
 
       Esci.AlphaSelect
       {
         name: "alpha_raw_unused"
         id: alpha_raw_unused
-        enabled: from_raw.checked | mixed.checked
+        enabled: !is_summary | is_mixed
 
       }
 

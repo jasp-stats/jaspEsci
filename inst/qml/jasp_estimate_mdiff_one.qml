@@ -24,192 +24,160 @@ import "./esci" as Esci
 
 Form
 {
-	id: form
-	property int framework:	Common.Type.Framework.Classical
+  id: form
 
-	function alpha_adjust() {
-	  myHeOptions.currentConfLevel = conf_level.value
+  columns: 1
+
+  function alpha_adjust() {
+    myHeOptions.currentConfLevel = conf_level.value
   }
 
   function switch_adjust() {
-      if (from_summary.checked) {
-        effect_size.currentValue = "mean"
-      }
+    if (switch_source.is_summary) {
+      effect_size.currentValue = "mean"
+    }
   }
 
-
-  RadioButtonGroup {
-    columns: 2
-    name: "switch"
+  Esci.RawOrSummary
+  {
     id: switch_source
-
-    RadioButton {
-      value: "from_raw";
-      label: qsTr("Analyze full data");
-      checked: true;
-      id: from_raw
-      onClicked: {
-         switch_adjust()
-      }
-    }
-
-    RadioButton {
-      value: "from_summary";
-      label: qsTr("Analyze summary data");
-      id: from_summary
-      onClicked: {
-         switch_adjust()
-      }
-    }
+    onValueChanged: switch_adjust()
   }
 
 
-
-  Section {
-    enabled: from_raw.checked
-    visible: from_raw.checked
-    expanded: from_raw.checked
-
-  	VariablesForm
-  	{
-  		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-  		AvailableVariablesList { name: "allVariablesList" }
-  		AssignedVariablesList { name: "outcome_variable"; title: qsTr("Outcome variable"); allowedColumns: ["scale"] }
-  	}
-
+  VariablesForm
+  {
+    visible: !switch_source.is_summary
+    preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+    AvailableVariablesList { name: "allVariablesList" }
+    AssignedVariablesList { name: "outcome_variable"; title: qsTr("Outcome variable"); allowedColumns: ["scale"] }
   }
 
+  GridLayout {
+    id: summary_grid
+    columns: 2
+    rowSpacing: 1
+    columnSpacing: 1
+    visible: switch_source.is_summary
 
-  Section {
-    enabled: from_summary.checked
-    visible: from_summary.checked
-    expanded: from_summary.checked
+    Label {
+      text: qsTr("Mean (<i>M</i>)")
+    }
 
-    GridLayout {
-      id: summary_grid
-      columns: 2
-      rowSpacing: 1
-      columnSpacing: 1
-
-
-      Label {
-        text: qsTr("Mean (<i>M</i>)")
+    DoubleField
+    {
+      name: "mean"
+      defaultValue: 10.1
+      fieldWidth: jaspTheme.textFieldWidth
+      negativeValues: true
+      onEditingFinished : {
+        summary_dirty.checked = true
       }
+    }
 
-      DoubleField
-      {
-        name: "mean"
-        defaultValue: 10.1
-        fieldWidth: jaspTheme.textFieldWidth
-        negativeValues: true
-        onEditingFinished : {
-          summary_dirty.checked = true
-        }
+    Label {
+      text: qsTr("Standard deviation (<i>s</i>)")
+    }
+
+    DoubleField
+    {
+      name: "sd"
+      defaultValue: 3
+      min: 0
+      fieldWidth: jaspTheme.textFieldWidth
+      onEditingFinished : {
+        summary_dirty.checked = true
       }
+    }
 
-      Label {
-        text: qsTr("Standard deviation (<i>s</i>)")
+    Label {
+      text: qsTr("Sample size (<i>N</i>)")
+    }
+
+    IntegerField
+    {
+      name: "n"
+      defaultValue: 20
+      min: 2
+      fieldWidth: jaspTheme.textFieldWidth
+      onEditingFinished : {
+        summary_dirty.checked = true
       }
+    }
 
-      DoubleField
-      {
-        name: "sd"
-        defaultValue: 3
-        min: 0
-        fieldWidth: jaspTheme.textFieldWidth
-        onEditingFinished : {
-          summary_dirty.checked = true
-        }
-      }
+    Label {
+      text: qsTr("Outcome variable name")
+    }
 
-      Label {
-        text: qsTr("Sample size (<i>N</i>)")
-      }
-
-      IntegerField
-      {
-        name: "n"
-        defaultValue: 20
-        min: 2
-        fieldWidth: jaspTheme.textFieldWidth
-        onEditingFinished : {
-          summary_dirty.checked = true
-        }
-      }
-
-      Label {
-        text: qsTr("Outcome variable name")
-      }
-
-      TextField
-      {
-        name: "outcome_variable_name"
-        placeholderText: qsTr("Outcome variable")
-      }
+    TextField
+    {
+      name: "outcome_variable_name"
+      placeholderText: qsTr("Outcome variable")
+    }
 
 
-      CheckBox
-	    {
-	      name: "summary_dirty";
-	      id: summary_dirty
-	      visible: false
-	    }
-
-
+    CheckBox
+    {
+      name: "summary_dirty";
+      id: summary_dirty
+      visible: false
     }
 
   }
 
-	Group
-	{
-		title: qsTr("<b>Analysis options</b>")
-		Layout.columnSpan: 2
-		Esci.ConfLevel
-		  {
-		    name: "conf_level"
-		    id: conf_level
-		    onFocusChanged: {
-         alpha_adjust()
-        }
-		  }
-		DropDown
-      {
-        name: "effect_size"
-        label: qsTr("Effect size of interest")
-        values:
+  Group
+  {
+    title: qsTr("<b>Analysis options</b>")
+
+    Esci.ConfLevel
+    {
+      name: "conf_level"
+      id: conf_level
+      onFocusChanged: {
+        alpha_adjust()
+      }
+    }
+    DropDown
+    {
+      name: "effect_size"
+      label: qsTr("Effect size of interest")
+      values:
           [
-            { label: qsTr("Mean"), value: "mean"},
-            { label: qsTr("Median"), value: "median"}
-          ]
-        id: effect_size
-        enabled: from_raw.checked
-      }
+        { label: qsTr("Mean"), value: "mean"},
+        { label: qsTr("Median"), value: "median"}
+      ]
+      id: effect_size
+      enabled: !switch_source.is_summary
+    }
 
-	}
+  }
 
-	Group
-	{
-	  title: qsTr("<b>Results options</b>")
-	  CheckBox
-	  {
-	    name: "show_details";
-	    label: qsTr("Extra details")
-	   }
-	  CheckBox
-	  {
-	    name: "show_calculations";
-	    label: qsTr("Calculation components");
-	    enabled: effect_size.currentValue == "mean"
-	   }
-	}
+  Group
+  {
+    title: qsTr("<b>Results options</b>")
+
+    CheckBox
+    {
+      name: "show_details";
+      label: qsTr("Extra details")
+    }
+    CheckBox
+    {
+      name: "show_calculations";
+      label: qsTr("Calculation components");
+      enabled: effect_size.currentValue == "mean"
+    }
+  }
 
 
   Esci.FigureOptions {
+    is_summary: switch_source.is_summary
     simple_labels_enabled: false
     simple_labels_visible: false
     difference_axis_grid_visible: false
+  }
 
-        Section
+  Section
   {
     title: qsTr("Aesthetics")
 
@@ -221,9 +189,9 @@ Form
 
     GridLayout
     {
-    columns: 5
-    rowSpacing:    jaspTheme.rowGroupSpacing
-    columnSpacing: jaspTheme.columnGroupSpacing
+      columns: 5
+      rowSpacing:    jaspTheme.rowGroupSpacing
+      columnSpacing: jaspTheme.columnGroupSpacing
 
       Label { text: "<b>CI</b>" }
 
@@ -302,7 +270,7 @@ Form
       {
         name: "shape_raw"
         id: shape_raw
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         fieldWidth: jaspTheme.textFieldWidth * 0.7
       }
 
@@ -312,7 +280,7 @@ Form
       {
         name: "size_raw"
         defaultValue: 2
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         fieldWidth: jaspTheme.textFieldWidth * 0.7
       }
 
@@ -325,7 +293,7 @@ Form
         name: "color_raw"
         startValue: '#008DF9'
         id: color_raw
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         fieldWidth: jaspTheme.textFieldWidth * 0.7
       }
 
@@ -336,7 +304,7 @@ Form
         name: "fill_raw"
         startValue: 'NA'
         id: fill_raw
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         fieldWidth: jaspTheme.textFieldWidth * 0.7
       }
 
@@ -348,17 +316,13 @@ Form
       Esci.AlphaSelect
       {
         name: "alpha_raw"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         fieldWidth: jaspTheme.textFieldWidth * 0.7
       }
 
     }
 
   } // end aesthetics
-
-
-  }
-
 
 
   Esci.HeOptions {

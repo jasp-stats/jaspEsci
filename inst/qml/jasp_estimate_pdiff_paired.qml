@@ -24,208 +24,180 @@ import "./esci" as Esci
 
 Form
 {
-	id: form
-	property int framework:	Common.Type.Framework.Classical
-	property alias conf_level_value: conf_level.value
+  id: form
+  columns: 1
+  property alias conf_level_value: conf_level.value
 
-	function alpha_adjust() {
-	  myHeOptions.currentConfLevel = conf_level.value
+  function alpha_adjust() {
+    myHeOptions.currentConfLevel = conf_level.value
   }
 
 
-  RadioButtonGroup {
-    columns: 2
-    name: "switch"
+  Esci.RawOrSummary
+  {
     id: switch_source
-
-    RadioButton {
-      value: "from_raw";
-      label: qsTr("Analyze full data");
-      checked: true;
-      id: from_raw
-    }
-
-    RadioButton {
-      value: "from_summary";
-      label: qsTr("Analyze summary data");
-      id: from_summary
-    }
   }
 
 
-
-  Section {
-    enabled: from_raw.checked
-    visible: from_raw.checked
-    expanded: from_raw.checked
-
-  	VariablesForm
-  	{
-  		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-  		AvailableVariablesList { name: "allVariablesList" }
-  		AssignedVariablesList { name: "reference_measure"; title: qsTr("Reference measure"); allowedColumns: ["nominal"]; singleVariable: true }
-  		AssignedVariablesList { name: "comparison_measure"; title: qsTr("Comparison measure"); allowedColumns: ["nominal"]; singleVariable: true }
-  	}
-
+  VariablesForm
+  {
+    visible: !switch_source.is_summary
+    preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+    AvailableVariablesList { name: "allVariablesList" }
+    AssignedVariablesList { name: "reference_measure"; title: qsTr("Reference measure"); allowedColumns: ["nominal"]; singleVariable: true }
+    AssignedVariablesList { name: "comparison_measure"; title: qsTr("Comparison measure"); allowedColumns: ["nominal"]; singleVariable: true }
   }
 
+  Group {
+    visible: switch_source.is_summary
 
-  Section {
-    enabled: from_summary.checked
-    visible: from_summary.checked
-    expanded: from_summary.checked
-
-    Group {
-
-
-      GridLayout {
+    GridLayout {
       id: sgrid
       columns: 3
       rowSpacing: 1
       columnSpacing: 1
 
-        Item {}
+      Item {}
 
-        TextField {
-          name: "comparison_measure_name"
-          Layout.columnSpan: 2
-          label: ""
-          placeholderText: qsTr("Post-test")
-          enabled: from_summary.checked
-          fieldWidth: 2*jaspTheme.textFieldWidth
-        }
+      TextField {
+        name: "comparison_measure_name"
+        Layout.columnSpan: 2
+        label: ""
+        placeholderText: qsTr("Post-test")
+        enabled: switch_source.is_summary
+        fieldWidth: 2*jaspTheme.textFieldWidth
+      }
 
 
-        TextField {
-          name: "reference_measure_name"
-          label: ""
-          placeholderText: qsTr("Pre-test")
-          enabled: from_summary.checked
-        }
+      TextField {
+        name: "reference_measure_name"
+        label: ""
+        placeholderText: qsTr("Pre-test")
+        enabled: switch_source.is_summary
+      }
 
-        TextField
-        {
-          name: "case_label"
-          id: case_label
-          label: ""
-          defaultValue: qsTr("Sick")
-          enabled: from_summary.checked
-        }
+      TextField
+      {
+        name: "case_label"
+        id: case_label
+        label: ""
+        defaultValue: qsTr("Sick")
+        enabled: switch_source.is_summary
+      }
 
-        TextField
-        {
-          name: "not_case_label"
-          id: not_case_label
-          label: ""
-          defaultValue: qsTr("Well")
-          enabled: from_summary.checked
-        }
+      TextField
+      {
+        name: "not_case_label"
+        id: not_case_label
+        label: ""
+        defaultValue: qsTr("Well")
+        enabled: switch_source.is_summary
+      }
 
-        Label {
-          id: case_label_again
-          text: case_label.value
-          enabled: false
-        }
+      Label {
+        id: case_label_again
+        text: case_label.value
+        enabled: false
+      }
 
-        IntegerField
-        {
-          name: "cases_consistent"
-          id: cases_consistent
-          label: ""
-          defaultValue: 18
-          min: 0
-          fieldWidth: jaspTheme.textFieldWidth
+      IntegerField
+      {
+        name: "cases_consistent"
+        id: cases_consistent
+        label: ""
+        defaultValue: 18
+        min: 0
+        fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
-        IntegerField
-        {
-          name: "cases_inconsistent"
-          id: cases_inconsistent
-          label: ""
-          defaultValue: 4
-          min: 0
-          fieldWidth: jaspTheme.textFieldWidth
+      IntegerField
+      {
+        name: "cases_inconsistent"
+        id: cases_inconsistent
+        label: ""
+        defaultValue: 4
+        min: 0
+        fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
 
-        Label {
-          id: not_case_label_again
-          text: not_case_label.value
-          enabled: false
-        }
+      Label {
+        id: not_case_label_again
+        text: not_case_label.value
+        enabled: false
+      }
 
-        IntegerField
-        {
-          name: "not_cases_inconsistent"
-          id: not_cases_inconsistent
-          label: ""
-          defaultValue: 12
-          min: 0
-          fieldWidth: jaspTheme.textFieldWidth
+      IntegerField
+      {
+        name: "not_cases_inconsistent"
+        id: not_cases_inconsistent
+        label: ""
+        defaultValue: 12
+        min: 0
+        fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
-        IntegerField
-        {
-          name: "not_cases_consistent"
-          id: not_cases_consistent
-          label: ""
-          defaultValue: 5
-          min: 0
-          fieldWidth: jaspTheme.textFieldWidth
+      IntegerField
+      {
+        name: "not_cases_consistent"
+        id: not_cases_consistent
+        label: ""
+        defaultValue: 5
+        min: 0
+        fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
 
-      }  // 3 column grid
+    }  // 3 column grid
 
-                  CheckBox
-	    {
-	      name: "summary_dirty";
-	      id: summary_dirty
-	      visible: false
-	    }
-    }  // end of group for summary
+    CheckBox
+    {
+      name: "summary_dirty";
+      id: summary_dirty
+      visible: false
+    }
+  }  // end of group for summary
+
+
+  Group
+  {
+    title: qsTr("<b>Analysis options</b>")
+    Esci.ConfLevel
+    {
+      name: "conf_level"
+      id: conf_level
+      onFocusChanged: {
+        alpha_adjust()
+      }
+    }
 
   }
 
-	Group
-	{
-		title: qsTr("<b>Analysis options</b>")
-		Layout.columnSpan: 2
-		Esci.ConfLevel
-		  {
-		    name: "conf_level"
-		    id: conf_level
-		    onFocusChanged: {
-         alpha_adjust()
-        }
-		  }
-
-	}
-
-	Group
-	{
-	  title: qsTr("<b>Results options</b>")
-	  CheckBox
-	  {
-	    name: "show_details";
-	    label: qsTr("Extra details")
-	   }
+  Group
+  {
+    title: qsTr("<b>Results options</b>")
+    CheckBox
+    {
+      name: "show_details";
+      label: qsTr("Extra details")
+    }
   }
 
 
   Esci.FigureOptions {
+    is_summary: switch_source.is_summary
     simple_labels_enabled: true
     simple_labels_visible: true
     difference_axis_grid_visible: true
@@ -236,8 +208,9 @@ Form
     ymax_placeholderText: "auto"
     width_defaultValue: 400
     height_defaultValue: 450
+  }
 
-        Section
+  Section
   {
     title: qsTr("Aesthetics")
 
@@ -276,22 +249,13 @@ Form
         name: "linetype_summary_difference"
         id: linetype_summary_difference
       }
-
-
-
     }
-
-
   }
-
-  }
-
 
   Esci.HeOptions {
     id: myHeOptions
     null_value_enabled: false
     null_boundary_max: 1
   }
-
 
 }

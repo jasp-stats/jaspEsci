@@ -11,7 +11,7 @@ import "./" as Esci
     property alias simple_labels_enabled: simple_contrast_labels.enabled
     property alias simple_labels_visible: simple_contrast_labels.visible
     property alias difference_axis_grid_visible: difference_axis_grid.visible
-	// property alias difference_axis_units_visible: difference_axis_units.visible
+    // property alias difference_axis_units_visible: difference_axis_units.visible
     property bool  difference_axis_units_visible: false
     property alias data_grid_visible: data_grid.visible
     property alias distributions_grid_visible: distributions_grid.visible
@@ -22,6 +22,8 @@ import "./" as Esci
     property alias error_nudge_defaultValue: error_nudge.defaultValue
     property alias data_spread_defaultValue: data_spread.defaultValue
     property alias error_scale_defaultValue: error_scale.defaultValue
+
+    property bool is_summary: false
 
 
     GridLayout
@@ -45,7 +47,7 @@ import "./" as Esci
         defaultValue: 300
         min: 100
         max: 3000
-		fieldWidth: dimensions_grid.adjustedFieldWidth
+        fieldWidth: dimensions_grid.adjustedFieldWidth
       }
 
       Label { text: qsTr("Height") }
@@ -56,7 +58,7 @@ import "./" as Esci
           defaultValue: 400
           min: 100
           max: 3000
-		  fieldWidth: dimensions_grid.adjustedFieldWidth
+          fieldWidth: dimensions_grid.adjustedFieldWidth
       }
       // end: Dimension
 
@@ -68,7 +70,7 @@ import "./" as Esci
       {
           name: "ylab"
           placeholderText: "auto"
-		      fieldWidth: dimensions_grid.adjustedFieldWidth * 2
+              fieldWidth: dimensions_grid.adjustedFieldWidth * 2
           Layout.columnSpan: 3
       }
 
@@ -83,7 +85,7 @@ import "./" as Esci
           defaultValue: 14
           min: 2
           max: 80
-		  fieldWidth: dimensions_grid.adjustedFieldWidth
+          fieldWidth: dimensions_grid.adjustedFieldWidth
       }
 
       Label { text: qsTr("Label font size") }
@@ -93,7 +95,7 @@ import "./" as Esci
           defaultValue: 15
           min: 2
           max: 80
-		  fieldWidth: dimensions_grid.adjustedFieldWidth
+          fieldWidth: dimensions_grid.adjustedFieldWidth
       }
       // end: y-axis row 2
 
@@ -106,7 +108,7 @@ import "./" as Esci
           name: "ymin"
           id: ymin
           placeholderText: "auto"
-		  fieldWidth: dimensions_grid.adjustedFieldWidth
+          fieldWidth: dimensions_grid.adjustedFieldWidth
       }
 
       Label { text: qsTr("Max") }
@@ -115,7 +117,7 @@ import "./" as Esci
           name: "ymax"
           id: ymax
           placeholderText: "auto"
-		  fieldWidth: dimensions_grid.adjustedFieldWidth
+          fieldWidth: dimensions_grid.adjustedFieldWidth
       }
       // end: y-axis row 3
 
@@ -127,7 +129,7 @@ import "./" as Esci
       {
           name: "ybreaks"
           placeholderText: "auto"
-		  fieldWidth: dimensions_grid.adjustedFieldWidth
+          fieldWidth: dimensions_grid.adjustedFieldWidth
       }
 
       Label { text: "" }
@@ -142,7 +144,7 @@ import "./" as Esci
       {
           name: "xlab"
           placeholderText: "auto"
-		      fieldWidth: dimensions_grid.adjustedFieldWidth * 2
+              fieldWidth: dimensions_grid.adjustedFieldWidth * 2
           Layout.columnSpan: 3      }
 
       // end: x-axis row 1
@@ -158,7 +160,7 @@ import "./" as Esci
         defaultValue: 14
         min: 2
         max: 80
-		    fieldWidth: dimensions_grid.adjustedFieldWidth
+            fieldWidth: dimensions_grid.adjustedFieldWidth
       }
 
       Label { text: qsTr("Label font size") }
@@ -168,7 +170,7 @@ import "./" as Esci
         defaultValue: 15
         min: 2
         max: 80
-		    fieldWidth: dimensions_grid.adjustedFieldWidth
+            fieldWidth: dimensions_grid.adjustedFieldWidth
       }
       // end: x-axis row 2
 
@@ -211,7 +213,7 @@ import "./" as Esci
             visible: difference_axis_grid.visible
             name: "difference_axis_breaks"
             placeholderText: "auto"
-			fieldWidth: dimensions_grid.adjustedFieldWidth
+            fieldWidth: dimensions_grid.adjustedFieldWidth
       }
 
         // these two "fill" the row with 5 elements if difference_axis_units_visible is false
@@ -269,14 +271,14 @@ import "./" as Esci
           ]
       }
 
-      Label { visible: data_grid.visible; text: qsTr("Spread"); enabled: from_raw.checked }
+      Label { visible: data_grid.visible; text: qsTr("Spread"); enabled: !is_summary }
       DoubleField
       {
           visible: data_grid.visible
           name: "data_spread"
           id: data_spread
           defaultValue: 0.25
-          enabled: from_raw.checked
+          enabled: !is_summary
           min: 0
           max: 5
           fieldWidth: dimensions_grid.adjustedFieldWidth
@@ -292,7 +294,7 @@ import "./" as Esci
           name: "error_nudge"
           id: error_nudge
           defaultValue: 0.3
-          enabled: from_raw.checked
+          enabled: !is_summary
           min: 0
           max: 5
         fieldWidth: dimensions_grid.adjustedFieldWidth

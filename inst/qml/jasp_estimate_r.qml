@@ -24,60 +24,39 @@ import "./esci" as Esci
 
 Form
 {
-	id: form
-	property int framework:	Common.Type.Framework.Classical
-	property alias conf_level_value: conf_level.value
+  id: form
+  columns: 1
 
-	function alpha_adjust() {
-	  myHeOptions.currentConfLevel = conf_level.value
+  property alias conf_level_value: conf_level.value
+
+  function alpha_adjust() {
+    myHeOptions.currentConfLevel = conf_level.value
   }
 
-  RadioButtonGroup {
-    columns: 2
-    name: "switch"
+  Esci.RawOrSummary
+  {
     id: switch_source
-
-    RadioButton {
-      value: "from_raw";
-      label: qsTr("Analyze full data");
-      checked: true;
-      id: from_raw
-    }
-
-    RadioButton {
-      value: "from_summary";
-      label: qsTr("Analyze summary data");
-      id: from_summary
-    }
   }
 
 
 
-  Section {
-    enabled: from_raw.checked
-    visible: from_raw.checked
-    expanded: from_raw.checked
-
-  	VariablesForm
-  	{
-  		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-  		AvailableVariablesList { name: "allVariablesList" }
-  		AssignedVariablesList { name: "x"; title: qsTr("<i>X</i> Variable"); allowedColumns: ["scale"]; singleVariable: true }
-  		AssignedVariablesList { name: "y"; title: qsTr("<i>Y</i> Variable"); allowedColumns: ["scale"]; singleVariable: true }
-  	}
-
+  VariablesForm
+  {
+    visible: !switch_source.is_summary
+    preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+    AvailableVariablesList { name: "allVariablesList" }
+    AssignedVariablesList { name: "x"; title: qsTr("<i>X</i> Variable"); allowedColumns: ["scale"]; singleVariable: true }
+    AssignedVariablesList { name: "y"; title: qsTr("<i>Y</i> Variable"); allowedColumns: ["scale"]; singleVariable: true }
   }
 
 
-  Section {
-    enabled: from_summary.checked
-    visible: from_summary.checked
-    expanded: from_summary.checked
 
-    Group {
+  Group {
 
+    columns : 1
+    visible: switch_source.is_summary
 
-      GridLayout {
+    GridLayout {
       id: sgrid
       columns: 3
       rowSpacing: 1
@@ -88,18 +67,18 @@ Form
         text: qsTr("Correlation (<i>r</i>)")
       }
 
-        DoubleField {
-          name: "r"
-          defaultValue: 0.5
-          negativeValues: true
-          min: -1
-          max: 1
-          enabled: from_summary.checked
-          fieldWidth: jaspTheme.textFieldWidth
+      DoubleField {
+        name: "r"
+        defaultValue: 0.5
+        negativeValues: true
+        min: -1
+        max: 1
+        enabled: switch_source.is_summary
+        fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
       Label {
         text: " "
@@ -109,16 +88,16 @@ Form
         text: qsTr("Sample size (<i>N</i>)")
       }
 
-        DoubleField {
-          name: "n"
-          defaultValue: 20
-          min: 2
-          fieldWidth: jaspTheme.textFieldWidth
-          enabled: from_summary.checked
-                  onEditingFinished : {
+      DoubleField {
+        name: "n"
+        defaultValue: 20
+        min: 2
+        fieldWidth: jaspTheme.textFieldWidth
+        enabled: switch_source.is_summary
+        onEditingFinished : {
           summary_dirty.checked = true
-          }
         }
+      }
 
       Label {
         text: " "
@@ -129,151 +108,150 @@ Form
         text: qsTr("<i>X</i>-variable name")
       }
 
-        TextField
-        {
-          name: "x_variable_name"
-          id: x_variable_name
-          fieldWidth: jaspTheme.textFieldWidth * 2
-          Layout.columnSpan: 2
-          placeholderText: qsTr("X variable")
-          enabled: from_summary.checked
-        }
+      TextField
+      {
+        name: "x_variable_name"
+        id: x_variable_name
+        fieldWidth: jaspTheme.textFieldWidth * 2
+        Layout.columnSpan: 2
+        placeholderText: qsTr("X variable")
+        enabled: switch_source.is_summary
+      }
 
 
       Label {
         text: qsTr("<i>Y</i>-variable name")
       }
 
-        TextField
-        {
-          name: "y_variable_name"
-          id: y_variable_name
-          fieldWidth: jaspTheme.textFieldWidth * 2
-          Layout.columnSpan: 2
-          placeholderText: qsTr("Y variable")
-          enabled: from_summary.checked
-        }
+      TextField
+      {
+        name: "y_variable_name"
+        id: y_variable_name
+        fieldWidth: jaspTheme.textFieldWidth * 2
+        Layout.columnSpan: 2
+        placeholderText: qsTr("Y variable")
+        enabled: switch_source.is_summary
+      }
 
-      }  // 1 column grid
+    }  // 1 column grid
 
-                        CheckBox
-	    {
-	      name: "summary_dirty";
-	      id: summary_dirty
-	      visible: false
-	    }
+    CheckBox
+    {
+      name: "summary_dirty";
+      id: summary_dirty
+      visible: false
+    }
 
-    }  // end of group for summary
+  }  // end of group for summary
+
+
+  Group
+  {
+    title: qsTr("<b>Analysis options</b>")
+    Esci.ConfLevel
+    {
+      name: "conf_level"
+      id: conf_level
+      onFocusChanged: {
+        alpha_adjust()
+      }
+    }
 
   }
 
-	Group
-	{
-		title: qsTr("<b>Analysis options</b>")
-		Layout.columnSpan: 2
-		Esci.ConfLevel
-		  {
-		    name: "conf_level"
-		    id: conf_level
-		    onFocusChanged: {
-         alpha_adjust()
-        }
-		  }
-
-	}
-
-	Group
-	{
-	  title: qsTr("<b>Results options</b>")
-	  CheckBox
-	  {
-	    name: "show_details";
-	    label: qsTr("Extra details")
-	   }
+  Group
+  {
+    title: qsTr("<b>Results options</b>")
+    CheckBox
+    {
+      name: "show_details";
+      label: qsTr("Extra details")
+    }
   }
 
 
   Group {
     title: qsTr("<b>Regression</b>")
-    enabled: from_raw.checked
-    visible: from_raw.checked
-    Layout.columnSpan: 2
+    enabled: !switch_source.is_summary
+    visible: !switch_source.is_summary
 
     CheckBox
-	  {
-	    name: "do_regression";
-	    id: do_regression
-	    label: qsTr("Regression analysis")
-	    enabled: from_raw.checked
-      visible: from_raw.checked
-	   }
+    {
+      name: "do_regression";
+      id: do_regression
+      label: qsTr("Regression analysis")
+      enabled: !switch_source.is_summary
+      visible: !switch_source.is_summary
+    }
 
-	  GridLayout {
-	    columns: 3
+    GridLayout {
+      columns: 3
 
-	      CheckBox {
-    	    name: "show_line";
-    	    id: show_line
-	        label: qsTr("Line")
-	        enabled: do_regression.checked
-          visible: from_raw.checked
-	      }
+      CheckBox {
+        name: "show_line";
+        id: show_line
+        label: qsTr("Line")
+        enabled: do_regression.checked
+        visible: !switch_source.is_summary
+      }
 
-	      CheckBox {
-    	    name: "show_line_CI";
-    	    id: show_line_CI
-	        label: qsTr("CI on Line")
-	        enabled: do_regression.checked
-          visible: from_raw.checked
-	      }
+      CheckBox {
+        name: "show_line_CI";
+        id: show_line_CI
+        label: qsTr("CI on Line")
+        enabled: do_regression.checked
+        visible: !switch_source.is_summary
+      }
 
-	      CheckBox {
-    	    name: "show_residuals";
-    	    id: show_residuals
-	        label: qsTr("Residuals")
-	        enabled: do_regression.checked
-          visible: from_raw.checked
-	      }
-	  }
+      CheckBox {
+        name: "show_residuals";
+        id: show_residuals
+        label: qsTr("Residuals")
+        enabled: do_regression.checked
+        visible: !switch_source.is_summary
+      }
+    }
 
     CheckBox
-	  {
-	    name: "show_PI";
-	    id: show_PI
-	    label: qsTr("Prediction interval")
-	    enabled: do_regression.checked
-      visible: from_raw.checked
-	   }
+    {
+      name: "show_PI";
+      id: show_PI
+      label: qsTr("Prediction interval")
+      enabled: do_regression.checked
+      visible: !switch_source.is_summary
+    }
 
-	   TextField {
-         name: "predict_from_x"
-         id: predict_from_x
-         label: qsTr("Enter <i>X</i> value to generate prediction (<i>&#374;</i>)")
-         placeholderText: qsTr("Enter an X value")
-   	     enabled: do_regression.checked
-         visible: from_raw.checked
-     }
+    TextField {
+      name: "predict_from_x"
+      id: predict_from_x
+      label: qsTr("Enter <i>X</i> value to generate prediction (<i>&#374;</i>)")
+      placeholderText: qsTr("Enter an X value")
+      enabled: do_regression.checked
+      visible: !switch_source.is_summary
+    }
 
   }
 
 
   Esci.ScatterplotOptions {
+    is_summary: switch_source.is_summary
     sp_other_options_grid_enabled: true
     sp_other_options_grid_visible: true
+  }
 
-    Section
+  Section
   {
     title: qsTr("Scatterplot aesthetics")
-    enabled: from_raw.checked
-    visible: from_raw.checked
+    enabled: !switch_source.is_summary
+    visible: !switch_source.is_summary
 
-     GridLayout {
+    GridLayout {
       id: sp_raw_grid
       columns: 1
       Layout.columnSpan: 2
 
       Label {
-          text: qsTr("<b>Raw data</b>")
+        text: qsTr("<b>Raw data</b>")
       }
 
       Esci.ShapeSelect
@@ -282,7 +260,7 @@ Form
         id: sp_shape_raw_reference
         label: qsTr("Shape")
         startValue: 'circle filled'
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.SizeSelect
@@ -291,7 +269,7 @@ Form
         id: sp_size_raw_reference
         label: qsTr("Size")
         defaultValue: 3
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
 
       }
 
@@ -301,7 +279,7 @@ Form
         id: sp_color_raw_reference
         label: qsTr("Outline")
         startValue: "black"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.ColorSelect
@@ -310,7 +288,7 @@ Form
         id: sp_fill_raw_reference
         label: qsTr("Fill")
         startValue: "#008DF9"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.AlphaSelect
@@ -318,10 +296,9 @@ Form
         name: "sp_alpha_raw_reference"
         label: qsTr("Transparency")
         id: sp_alpha_raw_reference
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         defaultValue: 75
       }
-
 
     }
 
@@ -332,24 +309,24 @@ Form
       enabled: do_regression.checked
 
       Label {
-          text: ""
+        text: ""
       }
 
       Label {
-          text: qsTr("<u>Regression</u>")
+        text: qsTr("<u>Regression</u>")
       }
 
       Label {
-          text: qsTr("<u>Prediction</u>")
+        text: qsTr("<u>Prediction</u>")
       }
 
 
       Label {
-          text: qsTr("<u>Residual</u>")
+        text: qsTr("<u>Residual</u>")
       }
 
       Label {
-          text: qsTr("Style")
+        text: qsTr("Style")
       }
 
       Esci.LineTypeSelect
@@ -375,7 +352,7 @@ Form
       }
 
       Label {
-          text: qsTr("Thickness")
+        text: qsTr("Thickness")
       }
 
       IntegerField
@@ -406,7 +383,7 @@ Form
       }
 
       Label {
-          text: qsTr("Color")
+        text: qsTr("Color")
       }
 
 
@@ -436,7 +413,7 @@ Form
 
 
       Label {
-          text: qsTr("Transparency")
+        text: qsTr("Transparency")
       }
 
 
@@ -471,7 +448,7 @@ Form
       Layout.columnSpan: 2
 
       Label {
-          text: qsTr("<b>Prediction from <i>X</i></b>")
+        text: qsTr("<b>Prediction from <i>X</i></b>")
       }
 
       IntegerField
@@ -481,7 +458,7 @@ Form
         label: qsTr("Label size")
         min: 1
         max: 10
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.ColorSelect
@@ -490,7 +467,7 @@ Form
         id: sp_prediction_color
         label: qsTr("Label color")
         startValue: "#E20134"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
 
@@ -503,24 +480,24 @@ Form
       enabled: do_regression.checked
 
       Label {
-          text: ""
+        text: ""
       }
 
       Label {
-          text: qsTr("<u>Guidelines</u>")
+        text: qsTr("<u>Guidelines</u>")
       }
 
       Label {
-          text: qsTr("<u>PI</u>")
+        text: qsTr("<u>PI</u>")
       }
 
 
       Label {
-          text: qsTr("<u>CI</u>")
+        text: qsTr("<u>CI</u>")
       }
 
       Label {
-          text: qsTr("Style")
+        text: qsTr("Style")
       }
 
 
@@ -528,7 +505,7 @@ Form
       {
         name: "sp_linetype_ref"
         id: sp_linetype_ref
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         startValue: "dotted"
       }
 
@@ -547,7 +524,7 @@ Form
       }
 
       Label {
-          text: qsTr("Thickness")
+        text: qsTr("Thickness")
       }
 
       IntegerField
@@ -556,7 +533,7 @@ Form
         defaultValue: 1
         min: 1
         max: 10
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       IntegerField
@@ -578,7 +555,7 @@ Form
       }
 
       Label {
-          text: qsTr("Color")
+        text: qsTr("Color")
       }
 
 
@@ -587,7 +564,7 @@ Form
         name: "sp_color_ref"
         id: sp_color_ref
         startValue: 'gray60'
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.ColorSelect
@@ -608,7 +585,7 @@ Form
 
 
       Label {
-          text: qsTr("Transparency")
+        text: qsTr("Transparency")
       }
 
 
@@ -616,7 +593,7 @@ Form
       {
         name: "sp_alpha_ref"
         id: sp_alpha_ref
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.AlphaSelect
@@ -634,15 +611,12 @@ Form
       }
 
     }
-
-  }
-
-
   }
 
 
   Esci.FigureOptions {
     title: qsTr("Estimation figure options")
+    is_summary: switch_source.is_summary
     simple_labels_enabled: false
     simple_labels_visible: false
     difference_axis_grid_visible: false
@@ -653,8 +627,9 @@ Form
     ymax_placeholderText: "1"
     width_defaultValue: 300
     height_defaultValue: 400
+  }
 
-    Section
+  Section
   {
     title: qsTr("Estimation figure aesthetics")
 
@@ -663,9 +638,9 @@ Form
 
     Group
     {
-    title: "<b>CI</b>"
-    columns: 2
-    Layout.columnSpan: 2
+      title: "<b>CI</b>"
+      columns: 2
+      Layout.columnSpan: 2
 
       Esci.LineTypeSelect
       {
@@ -697,10 +672,6 @@ Form
         label: qsTr("Transparency")
       }
     }  // end ci grid
-
-
-
-  }
 
   }
 

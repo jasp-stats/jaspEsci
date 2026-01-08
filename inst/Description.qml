@@ -7,12 +7,15 @@ Description
 	description		: qsTr("ESCI in JASP")
 	icon		    : "esci_logo.svg"
 	hasWrappers		: false
+	requiresData	: false
+
 
 	Analysis
 	{
 		title:	qsTr("ESCI: Describe")
 		menu:	qsTr("Describe")
 		func:	"jasp_describe"
+		requiresData	: true
 	}
 
 	GroupTitle
@@ -46,6 +49,8 @@ Description
 		title:	qsTr("ESCI Means and Medians: Independent Groups Contrast")
 		menu:	qsTr("Independent Groups Contrast")
 		func:	"jasp_estimate_mdiff_ind_contrast"
+		requiresData	: true
+
 	}
 
 	Analysis
@@ -113,6 +118,7 @@ Description
 		title:	qsTr("ESCI Meta-Analysis: Means")
 		menu:	qsTr("Means")
 		func:	"jasp_meta_mean"
+		requiresData: true
 	}
 
 	Analysis
@@ -120,6 +126,7 @@ Description
 		title:	qsTr("ESCI Meta-Analysis: Difference in Means")
 		menu:	qsTr("Difference in Means")
 		func:	"jasp_meta_mdiff_two"
+		requiresData: true
 	}
 
 	Analysis
@@ -127,6 +134,7 @@ Description
 		title:	qsTr("ESCI Meta-Analysis: Correlations")
 		menu:	qsTr("Correlations")
 		func:	"jasp_meta_r"
+		requiresData: true
 	}
 
 	Analysis
@@ -134,13 +142,15 @@ Description
 		title:	qsTr("ESCI Meta-Analysis: Proportions")
 		menu:	qsTr("Proportions")
 		func:	"jasp_meta_proportion"
+		requiresData: true
 	}
 
 		Analysis
 	{
-	  title: qsTr("ESCI Meta-Anlaysis: Difference in Proportions")
+		title: qsTr("ESCI Meta-Anlaysis: Difference in Proportions")
 		menu:	qsTr("Difference in Proportions")
 		func:	"jasp_meta_pdiff_two"
+		requiresData: true
 	}
 
 }
