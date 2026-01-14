@@ -3,7 +3,7 @@ import JASP.Module	1.0
 
 Description
 {
-	title		    : qsTr("ESCI (Beta)")
+	title		    : qsTr("ESCI")
 	description		: qsTr("ESCI in JASP")
 	icon		    : "esci_logo.svg"
 	hasWrappers		: false
