@@ -24,23 +24,22 @@ import "./esci" as Esci
 
 Form
 {
-	id: form
-	property int framework:	Common.Type.Framework.Classical
+  id: form
+  columns: 1
 
-	function alpha_adjust() {
-	  myHeOptions.currentConfLevel = conf_level.value
+  function alpha_adjust() {
+    myHeOptions.currentConfLevel = conf_level.value
   }
 
   function switch_adjust() {
-      if (from_summary.checked | mixed.checked) {
-        effect_size.currentValue = "mean_difference";
-      }
+    if (switch_source.is_summary | mixed.checked) {
+      effect_size.currentValue = "mean_difference";
+    }
   }
 
 
   RadioButtonGroup {
     columns: 2
-    Layout.columnSpan: 2
     name: "design"
     id: design
 
@@ -56,60 +55,42 @@ Form
       label: qsTr("Mixed (RCT)");
       id: mixed
       onClicked: {
-         switch_adjust()
+        switch_adjust()
       }
     }
   }  // end design selection
 
 
-  RadioButtonGroup {
-    columns: 2
-    Layout.columnSpan: 2
-    name: "switch"
+  Esci.RawOrSummary
+  {
     id: switch_source
     visible: fully_between.checked
-
-    RadioButton {
-      value: "from_raw";
-      label: qsTr("Analyze full data");
-      checked: true;
-      id: from_raw
-    }
-
-    RadioButton {
-      value: "from_summary";
-      label: qsTr("Analyze summary data");
-      id: from_summary
-      onClicked: {
-         switch_adjust()
-      }
-    }
-  }  // end raw or summary
-
+    onValueChanged: switch_adjust()
+  }
 
   Section {
-    enabled: from_raw.checked & fully_between.checked
-    visible: from_raw.checked & fully_between.checked
-    expanded: from_raw.checked & fully_between.checked
+    enabled: !switch_source.is_summary & fully_between.checked
+    visible: !switch_source.is_summary& fully_between.checked
+    expanded: !switch_source.is_summary & fully_between.checked
     title: "Between subjects, full data"
 
-    	VariablesForm
-    	{
-    		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-    		AvailableVariablesList { name: "allVariablesList_between" }
-    		AssignedVariablesList { name: "outcome_variable"; title: qsTr("Outcome variable"); allowedColumns: ["scale"]; singleVariable: true }
-    		AssignedVariablesList { name: "grouping_variable_A"; title: qsTr("Grouping variable A"); allowedColumns: ["nominal"]; singleVariable: true }
-    		AssignedVariablesList { name: "grouping_variable_B"; title: qsTr("Grouping variable B"); allowedColumns: ["nominal"]; singleVariable: true }
+    VariablesForm
+    {
+      preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+      AvailableVariablesList { name: "allVariablesList_between" }
+      AssignedVariablesList { name: "outcome_variable"; title: qsTr("Outcome variable"); allowedColumns: ["scale"]; singleVariable: true }
+      AssignedVariablesList { name: "grouping_variable_A"; title: qsTr("Grouping variable A"); allowedColumns: ["nominal"]; singleVariable: true }
+      AssignedVariablesList { name: "grouping_variable_B"; title: qsTr("Grouping variable B"); allowedColumns: ["nominal"]; singleVariable: true }
 
-    	}
+    }
 
   }  // end between_raw
 
 
   Section {
-    enabled: from_summary.checked & fully_between.checked
-    visible: from_summary.checked & fully_between.checked
-    expanded: from_summary.checked & fully_between.checked
+    enabled: switch_source.is_summary & fully_between.checked
+    visible: switch_source.is_summary & fully_between.checked
+    expanded: switch_source.is_summary & fully_between.checked
     title: qsTr("Between subjects, summary data")
 
     GridLayout {
@@ -330,149 +311,147 @@ Form
 
     TextField
     {
-        name: "outcome_variable_name_bs"
-        label: qsTr("Outcome variable name")
-        placeholderText: qsTr("My outcome variable")
-        Layout.columnSpan: 2
+      name: "outcome_variable_name_bs"
+      label: qsTr("Outcome variable name")
+      placeholderText: qsTr("My outcome variable")
+      Layout.columnSpan: 2
     }
 
 
-      CheckBox
-	    {
-	      name: "summary_dirty";
-	      id: summary_dirty
-	      visible: false
-	    }
+    CheckBox
+    {
+      name: "summary_dirty";
+      id: summary_dirty
+      visible: false
+    }
 
   }  // fully between summary section
 
 
-    Section {
+  Section {
     enabled: mixed.checked
     visible: mixed.checked
     expanded: mixed.checked
     title: qsTr("RCT, full data")
 
-    	VariablesForm
-    	{
-    		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-    		AvailableVariablesList { name: "allVariablesList" }
-    		AssignedVariablesList { name: "outcome_variable_level1"; title: qsTr("First repeated measure"); allowedColumns: ["scale"]; singleVariable: true }
-    		AssignedVariablesList { name: "outcome_variable_level2"; title: qsTr("Second repeated measure"); allowedColumns: ["scale"]; singleVariable: true }
-    		AssignedVariablesList { name: "grouping_variable"; title: qsTr("Grouping variable"); allowedColumns: ["nominal"]; singleVariable: true }
-    	}
+    VariablesForm
+    {
+      preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+      AvailableVariablesList { name: "allVariablesList" }
+      AssignedVariablesList { name: "outcome_variable_level1"; title: qsTr("First repeated measure"); allowedColumns: ["scale"]; singleVariable: true }
+      AssignedVariablesList { name: "outcome_variable_level2"; title: qsTr("Second repeated measure"); allowedColumns: ["scale"]; singleVariable: true }
+      AssignedVariablesList { name: "grouping_variable"; title: qsTr("Grouping variable"); allowedColumns: ["nominal"]; singleVariable: true }
+    }
 
 
-    	TextField
-      {
-        name: "repeated_measures_name"
-        label: qsTr("Repeated measure name")
-        placeholderText: qsTr("Time")
-        Layout.columnSpan: 2
-      }
+    TextField
+    {
+      name: "repeated_measures_name"
+      label: qsTr("Repeated measure name")
+      placeholderText: qsTr("Time")
+      Layout.columnSpan: 2
+    }
 
 
-    	TextField
-      {
-        name: "outcome_variable_name"
-        label: qsTr("Outcome variable name")
-        placeholderText: qsTr("My outcome variable")
-        Layout.columnSpan: 2
-      }
+    TextField
+    {
+      name: "outcome_variable_name"
+      label: qsTr("Outcome variable name")
+      placeholderText: qsTr("My outcome variable")
+      Layout.columnSpan: 2
+    }
 
 
   } // mixed variable selection
 
 
-	Group
-	{
-		title: qsTr("<b>Between-subjects analysis options</b>")
-		Layout.columnSpan: 2
-		visible: fully_between.checked
+  Group
+  {
+    title: qsTr("<b>Between-subjects analysis options</b>")
+    visible: fully_between.checked
 
-		DropDown
-      {
-        name: "effect_size"
-        label: qsTr("Effect size of interest")
-        enabled: from_raw.checked & fully_between.checked
-        values:
+    DropDown
+    {
+      name: "effect_size"
+      label: qsTr("Effect size of interest")
+      enabled: !switch_source.is_summary & fully_between.checked
+      values:
           [
-            { label: qsTr("Mean difference"), value: "mean_difference"},
-            { label: qsTr("Median difference"), value: "median_difference"}
-          ]
-        id: effect_size
-      }
+        { label: qsTr("Mean difference"), value: "mean_difference"},
+        { label: qsTr("Median difference"), value: "median_difference"}
+      ]
+      id: effect_size
+    }
 
     CheckBox {
-	    name: "assume_equal_variance";
-	    id: assume_equal_variance
-	    label: qsTr("Assume equal variances")
-	    checked: true
-	    enabled: effect_size.currentValue == "mean_difference"
-    }
-
-	}
-
-	Group
-	{
-		title: qsTr("<b>Analysis options</b>")
-		Layout.columnSpan: 2
-
-		Esci.ConfLevel
-		  {
-		    name: "conf_level"
-		    id: conf_level
-		    onFocusChanged: {
-         alpha_adjust()
-        }
-		  }
-
-	}
-
-
-	Group
-	{
-	  title: qsTr("<b>Results options</b>")
-	  CheckBox
-	  {
-	    name: "show_details";
-	    label: qsTr("Extra details")
-	   }
-	  CheckBox
-	  {
-	    name: "show_interaction_plot";
-	    id: show_interaction_plot
-	    label: qsTr("Figure to emphasize interaction");
-	   }
-
-	  CheckBox {
-	    name: "show_CI";
-	    id: show_CI
-	    label: qsTr("CI for each simple effect")
-	    enabled: show_interaction_plot.checked
-    }
-	}
-
-
-  Esci.FigureOptions {
-   simple_labels_enabled: fully_between.checked
-   width_defaultValue: 700
-   height_defaultValue: 400
-   error_nudge_defaultValue: 0.5
-   data_spread_defaultValue: 0.2
-   error_scale_defaultValue: 0.25
-
-     Esci.AestheticsAll {
-
+      name: "assume_equal_variance";
+      id: assume_equal_variance
+      label: qsTr("Assume equal variances")
+      checked: true
+      enabled: effect_size.currentValue == "mean_difference"
     }
 
   }
 
-	Esci.HeOptions {
-	  id: myHeOptions
+  Group
+  {
+    title: qsTr("<b>Analysis options</b>")
+
+    Esci.ConfLevel
+    {
+      name: "conf_level"
+      id: conf_level
+      onFocusChanged: {
+        alpha_adjust()
+      }
+    }
+
+  }
+
+  Group
+  {
+    title: qsTr("<b>Results options</b>")
+    CheckBox
+    {
+      name: "show_details";
+      label: qsTr("Extra details")
+    }
+    CheckBox
+    {
+      name: "show_interaction_plot";
+      id: show_interaction_plot
+      label: qsTr("Figure to emphasize interaction");
+    }
+
+    CheckBox {
+      name: "show_CI";
+      id: show_CI
+      label: qsTr("CI for each simple effect")
+      enabled: show_interaction_plot.checked
+    }
+  }
+
+
+  Esci.FigureOptions {
+    is_summary: switch_source.is_summary
+    simple_labels_enabled: fully_between.checked
+    width_defaultValue: 700
+    height_defaultValue: 400
+    error_nudge_defaultValue: 0.5
+    data_spread_defaultValue: 0.2
+    error_scale_defaultValue: 0.25
+  }
+
+  Esci.AestheticsAll {
+    is_summary: switch_source.is_summary
+    is_mixed: mixed.checked
+  }
+
+  Esci.HeOptions {
+    id: myHeOptions
     null_value_enabled: false
     rope_units_visible: evaluate_hypotheses_checked
-     hgrid_columns: 4
+    hgrid_columns: 4
   }
 
 }

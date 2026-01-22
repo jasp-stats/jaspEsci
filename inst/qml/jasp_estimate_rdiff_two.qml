@@ -24,279 +24,252 @@ import "./esci" as Esci
 
 Form
 {
-	id: form
-	property int framework:	Common.Type.Framework.Classical
-	property alias conf_level_value: conf_level.value
+  id: form
+  columns: 1
 
-	function alpha_adjust() {
-	  myHeOptions.currentConfLevel = conf_level.value
+  property alias conf_level_value: conf_level.value
+
+  function alpha_adjust() {
+    myHeOptions.currentConfLevel = conf_level.value
   }
 
 
-  RadioButtonGroup {
-    columns: 2
-    name: "switch"
+  Esci.RawOrSummary
+  {
     id: switch_source
-
-    RadioButton {
-      value: "from_raw";
-      label: qsTr("Analyze full data");
-      checked: true;
-      id: from_raw
-    }
-
-    RadioButton {
-      value: "from_summary";
-      label: qsTr("Analyze summary data");
-      id: from_summary
-    }
+    onValueChanged: switch_adjust()
   }
 
 
-
-  Section {
-    enabled: from_raw.checked
-    visible: from_raw.checked
-    expanded: from_raw.checked
-
-  	VariablesForm
-  	{
-  		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-  		AvailableVariablesList { name: "allVariablesList" }
-  		AssignedVariablesList { name: "x"; title: qsTr("<i>X</i> Variable"); allowedColumns: ["scale"]; singleVariable: true }
-  		AssignedVariablesList { name: "y"; title: qsTr("<i>Y</i> Variable"); allowedColumns: ["scale"]; singleVariable: true }
-  		AssignedVariablesList { name: "grouping_variable"; title: qsTr("Grouping variable"); allowedColumns: ["nominal"]; singleVariable: true }
-  	}
-
+  VariablesForm
+  {
+    visible: !switch_source.is_summary
+    preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+    AvailableVariablesList { name: "allVariablesList" }
+    AssignedVariablesList { name: "x"; title: qsTr("<i>X</i> Variable"); allowedColumns: ["scale"]; singleVariable: true }
+    AssignedVariablesList { name: "y"; title: qsTr("<i>Y</i> Variable"); allowedColumns: ["scale"]; singleVariable: true }
+    AssignedVariablesList { name: "grouping_variable"; title: qsTr("Grouping variable"); allowedColumns: ["nominal"]; singleVariable: true }
   }
 
 
-  Section {
-    enabled: from_summary.checked
-    visible: from_summary.checked
-    expanded: from_summary.checked
+  Group {
+    columns: 1
+    visible: switch_source.is_summary
 
-    Group {
-
-
-      GridLayout {
+    GridLayout {
       id: sgrid
       columns: 3
       rowSpacing: 1
       columnSpacing: 1
 
-        Label {
-          text: ""
-        }
+      Label {
+        text: ""
+      }
 
-        Label {
-          text: qsTr("<b>Reference group</b>")
-        }
+      Label {
+        text: qsTr("<b>Reference group</b>")
+      }
 
-        Label {
-          text: qsTr("<b>Comparison group</b>")
-        }
+      Label {
+        text: qsTr("<b>Comparison group</b>")
+      }
 
-        Label {
-          text: qsTr("Name")
-        }
+      Label {
+        text: qsTr("Name")
+      }
 
-        TextField
-        {
-          name: "reference_level_name"
-          id: reference_level_name
-          label: ""
-          placeholderText: qsTr("Reference level")
-          enabled: from_summary.checked
-          fieldWidth: jaspTheme.textFieldWidth
-        }
+      TextField
+      {
+        name: "reference_level_name"
+        id: reference_level_name
+        label: ""
+        placeholderText: qsTr("Reference level")
+        enabled: switch_source.is_summary
+        fieldWidth: jaspTheme.textFieldWidth
+      }
 
 
-        TextField
-        {
-          name: "comparison_level_name"
-          id: comparison_level_name
-          label: ""
-          placeholderText: qsTr("Comparison level")
-          enabled: from_summary.checked
-          fieldWidth: jaspTheme.textFieldWidth
-        }
+      TextField
+      {
+        name: "comparison_level_name"
+        id: comparison_level_name
+        label: ""
+        placeholderText: qsTr("Comparison level")
+        enabled: switch_source.is_summary
+        fieldWidth: jaspTheme.textFieldWidth
+      }
 
-        Label {
-          text: qsTr("Correlation (<i>r</i>)")
-        }
+      Label {
+        text: qsTr("Correlation (<i>r</i>)")
+      }
 
-        DoubleField {
-          name: "reference_r"
-          label: ""
-          defaultValue: 0.5
-          negativeValues: true
-          min: -1
-          max: 1
-          fieldWidth: jaspTheme.textFieldWidth
-          enabled: from_summary.checked
-                  onEditingFinished : {
+      DoubleField {
+        name: "reference_r"
+        label: ""
+        defaultValue: 0.5
+        negativeValues: true
+        min: -1
+        max: 1
+        fieldWidth: jaspTheme.textFieldWidth
+        enabled: switch_source.is_summary
+        onEditingFinished : {
           summary_dirty.checked = true
 
         }
-        }
+      }
 
-        DoubleField {
-          name: "comparison_r"
-          label: ""
-          defaultValue: 0.75
-          negativeValues: true
-          min: -1
-          max: 1
-          fieldWidth: jaspTheme.textFieldWidth
-          enabled: from_summary.checked
-                  onEditingFinished : {
+      DoubleField {
+        name: "comparison_r"
+        label: ""
+        defaultValue: 0.75
+        negativeValues: true
+        min: -1
+        max: 1
+        fieldWidth: jaspTheme.textFieldWidth
+        enabled: switch_source.is_summary
+        onEditingFinished : {
           summary_dirty.checked = true
 
         }
-        }
+      }
 
 
-        Label {
-          text: qsTr("Sample size (<i>N</i>)")
-        }
+      Label {
+        text: qsTr("Sample size (<i>N</i>)")
+      }
 
-        DoubleField {
-          name: "reference_n"
-          label: ""
-          defaultValue: 20
-          min: 2
-          fieldWidth: jaspTheme.textFieldWidth
-          enabled: from_summary.checked
-                  onEditingFinished : {
+      DoubleField {
+        name: "reference_n"
+        label: ""
+        defaultValue: 20
+        min: 2
+        fieldWidth: jaspTheme.textFieldWidth
+        enabled: switch_source.is_summary
+        onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
 
-        DoubleField {
-          name: "comparison_n"
-          label: ""
-          defaultValue: 20
-          min: 2
-          fieldWidth: jaspTheme.textFieldWidth
-          enabled: from_summary.checked
-                  onEditingFinished : {
+      DoubleField {
+        name: "comparison_n"
+        label: ""
+        defaultValue: 20
+        min: 2
+        fieldWidth: jaspTheme.textFieldWidth
+        enabled: switch_source.is_summary
+        onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
 
 
-        Label {
-          text: qsTr("<i>X</i>-variable name")
-        }
+      Label {
+        text: qsTr("<i>X</i>-variable name")
+      }
 
-        TextField
-        {
-          name: "x_variable_name"
-          id: x_variable_name
-          placeholderText: qsTr("X variable")
-          enabled: from_summary.checked
-           Layout.columnSpan: 2
-           fieldWidth: jaspTheme.textFieldWidth * 2
-        }
+      TextField
+      {
+        name: "x_variable_name"
+        id: x_variable_name
+        placeholderText: qsTr("X variable")
+        enabled: switch_source.is_summary
+        Layout.columnSpan: 2
+        fieldWidth: jaspTheme.textFieldWidth * 2
+      }
 
-        Label {
-          text: qsTr("<i>Y</i>-variable name")
-        }
+      Label {
+        text: qsTr("<i>Y</i>-variable name")
+      }
 
-        TextField
-        {
-          name: "y_variable_name"
-          id: y_variable_name
-          placeholderText: qsTr("Y variable")
-          enabled: from_summary.checked
-           Layout.columnSpan: 2
-           fieldWidth: jaspTheme.textFieldWidth * 2
-        }
+      TextField
+      {
+        name: "y_variable_name"
+        id: y_variable_name
+        placeholderText: qsTr("Y variable")
+        enabled: switch_source.is_summary
+        Layout.columnSpan: 2
+        fieldWidth: jaspTheme.textFieldWidth * 2
+      }
 
-        Label {
-          text: qsTr("Grouping variable name")
-        }
-
-
-        TextField
-        {
-          name: "grouping_variable_name"
-          id: grouping_variable_name
-          placeholderText: qsTr("Grouping variable")
-          enabled: from_summary.checked
-           Layout.columnSpan: 2
-           fieldWidth: jaspTheme.textFieldWidth * 2
-        }
-      } // end of 3 column grid
+      Label {
+        text: qsTr("Grouping variable name")
+      }
 
 
+      TextField
+      {
+        name: "grouping_variable_name"
+        id: grouping_variable_name
+        placeholderText: qsTr("Grouping variable")
+        enabled: switch_source.is_summary
+        Layout.columnSpan: 2
+        fieldWidth: jaspTheme.textFieldWidth * 2
+      }
+    } // end of 3 column grid
 
-                        CheckBox
-	    {
-	      name: "summary_dirty";
-	      id: summary_dirty
-	      visible: false
-	    }
 
-    }  // end of group for summary
+
+    CheckBox
+    {
+      name: "summary_dirty";
+      id: summary_dirty
+      visible: false
+    }
+
+  }  // end of group for summary
+
+
+  Group
+  {
+    title: qsTr("<b>Analysis options</b>")
+    Esci.ConfLevel
+    {
+      name: "conf_level"
+      id: conf_level
+      onFocusChanged: {
+        alpha_adjust()
+      }
+    }
 
   }
 
-	Group
-	{
-		title: qsTr("<b>Analysis options</b>")
-		Layout.columnSpan: 2
-		Esci.ConfLevel
-		  {
-		    name: "conf_level"
-		    id: conf_level
-		    onFocusChanged: {
-         alpha_adjust()
-        }
-		  }
-
-	}
-
-	Group
-	{
-	  title: qsTr("<b>Results options</b>")
-	  CheckBox
-	  {
-	    name: "show_details";
-	    label: qsTr("Extra details")
-	   }
+  Group
+  {
+    title: qsTr("<b>Results options</b>")
+    CheckBox
+    {
+      name: "show_details";
+      label: qsTr("Extra details")
+    }
   }
 
 
   Group {
     title: qsTr("<b>Regression</b>")
-    enabled: from_raw.checked
-    visible: from_raw.checked
-    Layout.columnSpan: 2
+    visible: !switch_source.is_summary
 
-	  GridLayout {
-	    columns: 2
+    GridLayout {
+      columns: 2
 
-	      CheckBox {
-    	    name: "show_line";
-    	    id: show_line
-	        label: qsTr("Line")
-	        enabled: do_regression.checked
-          visible: from_raw.checked
-	      }
+      CheckBox {
+        name: "show_line";
+        id: show_line
+        label: qsTr("Line")
+        enabled: do_regression.checked
+        visible: !switch_source.is_summary
+      }
 
-	      CheckBox {
-    	    name: "show_line_CI";
-    	    id: show_line_CI
-	        label: qsTr("CI on Line")
-	        enabled: do_regression.checked
-          visible: from_raw.checked
-	      }
+      CheckBox {
+        name: "show_line_CI";
+        id: show_line_CI
+        label: qsTr("CI on Line")
+        enabled: do_regression.checked
+        visible: !switch_source.is_summary
+      }
 
-	  }
+    }
 
 
   } // end of regression
@@ -305,16 +278,16 @@ Form
   Esci.ScatterplotOptions {
     sp_other_options_grid_enabled: false
     sp_other_options_grid_visible: false
+    is_summary: switch_source.is_summary
+  }
 
 
-    Section
+  Section
   {
     title: qsTr("Scatterplot aesthetics")
-    enabled: from_raw.checked
-    visible: from_raw.checked
+    visible: !switch_source.is_summary
 
-
-      GridLayout {
+    GridLayout {
       id: grid
       columns: 4
 
@@ -363,7 +336,7 @@ Form
         name: "sp_shape_raw_reference"
         id: sp_shape_raw_reference
         startValue: 'circle filled'
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.ShapeSelect
@@ -371,7 +344,7 @@ Form
         name: "sp_shape_raw_comparison"
         id: sp_shape_raw_comparison
         startValue: 'circle filled'
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
 
@@ -380,7 +353,7 @@ Form
         name: "shape_raw_unused"
         id: shape_raw_unused
         startValue: 'circle filled'
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
 
@@ -393,7 +366,7 @@ Form
         name: "sp_size_raw_reference"
         id: sp_size_raw_reference
         defaultValue: 3
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
 
       }
 
@@ -402,7 +375,7 @@ Form
         name: "sp_size_raw_comparison"
         id: sp_size_raw_comparison
         defaultValue: 3
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
 
       }
 
@@ -411,7 +384,7 @@ Form
         name: "sp_size_raw_unused"
         id: sp_size_raw_unused
         defaultValue: 2
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
 
       }
 
@@ -424,7 +397,7 @@ Form
         name: "sp_color_raw_reference"
         id: sp_color_raw_reference
         startValue: "black"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.ColorSelect
@@ -432,7 +405,7 @@ Form
         name: "sp_color_raw_comparison"
         id: sp_color_raw_comparison
         startValue: "black"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.ColorSelect
@@ -440,7 +413,7 @@ Form
         name: "sp_color_raw_unused"
         id: sp_color_raw_unused
         startValue: "black"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
 
@@ -453,7 +426,7 @@ Form
         name: "sp_fill_raw_reference"
         id: sp_fill_raw_reference
         startValue: "#008DF9"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.ColorSelect
@@ -461,7 +434,7 @@ Form
         name: "sp_fill_raw_comparison"
         id: sp_fill_raw_comparison
         startValue: "#009F81"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
       Esci.ColorSelect
@@ -469,7 +442,7 @@ Form
         name: "sp_fill_raw_unused"
         id: sp_fill_raw_unused
         startValue: "NA"
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
       }
 
 
@@ -481,7 +454,7 @@ Form
       {
         name: "sp_alpha_raw_reference"
         id: sp_alpha_raw_reference
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         defaultValue: 75
 
       }
@@ -490,7 +463,7 @@ Form
       {
         name: "sp_alpha_raw_comparison"
         id: sp_alpha_raw_comparison
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         defaultValue: 75
 
       }
@@ -499,7 +472,7 @@ Form
       {
         name: "sp_alpha_raw_unused"
         id: sp_alpha_raw_unused
-        enabled: from_raw.checked
+        enabled: !switch_source.is_summary
         defaultValue: 75
 
       }
@@ -623,12 +596,9 @@ Form
   } // end scatterplot aesthetics
 
 
-
-  }
-
-
   Esci.FigureOptions {
     title: qsTr("Estimation figure options")
+    is_summary: switch_source.is_summary
     simple_labels_enabled: false
     simple_labels_visible: false
     difference_axis_grid_visible: true
@@ -639,9 +609,10 @@ Form
     ymax_placeholderText: "1"
     width_defaultValue: 600
     height_defaultValue: 400
+  }
 
 
-    Section
+  Section
   {
     title: qsTr("Estimation figure aesthetics")
 
@@ -681,12 +652,7 @@ Form
         id: linetype_summary_difference
       }
 
-
-
     }
-
-
-  }
 
   }
 

@@ -24,263 +24,240 @@ import "./esci" as Esci
 
 Form
 {
-	id: form
-	property int framework:	Common.Type.Framework.Classical
-	property alias conf_level_value: conf_level.value
+  id: form
+  columns: 1
 
-	function alpha_adjust() {
-	  myHeOptions.currentConfLevel = conf_level.value
+  property alias conf_level_value: conf_level.value
+
+  function alpha_adjust() {
+    myHeOptions.currentConfLevel = conf_level.value
   }
 
 
-  RadioButtonGroup {
-    columns: 2
-    name: "switch"
+  Esci.RawOrSummary
+  {
     id: switch_source
-
-    RadioButton {
-      value: "from_raw";
-      label: qsTr("Analyze full data");
-      checked: true;
-      id: from_raw
-    }
-
-    RadioButton {
-      value: "from_summary";
-      label: qsTr("Analyze summary data");
-      id: from_summary
-    }
   }
 
 
 
-  Section {
-    enabled: from_raw.checked
-    visible: from_raw.checked
-    expanded: from_raw.checked
-
-  	VariablesForm
-  	{
-  		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-  		AvailableVariablesList { name: "allVariablesList" }
-  		AssignedVariablesList { name: "outcome_variable"; title: qsTr("Outcome variable"); allowedColumns: ["nominal", "ordinal"] }
-  		AssignedVariablesList { name: "grouping_variable"; title: qsTr("Grouping variable"); allowedColumns: ["nominal", "ordinal"]; singleVariable: true }
-  	}
-
+  VariablesForm
+  {
+    visible: !switch_source.is_summary
+    preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+    AvailableVariablesList { name: "allVariablesList" }
+    AssignedVariablesList { name: "outcome_variable"; title: qsTr("Outcome variable"); allowedColumns: ["nominal", "ordinal"] }
+    AssignedVariablesList { name: "grouping_variable"; title: qsTr("Grouping variable"); allowedColumns: ["nominal", "ordinal"]; singleVariable: true }
   }
 
 
-  Section {
-    enabled: from_summary.checked
-    visible: from_summary.checked
-    expanded: from_summary.checked
 
-    Group {
+  Group {
 
+    visible: switch_source.is_summary
 
-      GridLayout {
+    GridLayout {
       id: sgrid
       columns: 3
       rowSpacing: 1
       columnSpacing: 1
 
-        Item {}
+      Item {}
 
 
-        TextField {
-          name: "grouping_variable_name"
-          Layout.columnSpan: 2
-          label: ""
-          placeholderText: qsTr("Grouping variable")
-          fieldWidth: 2*jaspTheme.textFieldWidth
-        }
+      TextField {
+        name: "grouping_variable_name"
+        Layout.columnSpan: 2
+        label: ""
+        placeholderText: qsTr("Grouping variable")
+        fieldWidth: 2*jaspTheme.textFieldWidth
+      }
 
 
-        TextField {
-          name: "outcome_variable_name"
-          label: ""
-          placeholderText: qsTr("Outcome variable")
-        }
+      TextField {
+        name: "outcome_variable_name"
+        label: ""
+        placeholderText: qsTr("Outcome variable")
+      }
 
-        TextField {
-          name: "grouping_variable_level1"
-          label: ""
-          placeholderText: qsTr("Control")
-        }
+      TextField {
+        name: "grouping_variable_level1"
+        label: ""
+        placeholderText: qsTr("Control")
+      }
 
-        TextField {
-          name: "grouping_variable_level2"
-          label: ""
-          placeholderText: qsTr("Treated")
-        }
+      TextField {
+        name: "grouping_variable_level2"
+        label: ""
+        placeholderText: qsTr("Treated")
+      }
 
 
-        TextField
-        {
-          name: "case_label"
-          id: case_label
-          label: ""
-          placeholderText: qsTr("Sick")
-        }
+      TextField
+      {
+        name: "case_label"
+        id: case_label
+        label: ""
+        placeholderText: qsTr("Sick")
+      }
 
-        IntegerField
-        {
-          name: "reference_cases"
-          id: reference_cases
-          label: ""
-          defaultValue: 20
-          min: 0
-          fieldWidth: jaspTheme.textFieldWidth
+      IntegerField
+      {
+        name: "reference_cases"
+        id: reference_cases
+        label: ""
+        defaultValue: 20
+        min: 0
+        fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
-        IntegerField
-        {
-          name: "comparison_cases"
-          id: comparison_cases
-          label: ""
-          defaultValue: 40
-          min: 0
-          fieldWidth: jaspTheme.textFieldWidth
+      IntegerField
+      {
+        name: "comparison_cases"
+        id: comparison_cases
+        label: ""
+        defaultValue: 40
+        min: 0
+        fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
-        TextField
-        {
-          name: "not_case_label"
-          id: not_case_label
-          label: ""
-          placeholderText: qsTr("Well")
-        }
+      TextField
+      {
+        name: "not_case_label"
+        id: not_case_label
+        label: ""
+        placeholderText: qsTr("Well")
+      }
 
-        IntegerField
-        {
-          name: "reference_not_cases"
-          id: reference_not_cases
-          label: ""
-          defaultValue: 80
-          min: 0
-          fieldWidth: jaspTheme.textFieldWidth
+      IntegerField
+      {
+        name: "reference_not_cases"
+        id: reference_not_cases
+        label: ""
+        defaultValue: 80
+        min: 0
+        fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
-        IntegerField
-        {
-          name: "comparison_not_cases"
-          id: comparison_not_cases
-          label: ""
-          defaultValue: 60
-          min: 0
-          fieldWidth: jaspTheme.textFieldWidth
+      IntegerField
+      {
+        name: "comparison_not_cases"
+        id: comparison_not_cases
+        label: ""
+        defaultValue: 60
+        min: 0
+        fieldWidth: jaspTheme.textFieldWidth
         onEditingFinished : {
           summary_dirty.checked = true
         }
-        }
+      }
 
-      }  // 3 column grid
+    }  // 3 column grid
 
-                  CheckBox
-	    {
-	      name: "summary_dirty";
-	      id: summary_dirty
-	      visible: false
-	    }
-    }  // end of group for summary
+    CheckBox
+    {
+      name: "summary_dirty";
+      id: summary_dirty
+      visible: false
+    }
+  }  // end of group for summary
 
+
+  Group
+  {
+    title: qsTr("<b>Analysis options</b>")
+    Esci.ConfLevel
+    {
+      name: "conf_level"
+      id: conf_level
+      onFocusChanged: {
+        alpha_adjust()
+      }
+    }
+
+    CheckBox
+    {
+      name: "count_NA";
+      label: qsTr("Missing cases are counted")
+      enabled: !switch_source.is_summary
+    }
   }
 
-	Group
-	{
-		title: qsTr("<b>Analysis options</b>")
-		Layout.columnSpan: 2
-		Esci.ConfLevel
-		  {
-		    name: "conf_level"
-		    id: conf_level
-		    onFocusChanged: {
-         alpha_adjust()
-        }
-		  }
-
-		CheckBox
-	  {
-	    name: "count_NA";
-	    label: qsTr("Missing cases are counted")
-	    enabled: from_raw.checked
-	   }
-	}
-
-	Group
-	{
-	  title: qsTr("<b>Results options</b>")
-	  CheckBox
-	  {
-	    name: "show_details";
-	    label: qsTr("Extra details")
-	   }
-	  CheckBox
-	  {
-	    name: "show_ratio";
-	    label: qsTr("Odds ratio");
-	   }
-	  CheckBox
-	  {
-	    name: "show_phi";
-	    label: qsTr("Correlation (ϕ)");
-	   }
+  Group
+  {
+    title: qsTr("<b>Results options</b>")
+    CheckBox
+    {
+      name: "show_details";
+      label: qsTr("Extra details")
+    }
+    CheckBox
+    {
+      name: "show_ratio";
+      label: qsTr("Odds ratio");
+    }
+    CheckBox
+    {
+      name: "show_phi";
+      label: qsTr("Correlation (ϕ)");
+    }
 
 
-      GridLayout {
+    GridLayout {
       id: show_chi_square_grid
       columns: 4
-    	 	CheckBox
-    	  {
-    	    name: "show_chi_square";
-    	    id: show_chi_square;
-    	    label: qsTr("&#120536;<sup>2</sup> analysis");
-    	  }
+      CheckBox
+      {
+        name: "show_chi_square";
+        id: show_chi_square;
+        label: qsTr("&#120536;<sup>2</sup> analysis");
+      }
 
 
-        RadioButtonGroup {
-          columns: 3
-          name: "chi_table_option"
-          id: chi_table_option
+      RadioButtonGroup {
+        columns: 3
+        name: "chi_table_option"
+        id: chi_table_option
 
-          RadioButton {
-            value: "observed";
-            label: qsTr("Observed frequencies");
-            id: observed
-            enabled: show_chi_square.checked
-          }
+        RadioButton {
+          value: "observed";
+          label: qsTr("Observed frequencies");
+          id: observed
+          enabled: show_chi_square.checked
+        }
 
-          RadioButton {
-            value: "expected";
-            label: qsTr("Expected frequencies");
-            id: expected
-            enabled: show_chi_square.checked
-          }
+        RadioButton {
+          value: "expected";
+          label: qsTr("Expected frequencies");
+          id: expected
+          enabled: show_chi_square.checked
+        }
 
-          RadioButton {
-            value: "both";
-            label: qsTr("Both");
-            id: both;
-            checked: true;
-            enabled: show_chi_square.checked
-          }
+        RadioButton {
+          value: "both";
+          label: qsTr("Both");
+          id: both;
+          checked: true;
+          enabled: show_chi_square.checked
+        }
       } // end chi_table_option
 
     } // end show_chi_square 4-column grid
 
-}
+  }
 
 
   Esci.FigureOptions {
+    is_summary: switch_source.is_summary
     simple_labels_enabled: true
     simple_labels_visible: true
     difference_axis_grid_visible: true
@@ -289,8 +266,9 @@ Form
     distributions_grid_visible: false
     ymin_placeholderText: "auto"
     ymax_placeholderText: "auto"
+  }
 
-    Section
+  Section
   {
     title: qsTr("Aesthetics")
 
@@ -330,16 +308,9 @@ Form
         id: linetype_summary_difference
       }
 
-
-
     }
 
-
   }
-
-  }
-
-
 
   Esci.HeOptions {
     id: myHeOptions

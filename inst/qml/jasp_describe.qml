@@ -24,34 +24,34 @@ import "./esci" as Esci
 
 Form
 {
-	id: form
-	property int framework:	Common.Type.Framework.Classical
+  id: form
+
+  columns: 1
 
   VariablesForm
-  	{
-  		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-  		AvailableVariablesList { name: "allVariablesList" }
-  		AssignedVariablesList { name: "outcome_variable"; title: qsTr("Outcome variable"); allowedColumns: ["scale"]; singleVariable: true}
-  	}
+  {
+    preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+    AvailableVariablesList { name: "allVariablesList" }
+    AssignedVariablesList { name: "outcome_variable"; title: qsTr("Outcome variable"); allowedColumns: ["scale"]; singleVariable: true}
+  }
 
-	Group
-	{
-	  title: qsTr("<b>Results options</b>")
-	  Layout.columnSpan: 2
+  Group
+  {
+    title: qsTr("<b>Results options</b>")
 
-	  CheckBox
-	  {
-	    name: "show_details";
-	    label: qsTr("Extra details")
-	   }
-	}
+    CheckBox
+    {
+      name: "show_details";
+      label: qsTr("Extra details")
+    }
+  }
 
-	Group
-	{
-	  title: qsTr("<b>Explore</b>")
+  Group
+  {
+    title: qsTr("<b>Explore</b>")
 
 
-	   GridLayout {
+    GridLayout {
       id: explore_grid
       columns: 3
 
@@ -61,14 +61,14 @@ Form
       }
 
       CheckBox {
-	      name: "mark_mean";
-	      label: qsTr("Mean")
-	    }
+        name: "mark_mean";
+        label: qsTr("Mean")
+      }
 
       CheckBox {
-	      name: "mark_median";
-	      label: qsTr("Median")
-	    }
+        name: "mark_median";
+        label: qsTr("Median")
+      }
 
 
       Label {
@@ -76,23 +76,23 @@ Form
       }
 
       CheckBox {
-	      name: "mark_sd";
-	      label: qsTr("Standard deviation")
-	    }
+        name: "mark_sd";
+        label: qsTr("Standard deviation")
+      }
 
       CheckBox {
-	      name: "mark_quartiles";
-	      label: qsTr("Quartiles")
-	    }
+        name: "mark_quartiles";
+        label: qsTr("Quartiles")
+      }
 
       Label {
         text: qsTr("<i>z</i> scores")
       }
 
       CheckBox {
-	      name: "mark_z_lines";
-	      label: qsTr("<i>z</i> lines")
-	    }
+        name: "mark_z_lines";
+        label: qsTr("<i>z</i> lines")
+      }
 
       Label {
         text: ""
@@ -104,17 +104,17 @@ Form
       }
 
       PercentField
-		  {
-		    name: "mark_percentile"
-		    label: qsTr("Highlight bottom")
-		    defaultValue: 0
-		  }
+      {
+        name: "mark_percentile"
+        label: qsTr("Highlight bottom")
+        defaultValue: 0
+      }
 
 
     }  // end explore grid
 
 
-	} // end explore
+  } // end explore
 
 
   Esci.ScatterplotOptions {
@@ -124,9 +124,10 @@ Form
     histogram_grid_visible: true
     sp_plot_width_defaultValue: 500
     sp_plot_height_defaultValue: 400
+  }
 
 
-    Section
+  Section
   {
     title: qsTr("Aesthetics")
 
@@ -178,15 +179,12 @@ Form
   } // end aesthetics
 
 
+  Esci.ConfLevel
+  {
+    name: "conf_level"
+    id: conf_level
+    enabled: false
+    visible: false
   }
-
-		Esci.ConfLevel
-		  {
-		    name: "conf_level"
-		    id: conf_level
-		    enabled: false
-		    visible: false
-		  }
-
 
 }

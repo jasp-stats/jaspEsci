@@ -24,252 +24,218 @@ import "./esci" as Esci
 
 Form
 {
-	id: form
-	property int framework:	Common.Type.Framework.Classical
+  id: form
 
+  columns: 1
 
-	function alpha_adjust() {
-	  myHeOptions.currentConfLevel = conf_level.value
+  function alpha_adjust() {
+    myHeOptions.currentConfLevel = conf_level.value
   }
 
   function switch_adjust() {
-      if (from_summary.checked) {
-        effect_size.currentValue = "mean_difference";
-        show_ratio.checked = false;
-      }
+    if (switch_source.is_summary) {
+      effect_size.currentValue = "mean_difference";
+      show_ratio.checked = false;
+    }
   }
 
 
-  RadioButtonGroup {
-    columns: 2
-    name: "switch"
+  Esci.RawOrSummary
+  {
     id: switch_source
+    onValueChanged: switch_adjust()
+  }
 
-    RadioButton {
-      value: "from_raw";
-      label: qsTr("Analyze full data");
-      checked: true;
-      id: from_raw
+
+  VariablesForm
+  {
+    visible: !switch_source.is_summary
+    preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+    AvailableVariablesList { name: "allVariablesList" }
+    AssignedVariablesList {
+      name: "outcome_variable";
+      title: qsTr("Outcome variable(s)");
+      allowedColumns: ["scale"];
+
     }
+    AssignedVariablesList {
+      name: "grouping_variable";
+      title: qsTr("Grouping variable");
+      allowedColumns: ["nominal"];
+      singleVariable: trueOn
+    }
+  }
 
-    RadioButton {
-      value: "from_summary";
-      label: qsTr("Analyze summary data");
-      id: from_summary
-      onClicked: {
-         switch_adjust()
+  VariablesForm {
+    visible: switch_source.is_summary
+    preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+    AvailableVariablesList { name: "allVariablesList_summary" }
+    AssignedVariablesList {
+      name: "grouping_variable_levels";
+      id: grouping_variable_levels;
+      title: qsTr("Grouping variable levels");
+      allowedColumns: ["nominal"];
+      singleVariable: true;
+      onCountChanged: {
+        if (grouping_variable_levels.count > 0) summary_dirty.checked = true
+      }
+    }
+    AssignedVariablesList {
+      name: "means";
+      id: means;
+      title: qsTr("Group means");
+      allowedColumns: ["scale"];
+      singleVariable: true;
+      onCountChanged: {
+        if (means.count > 0) summary_dirty.checked = true
+      }
+    }
+    AssignedVariablesList {
+      name: "sds";
+      id: sds;
+      title: qsTr("Group standard deviations");
+      allowedColumns: ["scale"];
+      singleVariable: true;
+      onCountChanged: {
+        if (sds.count > 0) summary_dirty.checked = true
+      }
+    }
+    AssignedVariablesList {
+      name: "ns";
+      id: ns;
+      title: qsTr("Group sample sizes");
+      allowedColumns: ["scale"];
+      singleVariable: true;
+      onCountChanged: {
+        if (ns.count > 0) summary_dirty.checked = true
       }
     }
   }
 
-  Section {
-    enabled: from_raw.checked
-    visible: from_raw.checked
-    expanded: from_raw.checked
+
+  Group {
+    visible: switch_source.is_summary
+
+    TextField
+    {
+      name: "outcome_variable_name"
+      label: qsTr("Outcome variable name")
+      placeholderText: "Outcome variable"
+    }
 
 
-    	VariablesForm
-    	{
-    		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-    		AvailableVariablesList { name: "allVariablesList" }
-    		AssignedVariablesList {
-    		  name: "outcome_variable";
-    		  title: qsTr("Outcome variable(s)");
-    		  allowedColumns: ["scale"];
-
-    		}
-    		AssignedVariablesList {
-    		  name: "grouping_variable";
-    		  title: qsTr("Grouping variable");
-    		  allowedColumns: ["nominal"];
-    		  singleVariable: trueOn
-    		}
-    	}
-
-
+    TextField
+    {
+      name: "grouping_variable_name"
+      label: qsTr("Grouping variable name")
+      placeholderText: "Grouping variable"
+    }
 
   }
 
 
-  Section {
-    enabled: from_summary.checked
-    visible: from_summary.checked
-    expanded: from_summary.checked
-
-
-    VariablesForm {
-      preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-      AvailableVariablesList { name: "allVariablesList_summary" }
-      AssignedVariablesList {
-        name: "grouping_variable_levels";
-        id: grouping_variable_levels;
-        title: qsTr("Grouping variable levels");
-        allowedColumns: ["nominal"];
-        singleVariable: true;
-    		  onCountChanged: {
-    		    if (grouping_variable_levels.count > 0) summary_dirty.checked = true
-          }
-      }
-      AssignedVariablesList {
-        name: "means";
-        id: means;
-        title: qsTr("Group means");
-        allowedColumns: ["scale"];
-        singleVariable: true;
-          onCountChanged: {
-    		    if (means.count > 0) summary_dirty.checked = true
-          }
-      }
-      AssignedVariablesList {
-        name: "sds";
-        id: sds;
-        title: qsTr("Group standard deviations");
-        allowedColumns: ["scale"];
-        singleVariable: true;
-          onCountChanged: {
-    		    if (sds.count > 0) summary_dirty.checked = true
-          }
-      }
-      AssignedVariablesList {
-        name: "ns";
-        id: ns;
-        title: qsTr("Group sample sizes");
-        allowedColumns: ["scale"];
-        singleVariable: true;
-          onCountChanged: {
-    		    if (ns.count > 0) summary_dirty.checked = true
-          }
-      }
-    }
-
-
-    Group {
-      Layout.columnSpan: 2
-      TextField
-      {
-        name: "outcome_variable_name"
-        label: qsTr("Outcome variable name")
-        placeholderText: "Outcome variable"
-      }
-
-
-      TextField
-      {
-        name: "grouping_variable_name"
-        label: qsTr("Grouping variable name")
-        placeholderText: "Grouping variable"
-      }
-
-    }
-
-
-    	CheckBox
-	    {
-	      name: "summary_dirty";
-	      id: summary_dirty
-	      checked: false
-	      visible: false
-	    }
+  CheckBox
+  {
+    name: "summary_dirty";
+    id: summary_dirty
+    checked: false
+    visible: false
   }
 
   Group {
     title: qsTr("<b>Define contrast</b>")
-    Layout.columnSpan: 2
 
-     TextField
-      {
-        name: "reference_labels"
-        id: reference_labels
-        label: qsTr("Reference subset")
-        fieldWidth: 400
-      }
+    TextField
+    {
+      name: "reference_labels"
+      id: reference_labels
+      label: qsTr("Reference subset")
+      fieldWidth: 400
+    }
 
-     TextField
-      {
-        name: "comparison_labels"
-        id: comparison_labels
-        label: qsTr("Comparison subset")
-        fieldWidth: 400
-      }
+    TextField
+    {
+      name: "comparison_labels"
+      id: comparison_labels
+      label: qsTr("Comparison subset")
+      fieldWidth: 400
+    }
 
 
   }
 
-	Group
-	{
-		title: qsTr("<b>Analysis options</b>")
-		Layout.columnSpan: 2
+  Group
+  {
+    title: qsTr("<b>Analysis options</b>")
 
-		Esci.ConfLevel
-		  {
-		    name: "conf_level"
-		    id: conf_level
-		    onFocusChanged: {
-         alpha_adjust()
-        }
-		  }
-
-		DropDown
-      {
-        name: "effect_size"
-        label: qsTr("Effect size of interest")
-        enabled: from_raw.checked
-        values:
-          [
-            { label: "Mean difference", value: "mean_difference"},
-            { label: "Median difference", value: "median_difference"}
-          ]
-        id: effect_size
+    Esci.ConfLevel
+    {
+      name: "conf_level"
+      id: conf_level
+      onFocusChanged: {
+        alpha_adjust()
       }
-
-    CheckBox {
-	    name: "assume_equal_variance";
-	    id: assume_equal_variance
-	    label: qsTr("Assume equal variances")
-	    checked: true
-	    enabled: effect_size.currentValue == "mean_difference"
     }
 
-	}
+    DropDown
+    {
+      name: "effect_size"
+      label: qsTr("Effect size of interest")
+      enabled: !switch_source.is_summary
+      values:
+          [
+        { label: "Mean difference", value: "mean_difference"},
+        { label: "Median difference", value: "median_difference"}
+      ]
+      id: effect_size
+    }
 
-	Group
-	{
-	  title: qsTr("<b>Results options</b>")
-	  CheckBox
-	  {
-	    name: "show_details";
-	    label: qsTr("Extra details")
-	   }
+    CheckBox {
+      name: "assume_equal_variance";
+      id: assume_equal_variance
+      label: qsTr("Assume equal variances")
+      checked: true
+      enabled: effect_size.currentValue == "mean_difference"
+    }
 
-	  CheckBox
-	  {
-	    name: "mixed";
-	    id: mixed
-	    visible: false
-	    enabled: false
-	   }
-	}
+  }
+
+  Group
+  {
+    title: qsTr("<b>Results options</b>")
+    CheckBox
+    {
+      name: "show_details";
+      label: qsTr("Extra details")
+    }
+
+    CheckBox
+    {
+      name: "mixed";
+      id: mixed
+      visible: false
+      enabled: false
+    }
+  }
 
 
   Esci.FigureOptions {
-   simple_labels_enabled: true
-   width_defaultValue: 550
-   height_defaultValue: 450
-   error_nudge_defaultValue: 0.5
-   data_spread_defaultValue: 0.20
-   error_scale_defaultValue: 0.25
-
-
-    Esci.AestheticsAll {
-
-    }
+    is_summary: switch_source.is_summary
+    simple_labels_enabled: true
+    width_defaultValue: 550
+    height_defaultValue: 450
+    error_nudge_defaultValue: 0.5
+    data_spread_defaultValue: 0.20
+    error_scale_defaultValue: 0.25
   }
 
 
+  Esci.AestheticsAll {
+    is_summary: switch_source.is_summary
+  }
 
-
-	Esci.HeOptions {
-	  id: myHeOptions
+  Esci.HeOptions {
+    id: myHeOptions
     null_value_enabled: false
     rope_units_visible: evaluate_hypotheses_checked
     hgrid_columns: 4

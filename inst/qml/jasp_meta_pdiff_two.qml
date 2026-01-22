@@ -25,7 +25,6 @@ import "./esci" as Esci
 Form
 {
 	id: form
-	property int framework:	Common.Type.Framework.Classical
 
 
       	VariablesForm {

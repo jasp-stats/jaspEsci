@@ -7,9 +7,11 @@ import "./" as Esci
 
   Section
   {
+    property bool is_summary: false
+
     title: qsTr("Scatterplot options")
-    enabled: from_raw.checked
-    visible: from_raw.checked
+    enabled: !is_summary
+    visible: !is_summary
 
     property alias sp_other_options_grid_enabled: sp_other_options_grid.enabled
     property alias sp_other_options_grid_visible: sp_other_options_grid.visible
@@ -334,16 +336,16 @@ import "./" as Esci
     	  {
     	    name: "show_mean_lines";
     	    label: qsTr("Cross through means of <i>X</i> and <i>Y</i>")
-    	    enabled: from_raw.checked
-          visible: from_raw.checked
+            enabled: !is_summary
+          visible: !is_summary
     	   }
 
     	  CheckBox
     	  {
     	    name: "plot_as_z";
     	    label: qsTr("<i>Z</i> scores rather than raw scores")
-    	    enabled: from_raw.checked
-          visible: from_raw.checked
+            enabled: !is_summary
+          visible: !is_summary
     	   }
 
         Label {
@@ -354,8 +356,8 @@ import "./" as Esci
     	  {
     	    name: "show_r";
     	    label: qsTr("<i>r</i> value on scatterplot")
-    	    enabled: from_raw.checked
-          visible: from_raw.checked
+            enabled: !is_summary
+          visible: !is_summary
     	   }
 
         Label {
