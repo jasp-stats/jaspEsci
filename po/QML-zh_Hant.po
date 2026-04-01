@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-25 00:02+0000\n"
-"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
+"PO-Revision-Date: 2026-04-02 08:09+0000\n"
+"Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/jasp/jaspesci/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -9,28 +9,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14.1-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 "X-Qt-Contexts: true\n"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:7
 msgctxt "Description|"
 msgid "ESCI (Beta)"
-msgstr ""
+msgstr "ESCI（測試版）"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:8
 msgctxt "Description|"
 msgid "ESCI in JASP"
-msgstr ""
+msgstr "JASP 中的 ESCI"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:18
 msgctxt "Description|"
 msgid "ESCI: Describe"
-msgstr ""
+msgstr "ESCI：描述"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:19
 msgctxt "Description|"
 msgid "Describe"
-msgstr ""
+msgstr "描述性統計"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:26
 msgctxt "Description|"
