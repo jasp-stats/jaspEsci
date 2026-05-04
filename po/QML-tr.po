@@ -1,95 +1,104 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-09-15 00:01+0000\n"
+"Last-Translator: hakan dokumuş <dokumushakan@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/jaspesci/tr/"
+">\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14-dev\n"
 "X-Qt-Contexts: true\n"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:7
 msgctxt "Description|"
 msgid "ESCI (Beta)"
-msgstr ""
+msgstr "ESCI (Beta) – Güven Aralıkları için Keşifsel Yazılım"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:8
 msgctxt "Description|"
 msgid "ESCI in JASP"
-msgstr ""
+msgstr "JASP’ta ESCI (Güven Aralıkları için Keşifsel Yazılım)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:18
 msgctxt "Description|"
 msgid "ESCI: Describe"
-msgstr ""
+msgstr "ESCI: Betimle"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:19
 msgctxt "Description|"
 msgid "Describe"
-msgstr ""
+msgstr "Tanımla"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:26
 msgctxt "Description|"
 msgid "Means and Medians"
-msgstr ""
+msgstr "Ortalamalar ve Medyanlar"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:31
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Single Group"
-msgstr ""
+msgstr "GATİ Ortalamalar ve Medyanlar: Tek Grup"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:32
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:78
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:100
 msgctxt "Description|"
 msgid "Single Group"
-msgstr ""
+msgstr "Tek Grup"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:39
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Two Groups"
-msgstr ""
+msgstr "GATİ Ortalamalar ve Medyanlar: İki Grup"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:40
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:86
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:108
 msgctxt "Description|"
 msgid "Two Groups"
-msgstr ""
+msgstr "İki Grup"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:47
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Paired"
-msgstr ""
+msgstr "GATİ Ortalamalar ve Medyanlar: Eşleşmeli"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:48
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:116
 msgctxt "Description|"
 msgid "Paired"
-msgstr ""
+msgstr "Eşleşmeli"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:55
+#, fuzzy
 msgctxt "Description|"
 msgid "ESCI Means and Medians: Independent Groups Contrast"
-msgstr ""
+msgstr "GATİ Ortalamalar ve Medyanlar: Bağımsız Gruplar Karşılaştırması"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:56
+#, fuzzy
 msgctxt "Description|"
 msgid "Independent Groups Contrast"
-msgstr ""
+msgstr "Bağımsız Gruplar Karşılaştırması (Kontrastı)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:63
 msgctxt "Description|"
 msgid "ESCI Means and Medians: 2x2 Factorial"
-msgstr ""
+msgstr "GATİ Ortalamalar ve Medyanlar: 2x2 Faktöriyel"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:64
 msgctxt "Description|"
 msgid "2x2 Factorial"
-msgstr ""
+msgstr "2x2 Faktöriyel"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:72
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:146
 msgctxt "Description|"
 msgid "Correlations"
-msgstr ""
+msgstr "Korelasyonlar"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:77
 msgctxt "Description|"
