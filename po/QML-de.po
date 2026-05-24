@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-06-21 19:26+0000\n"
+"PO-Revision-Date: 2026-05-25 09:11+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspesci/de/>"
 "\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 "X-Qt-Contexts: true\n"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:7
@@ -112,7 +112,7 @@ msgstr "ESCI Korrelationen: Zwei Gruppen"
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:154
 msgctxt "Description|"
 msgid "Proportions"
-msgstr ""
+msgstr "Anteile"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/Description.qml:99
 msgctxt "Description|"
@@ -830,12 +830,12 @@ msgstr ""
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_mdiff_2x2.qml:81
 msgctxt "jasp_estimate_mdiff_2x2|"
 msgid "Analyze summary data"
-msgstr ""
+msgstr "Zusammengefasste Daten analysieren"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_mdiff_2x2.qml:100
 msgctxt "jasp_estimate_mdiff_2x2|"
 msgid "Outcome variable"
-msgstr ""
+msgstr "Ergebnisvariable"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_mdiff_2x2.qml:101
 msgctxt "jasp_estimate_mdiff_2x2|"
@@ -914,13 +914,11 @@ msgid "My outcome variable"
 msgstr "Meine Ergebnisvariable"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_mdiff_2x2.qml:356
-#, fuzzy
 msgctxt "jasp_estimate_mdiff_2x2|"
 msgid "First repeated measure"
 msgstr "Erste Messwiederholung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_mdiff_2x2.qml:357
-#, fuzzy
 msgctxt "jasp_estimate_mdiff_2x2|"
 msgid "Second repeated measure"
 msgstr "Zweite Messwiederholung"
@@ -933,7 +931,7 @@ msgstr "Gruppierungsvariable"
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_mdiff_2x2.qml:365
 msgctxt "jasp_estimate_mdiff_2x2|"
 msgid "Repeated measure name"
-msgstr ""
+msgstr "Name Messwiederholung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_mdiff_2x2.qml:366
 msgctxt "jasp_estimate_mdiff_2x2|"
@@ -941,7 +939,6 @@ msgid "Time"
 msgstr "Zeit"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_mdiff_2x2.qml:385
-#, fuzzy
 msgctxt "jasp_estimate_mdiff_2x2|"
 msgid "<b>Between-subjects analysis options</b>"
 msgstr "<b>Zwischensubjekt-Analyseoptionen</b>"
@@ -1539,7 +1536,7 @@ msgstr "Weitere Details"
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_pdiff_one.qml:188
 msgctxt "jasp_estimate_pdiff_one|"
 msgid "Lines at proportion intervals"
-msgstr ""
+msgstr "Linien bei Anteils-Intervallen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_pdiff_one.qml:204
 msgctxt "jasp_estimate_pdiff_one|"
@@ -1740,118 +1737,118 @@ msgstr "<i>Y</i>-Variablenname"
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:171
 msgctxt "jasp_estimate_r|"
 msgid "<b>Analysis options</b>"
-msgstr ""
+msgstr "<b>Analyseoptionen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:186
 msgctxt "jasp_estimate_r|"
 msgid "<b>Results options</b>"
-msgstr ""
+msgstr "<b>Ergebnisoptionen</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:190
 msgctxt "jasp_estimate_r|"
 msgid "Extra details"
-msgstr ""
+msgstr "Weitere Details"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:196
 msgctxt "jasp_estimate_r|"
 msgid "<b>Regression</b>"
-msgstr ""
+msgstr "<b>Regression</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:205
 msgctxt "jasp_estimate_r|"
 msgid "Regression analysis"
-msgstr ""
+msgstr "Regressionsanalyse"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:216
 msgctxt "jasp_estimate_r|"
 msgid "Line"
-msgstr ""
+msgstr "Linie"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:224
 msgctxt "jasp_estimate_r|"
 msgid "CI on Line"
-msgstr ""
+msgstr "KI auf Linie"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:232
 msgctxt "jasp_estimate_r|"
 msgid "Residuals"
-msgstr ""
+msgstr "Residuen"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:242
 msgctxt "jasp_estimate_r|"
 msgid "Prediction interval"
-msgstr ""
+msgstr "Vorhersageintervall"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:250
 msgctxt "jasp_estimate_r|"
 msgid "Enter <i>X</i> value to generate prediction (<i>&#374;</i>)"
-msgstr ""
+msgstr "Geben Sie <i>X</i>-Wert ein, um Vorhersage zu erzeugen (<i>&#374;</i>)"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:265
 msgctxt "jasp_estimate_r|"
 msgid "Scatterplot aesthetics"
-msgstr ""
+msgstr "Streudiagramm-Ästhetik"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:275
 msgctxt "jasp_estimate_r|"
 msgid "<b>Raw data</b>"
-msgstr ""
+msgstr "<b>Rohdaten</b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:282
 msgctxt "jasp_estimate_r|"
 msgid "Shape"
-msgstr ""
+msgstr "Form"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:291
 msgctxt "jasp_estimate_r|"
 msgid "Size"
-msgstr ""
+msgstr "Größe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:301
 msgctxt "jasp_estimate_r|"
 msgid "Outline"
-msgstr ""
+msgstr "Umriss"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:310
 msgctxt "jasp_estimate_r|"
 msgid "Fill"
-msgstr ""
+msgstr "Füllung"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:318
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:696
 msgctxt "jasp_estimate_r|"
 msgid "Transparency"
-msgstr ""
+msgstr "Transparenz"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:338
 msgctxt "jasp_estimate_r|"
 msgid "<u>Regression</u>"
-msgstr ""
+msgstr "<u>Regression</u>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:342
 msgctxt "jasp_estimate_r|"
 msgid "<u>Prediction</u>"
-msgstr ""
+msgstr "<u>Vorhersage</u>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:347
 msgctxt "jasp_estimate_r|"
 msgid "<u>Residual</u>"
-msgstr ""
+msgstr "<u>Residuum</u>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:473
 msgctxt "jasp_estimate_r|"
 msgid "<b>Prediction from <i>X</i></b>"
-msgstr ""
+msgstr "<b>Form für Vorhersage <i>X</i></b>"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:480
 msgctxt "jasp_estimate_r|"
 msgid "Label size"
-msgstr ""
+msgstr "Beschriftungsgröße"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:490
 msgctxt "jasp_estimate_r|"
 msgid "Label color"
-msgstr ""
+msgstr "Beschriftungsfarbe"
 
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/jasp_estimate_r.qml:509
 msgctxt "jasp_estimate_r|"
