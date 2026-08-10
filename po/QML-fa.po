@@ -2415,11 +2415,6 @@ msgctxt "jasp_meta_r|"
 msgid "Prediction intervals"
 msgstr ""
 
-#: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:350
-msgctxt "ScatterplotOptions|"
-msgid ""
-msgstr ""
-
 #: /home/runner/work/jaspEsci/jaspEsci/inst/qml/esci/ScatterplotOptions.qml:362
 msgctxt "ScatterplotOptions|"
 msgid ""
