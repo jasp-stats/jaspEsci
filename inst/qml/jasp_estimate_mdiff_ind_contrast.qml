@@ -62,7 +62,7 @@ Form
       name: "grouping_variable";
       title: qsTr("Grouping variable");
       allowedColumns: ["nominal"];
-      singleVariable: trueOn
+      singleVariable: true
     }
   }
 
