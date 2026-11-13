@@ -1,4 +1,4 @@
-jasp_estimate_mdiff_2x2 <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_estimate_mdiff_2x2Internal <- function(jaspResults, dataset = NULL, options, ...) {
 
   self <- list()
   self$options <- options

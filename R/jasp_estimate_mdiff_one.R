@@ -1,4 +1,4 @@
-jasp_estimate_mdiff_one <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_estimate_mdiff_oneInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles
   from_raw <- options$switch == "from_raw"

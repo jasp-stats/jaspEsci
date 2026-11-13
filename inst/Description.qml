@@ -6,7 +6,7 @@ Description
 	title		    : qsTr("ESCI")
 	description		: qsTr("ESCI in JASP")
 	icon		    : "esci_logo.svg"
-	hasWrappers		: false
+	hasWrappers		: true
 	requiresData	: false
 
 

@@ -1,4 +1,4 @@
-jasp_estimate_mdiff_ind_contrast <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_estimate_mdiff_ind_contrastInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles --------------------------------------------------------
   from_raw <- options$switch == "from_raw"

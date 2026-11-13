@@ -1,4 +1,4 @@
-jasp_estimate_pdiff_paired <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_estimate_pdiff_pairedInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles
   from_raw <- options$switch == "from_raw"

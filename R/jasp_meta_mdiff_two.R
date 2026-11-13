@@ -1,4 +1,4 @@
-jasp_meta_mdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_meta_mdiff_twoInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles
   from_raw <- options$switch == "from_raw"

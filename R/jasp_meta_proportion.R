@@ -1,4 +1,4 @@
-jasp_meta_proportion <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_meta_proportionInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles
   has_moderator <- options$moderator != ""

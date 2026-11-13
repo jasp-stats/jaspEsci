@@ -1,4 +1,4 @@
-jasp_estimate_r <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_estimate_rInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles
   from_raw <- options$switch == "from_raw"

@@ -1,4 +1,4 @@
-jasp_meta_mean <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_meta_meanInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles
   from_raw <- options$switch == "from_raw"
