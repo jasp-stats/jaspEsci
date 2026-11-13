@@ -1,4 +1,4 @@
-jasp_meta_pdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_meta_pdiff_twoInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles
   has_moderator <- options$moderator != ""

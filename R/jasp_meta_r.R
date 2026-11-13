@@ -1,4 +1,4 @@
-jasp_meta_r <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_meta_rInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles
   has_moderator <- options$moderator != ""

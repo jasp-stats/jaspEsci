@@ -1,4 +1,4 @@
-jasp_describe <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_describeInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
 
   ready <- if (options$outcome_variable != "") TRUE else FALSE

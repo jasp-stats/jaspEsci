@@ -1,4 +1,4 @@
-jasp_estimate_rdiff_two <- function(jaspResults, dataset = NULL, options, ...) {
+jasp_estimate_rdiff_twoInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Handles
   from_raw <- options$switch == "from_raw"
